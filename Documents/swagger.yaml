@@ -1,0 +1,290 @@
+swagger: "2.0"
+info:
+  version: "0.0.1"
+  title: OrderService
+# during dev, should point to your local machine
+host: localhost:10010
+# basePath prefixes all resource paths
+basePath: /
+#
+schemes:
+  # tip: remove http to make production-grade
+  - http
+  - https
+# format of bodies a client can send (Content-Type)
+consumes:
+  - application/json
+# format of the responses to the client (Accepts)
+produces:
+  - application/json
+paths:
+  /users/orders:
+    x-swagger-router-controller: orders
+    get:
+      summary: get orders
+      tags:
+        - orders
+      responses:
+        200:
+          description: An paged array of orders
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Order'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /users/orders/buy:
+    x-swagger-router-controller: orders
+    post:
+      description: place buy order
+      operationId: buy
+      tags:
+        - orders
+      responses:
+        201:
+          description: created
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /users/orders/sell:
+    x-swagger-router-controller: orders
+    post:
+      description: place sell order
+      operationId: sell
+      tags:
+        - orders
+      responses:
+        201:
+          description: created
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /users:
+    x-swagger-router-controller: users
+    post:
+     description: register user
+     tags:
+      - users
+     responses:
+      201:
+        description: created
+      default:
+        description: unexpected error
+        schema:
+          $ref: '#/definitions/Error'
+  /users/contracts:
+    x-swagger-router-controller: contract
+    get:
+      operationId: getContracts
+      description: get all contracts under user
+      tags:
+        - contracts
+      responses:
+        200:
+          description: get contracts sucessfully
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Contract'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /users/contracts/{contractId}/stocks:
+    x-swagger-router-controller: contract
+    get:
+      operationId: getStocks
+      description: get all stocks under contract
+      parameters:
+        - name: contractId
+          in: path
+          description: contract id
+          type: integer
+          format: int32
+          required: true
+      tags:
+        - contracts
+      responses:
+        200:
+          description: get stocks sucessfully
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Stock'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /authenticate:
+    x-swagger-router-controller: authenticate
+    post:
+      operationId: login
+      description: authenticate user
+      tags:
+       - login
+      responses:
+        200:
+          description: login sucessfully
+          schema:
+            $ref: '#/definitions/Token'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /contracts/{contractId}/sign:
+    x-swagger-router-controller: contract
+    post:
+      operationId: sign
+      description: sign contract
+      parameters:
+        - name: contractId
+          in: path
+          description: contract id
+          type: integer
+          format: int32
+          required: true
+      tags:
+        - contracts
+      responses:
+        200:
+          description: sign contract sucessfully
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /contracts:
+    x-swagger-router-controller: contract
+    get:
+      operationId: get
+      description: get all aviailable contracts
+      tags:
+        - contracts
+      responses:
+        200:
+          description: get contracts sucessfully
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Contract'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+definitions:
+  Token:
+    properties:
+      value:
+        type: string
+      expiresInMinutes:
+        type: integer
+        format: int32
+  Order:
+    properties:
+      id:
+        type: integer
+        format: int32
+      stockNo:
+        type: string
+      count:
+        type: integer
+        format: int32
+      price:
+        type: number
+        format: double
+      contractId:
+        type: integer
+        format: int32
+      status:
+        type: string
+        enum: ['created','in progress','success','failed']
+  User:
+    required:
+      - username
+      - password
+      - phone
+    properties:
+      id:
+        type: integer
+        format: int32
+      username:
+        type: string
+      password:
+        type: string
+      phone:
+        type: string
+  Error:
+    required:
+      - code
+      - message
+    properties:
+      code:
+        type: integer
+        format: int32
+      message:
+        type: string
+  Contract:
+      required:
+        - id
+        - inversterId
+        - inversterName
+        - marketId
+        - marketName
+        - amount
+        - securityDeposit
+        - profitAllocation
+        - period
+        - status
+      properties:
+        id:
+          type: integer
+          format: int32
+        inversterId:
+          type: integer
+          format: int32
+        inversterName:
+          type: string
+        marketId:
+          type: integer
+          format: int32
+        marketName:
+          type: string
+        amount:
+          type: number
+          format: double
+        securityDeposit:
+          type: integer
+          format: int32
+        profitAllocation:
+          type: integer
+          format: int32
+        period:
+          type: integer
+          format: int32
+        status:
+          type: string
+          enum: ['created','active', 'in progess', 'signed', 'closed']
+  Stock:
+    required:
+      - id
+      - orderId
+      - stockNo
+      - amount
+    properties:
+      id:
+        type: integer
+        format: int32
+      orderId:
+        type: integer
+        format: int32
+      stockNo:
+        type: string
+      amount:
+        type: integer
+        format: int32
+      costPrice:
+        type: number
+        format: double

@@ -1,0 +1,6 @@
+platform :ios, '7.0' 
+pod 'FMDB'
+pod 'MBProgressHUD', '~> 0.9.1'
+pod 'ReactiveCocoa'
+
+xcodeproj 'Partner/Partner.xcodeproj'

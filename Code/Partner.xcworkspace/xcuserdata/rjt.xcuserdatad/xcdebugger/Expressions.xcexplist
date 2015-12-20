@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "__34-[LoginViewModel viewModelDidLoad]_block_invoke_3:LoginViewModel.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "((AppEntity*)entity).code">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__36-[LoginViewController bindViewModel]_block_invoke_2:LoginViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "event.object">
+            </PersistentString>
+            <PersistentString
+               value = "[event.value boolValue]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__36-[LoginViewController bindViewModel]_block_invoke_4:LoginViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[EFScrollViewController viewDidLoad]:EFScrollViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.pSection.frame.size.height">
+            </PersistentString>
+            <PersistentString
+               value = "self.pScrollView.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__36-[LoginViewController bindViewModel]_block_invoke_6:LoginViewController.m">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

@@ -1,0 +1,20 @@
+//
+//  KChartView.h
+//  QianFangGuJie
+//
+//  Created by  rjt on 15/5/28.
+//  Copyright (c) 2015年 JYZD. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface KChartView : UIView
+@property(strong,nonatomic)NSString* jingdu;            //精度
+/*!
+ *  @brief  绘制K线图
+ *
+ *  @param records 包含K线图数据的数组
+ *  @param needVol 是否需要绘制交易量
+ */
+-(void)drawChart:(NSArray*)records stock:(BOOL)isStock isNeedVol:(BOOL)needVol;
+@end

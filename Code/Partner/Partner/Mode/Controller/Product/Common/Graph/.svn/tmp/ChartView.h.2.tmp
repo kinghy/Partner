@@ -1,0 +1,35 @@
+//
+//  ChartView.h
+//  chart
+//
+//  Created by  rjt on 15/5/27.
+//  Copyright (c) 2015年 JYZD. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface ChartView : UIView
+
+/** 绘制图片 */
+-(void)drawChartWithPrices:(NSArray*)prices
+                    yClose:(NSString*)close
+                 highPrice:(NSString*)high
+                  lowPrice:(NSString*)low
+                 openPrice:(NSString*)open
+                      time:(NSString*)time
+                allMinutes:(int)min
+                 fullSize:(BOOL)fullSize
+                spliteTime:(NSArray*) sptime
+               splitDiffer:(NSArray*) spdiffer;
+
+
+/** 绘制图片 */
+-(void)drawChartWithVols:(NSArray*)prices
+                allMinutes:(int)min
+                spliteTime:(NSArray*) sptime
+               splitDiffer:(NSArray*) spdiffer;
+
+-(void)startPulse;//开启最新价跳动
+-(void)endPulse;//关闭最新价跳动
+
+@end

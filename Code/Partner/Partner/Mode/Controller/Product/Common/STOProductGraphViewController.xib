@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="STOProductGraphViewController">
+            <connections>
+                <outlet property="chartBtn" destination="MBe-0S-7wv" id="TR3-nN-Vu5"/>
+                <outlet property="chartView" destination="SAO-a4-Xjq" id="Lfo-GP-Jup"/>
+                <outlet property="chooseBarView" destination="8h5-jp-IjT" id="CTe-fc-qs3"/>
+                <outlet property="kChartBtn" destination="0pA-l7-d1x" id="HNe-Jc-RhN"/>
+                <outlet property="kchart" destination="Ffb-8g-3wI" id="ckV-Mn-3fg"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="B4u-3C-sa1"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="450"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8h5-jp-IjT" userLabel="view_choose">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="35"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0pA-l7-d1x">
+                            <rect key="frame" x="196" y="0.0" width="171" height="35"/>
+                            <state key="normal" title="日K">
+                                <color key="titleColor" red="0.45882352941176469" green="0.45882352941176469" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="clickBtnDisplayGraph:" destination="-1" eventType="touchUpInside" id="tnm-qY-m3W"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBe-0S-7wv">
+                            <rect key="frame" x="8" y="0.0" width="171" height="35"/>
+                            <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="分时">
+                                <color key="titleColor" red="0.45882352941176469" green="0.45882352941176469" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="clickBtnDisplayGraph:" destination="-1" eventType="touchUpInside" id="FAh-ub-RIq"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B2S-7B-KBg" customClass="QUFlatLine">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                            <color key="backgroundColor" red="0.7725490196" green="0.7725490196" blue="0.7725490196" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="4T7-D0-2Xv"/>
+                        <constraint firstItem="MBe-0S-7wv" firstAttribute="leading" secondItem="8h5-jp-IjT" secondAttribute="leading" constant="8" id="5yj-gi-92h"/>
+                        <constraint firstItem="MBe-0S-7wv" firstAttribute="top" secondItem="8h5-jp-IjT" secondAttribute="top" id="6Mw-tA-hha"/>
+                        <constraint firstItem="MBe-0S-7wv" firstAttribute="width" secondItem="8h5-jp-IjT" secondAttribute="width" multiplier="0.456" id="6fL-ow-ykf"/>
+                        <constraint firstItem="0pA-l7-d1x" firstAttribute="top" secondItem="8h5-jp-IjT" secondAttribute="top" id="CMv-WM-mWK"/>
+                        <constraint firstAttribute="bottom" secondItem="0pA-l7-d1x" secondAttribute="bottom" id="DRK-Iy-iQH"/>
+                        <constraint firstAttribute="bottom" secondItem="MBe-0S-7wv" secondAttribute="bottom" id="nBt-Z9-6r0"/>
+                        <constraint firstItem="0pA-l7-d1x" firstAttribute="width" secondItem="MBe-0S-7wv" secondAttribute="width" id="u0L-8m-iJs"/>
+                        <constraint firstAttribute="trailing" secondItem="0pA-l7-d1x" secondAttribute="trailing" constant="8" id="zhK-09-Uiv"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SAO-a4-Xjq" customClass="ChartView">
+                    <rect key="frame" x="8" y="46" width="359" height="404"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ffb-8g-3wI" customClass="KChartView">
+                    <rect key="frame" x="8" y="46" width="359" height="404"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="SAO-a4-Xjq" secondAttribute="bottom" id="2sH-Fd-Tyk"/>
+                <constraint firstItem="SAO-a4-Xjq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="GhL-XZ-K4z"/>
+                <constraint firstAttribute="trailing" secondItem="SAO-a4-Xjq" secondAttribute="trailing" constant="8" id="Gvz-3g-31O"/>
+                <constraint firstAttribute="trailing" secondItem="8h5-jp-IjT" secondAttribute="trailing" id="MSL-Nl-LH8"/>
+                <constraint firstItem="SAO-a4-Xjq" firstAttribute="top" secondItem="8h5-jp-IjT" secondAttribute="bottom" constant="11" id="ROQ-tE-Dfl"/>
+                <constraint firstAttribute="bottom" secondItem="Ffb-8g-3wI" secondAttribute="bottom" id="aXf-rW-0y8"/>
+                <constraint firstItem="8h5-jp-IjT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="aad-Ue-DUR"/>
+                <constraint firstItem="8h5-jp-IjT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="b80-D2-Eo7"/>
+                <constraint firstAttribute="trailing" secondItem="Ffb-8g-3wI" secondAttribute="trailing" constant="8" id="rEM-aN-8gS"/>
+                <constraint firstItem="Ffb-8g-3wI" firstAttribute="top" secondItem="8h5-jp-IjT" secondAttribute="bottom" constant="11" id="sPo-QD-SZr"/>
+                <constraint firstItem="Ffb-8g-3wI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="tIp-Jy-43y"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="236.5" y="183"/>
+        </view>
+    </objects>
+</document>

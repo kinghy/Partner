@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IndexViewController">
+            <connections>
+                <outlet property="investTable" destination="qSL-M4-N7u" id="gAa-zn-jrR"/>
+                <outlet property="partnerTable" destination="Lz8-ny-klX" id="Jtg-A0-ubJ"/>
+                <outlet property="personalTable" destination="ypY-Iw-gLb" id="BHE-fe-6Vf"/>
+                <outlet property="tabBar" destination="RJ3-Mb-lIP" id="oGu-2n-NTD"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RJ3-Mb-lIP">
+                    <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <items>
+                        <tabBarItem title="合伙" image="partner.png" id="Z0S-H6-G73"/>
+                        <tabBarItem tag="1" title="投资" image="invest.png" id="rvJ-yf-7Nb"/>
+                        <tabBarItem tag="2" title="个人" image="person.png" id="FLh-Jk-lid"/>
+                    </items>
+                </tabBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lz8-ny-klX" userLabel="partnerTable" customClass="EFTableView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qSL-M4-N7u" userLabel="investTable" customClass="EFTableView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ypY-Iw-gLb" customClass="EFTableView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="qSL-M4-N7u" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="0h8-eB-B4M"/>
+                <constraint firstAttribute="trailing" secondItem="ypY-Iw-gLb" secondAttribute="trailing" id="6Rf-zD-5AO"/>
+                <constraint firstItem="Lz8-ny-klX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="7dr-wc-mja"/>
+                <constraint firstItem="RJ3-Mb-lIP" firstAttribute="top" secondItem="Lz8-ny-klX" secondAttribute="bottom" id="7s8-ee-gsd"/>
+                <constraint firstAttribute="trailing" secondItem="RJ3-Mb-lIP" secondAttribute="trailing" id="EqN-l3-HIP"/>
+                <constraint firstAttribute="trailing" secondItem="Lz8-ny-klX" secondAttribute="trailing" id="I6c-7M-aCH"/>
+                <constraint firstItem="ypY-Iw-gLb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="PjP-KO-slR"/>
+                <constraint firstItem="qSL-M4-N7u" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Wdd-dh-r10"/>
+                <constraint firstItem="RJ3-Mb-lIP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="XLe-m6-2tN"/>
+                <constraint firstItem="RJ3-Mb-lIP" firstAttribute="top" secondItem="qSL-M4-N7u" secondAttribute="bottom" id="ZNX-is-dFR"/>
+                <constraint firstItem="Lz8-ny-klX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hh5-CT-I84"/>
+                <constraint firstAttribute="bottom" secondItem="RJ3-Mb-lIP" secondAttribute="bottom" id="iPl-3E-L5b"/>
+                <constraint firstItem="ypY-Iw-gLb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jp5-id-62c"/>
+                <constraint firstAttribute="trailing" secondItem="qSL-M4-N7u" secondAttribute="trailing" id="l6X-qG-L3t"/>
+                <constraint firstItem="RJ3-Mb-lIP" firstAttribute="top" secondItem="ypY-Iw-gLb" secondAttribute="bottom" id="zSr-qS-gyx"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="554.5" y="265.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="invest.png" width="33" height="24"/>
+        <image name="partner.png" width="37" height="25"/>
+        <image name="person.png" width="27" height="26"/>
+    </resources>
+</document>
