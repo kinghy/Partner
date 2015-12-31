@@ -13,6 +13,8 @@
 #import "EFSourceItem.h"
 #import "EFNibHelper.h"
 #import "UIView+RemoveSubviews.h"
+#import "EFHLine.h"
+#import "EFEmptyEntity.h"
 
 @implementation EFAdaptor{
     CGFloat tableHieght ;
@@ -153,7 +155,7 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    CGFloat height = 0;
+    CGFloat height = kCellHeight;
     EFSourceGroupItem *item = [self.pSources groupSecionByIndex:section];
     if (item.sectionName==nil || [item.sectionName isEqualToString:NSStringFromClass([EFSection class])]) {
         return 0;
@@ -191,7 +193,7 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    CGFloat height = 0;
+    CGFloat height = kCellHeight;
     EFSourceItem *item = [self.pSources secionByEntityIndex:indexPath.row andGroupIndex:indexPath.section];
     if (item.sectionHeight>0) {
         height = item.sectionHeight;
@@ -215,8 +217,8 @@
     EFSection* section = item.section;
     if(cell.contentView.subviews.count>0 &&  item.section == cell.contentView.subviews[0]){
         section = item.section;
-    }else if ([item.sectionName isEqualToString:@"EFSection"]) {
-        section = [[EFSection alloc] init];
+//    }else if ([item.sectionName isEqualToString:@"EFSection"]) {
+//        section = [[EFSection alloc] init];
     }else{
         /** 如果实现了自定义Section初始化委托，用于notifyChangeForSection 时，复用现有Section */
         if([self.delegate respondsToSelector:@selector(EFAdaptor:initSectionClass:)])
@@ -242,8 +244,25 @@
             cell.shouldIndentWhileEditing = setEntity.shouldIndentWhileEditing;
             cell.accessoryType = setEntity.accessoryType;
             cell.editingAccessoryType = setEntity.editingAccessoryType;
-            cell.indentationLevel = setEntity.indentationLevel;
-            cell.indentationWidth = setEntity.indentationWidth;
+//            cell.indentationLevel = setEntity.indentationLevel;
+//            cell.indentationWidth = setEntity.indentationWidth;
+            
+            float indentation = 15*setEntity.indentationLevel;
+            float height = item.sectionHeight==0?kCellHeight:item.sectionHeight;
+            EFHLine *line = [EFHLine lineWithFrame:CGRectMake(0+indentation, height-1, tableView.frame.size.width-indentation, 1) andColor:kLineColor];
+            [cell addSubview:line];
+            
+        }else if ([item.entity isKindOfClass:[EFEmptyEntity class]]) {
+            EFEmptyEntity* setEntity = (EFEmptyEntity*)item.entity;
+//            cell.indentationLevel = setEntity.indentationLevel;
+//            cell.indentationWidth = setEntity.indentationWidth;
+            
+            cell.backgroundColor = [UIColor colorWithRed:246.f/250.f green:246.f/250.f blue:246.f/250.f alpha:1.f];
+            float indentation = 15*setEntity.indentationLevel;
+            
+            EFHLine *line = [EFHLine lineWithFrame:CGRectMake(0+indentation, item.sectionHeight-1, tableView.frame.size.width-indentation, 1) andColor:kLineColor];
+            [cell addSubview:line];
+            
         }else{
             [cell.contentView removeAllSubviews];
             CGRect rect = cell.contentView.bounds;

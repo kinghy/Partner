@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface EFVLine : UIView
++(instancetype)lineWithFrame:(CGRect)frame andColor:(UIColor*)color;
+-(void)trans;
 @property (nonatomic,strong) CAShapeLayer* lineLayer;
 @end

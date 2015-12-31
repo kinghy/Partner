@@ -9,7 +9,18 @@
 #import "EFHLine.h"
 
 @implementation EFHLine
++(instancetype)lineWithFrame:(CGRect)frame andColor:(UIColor*)color{
+    EFHLine* line = [[self alloc] initWithFrame:frame];
+    line.backgroundColor = color;
+    [line trans];
+    return line;
+}
+
 -(void)awakeFromNib{
+    [self trans];
+}
+
+-(void)trans{
     UIColor *color = self.backgroundColor;
     self.backgroundColor = [UIColor clearColor];
     self.lineLayer = [CAShapeLayer layer];

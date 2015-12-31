@@ -68,9 +68,12 @@
     [[self.loginBtn.rac_command.executionSignals flattenMap:^RACStream *(RACSignal *subscribeSignal) {
         return [[subscribeSignal materialize] filter:^BOOL(RACEvent *event) {
             [hud hide:YES];
+            DDLogInfo(@"登录成功");
             return [event.value boolValue];
         }];
     }] subscribeNext:^(id x) {
+        DDLogInfo(@"登录成功");
+        
         [self.navigationController pushViewController:[[IndexViewController alloc] init] animated:YES];
     }];
 }

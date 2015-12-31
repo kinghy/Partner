@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C2365261C27F43F00760891 /* EFEmptyEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2365251C27F43F00760891 /* EFEmptyEntity.m */; };
 		7CD8B89E1C26CF0B00246013 /* EFAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD8B8101C26CF0B00246013 /* EFAdaptor.m */; };
 		7CD8B89F1C26CF0B00246013 /* EFBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD8B8131C26CF0B00246013 /* EFBaseManager.m */; };
 		7CD8B8A01C26CF0B00246013 /* EFBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD8B8151C26CF0B00246013 /* EFBaseViewController.m */; };
@@ -69,6 +70,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C2365241C27F43F00760891 /* EFEmptyEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFEmptyEntity.h; sourceTree = "<group>"; };
+		7C2365251C27F43F00760891 /* EFEmptyEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFEmptyEntity.m; sourceTree = "<group>"; };
 		7CD8B8021C26CEC600246013 /* libEasyFrame.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEasyFrame.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CD8B80F1C26CF0B00246013 /* EFAdaptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFAdaptor.h; sourceTree = "<group>"; };
 		7CD8B8101C26CF0B00246013 /* EFAdaptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFAdaptor.m; sourceTree = "<group>"; };
@@ -263,12 +266,14 @@
 				7CD8B81B1C26CF0B00246013 /* EFScrollViewController.m */,
 				7CD8B81C1C26CF0B00246013 /* EFSection.h */,
 				7CD8B81D1C26CF0B00246013 /* EFSection.m */,
-				7CD8B81E1C26CF0B00246013 /* EFSetEntity.h */,
-				7CD8B81F1C26CF0B00246013 /* EFSetEntity.m */,
 				7CD8B8201C26CF0B00246013 /* EFSource.h */,
 				7CD8B8211C26CF0B00246013 /* EFSource.m */,
 				7CD8B8221C26CF0B00246013 /* EFSourceItem.h */,
 				7CD8B8231C26CF0B00246013 /* EFSourceItem.m */,
+				7CD8B81E1C26CF0B00246013 /* EFSetEntity.h */,
+				7CD8B81F1C26CF0B00246013 /* EFSetEntity.m */,
+				7C2365241C27F43F00760891 /* EFEmptyEntity.h */,
+				7C2365251C27F43F00760891 /* EFEmptyEntity.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -552,6 +557,7 @@
 				7CD8B8A91C26CF0B00246013 /* EFConnectorParam.m in Sources */,
 				7CD8B8CE1C26CF0B00246013 /* UIBarButtonItem+YL.m in Sources */,
 				7CD8B8AB1C26CF0B00246013 /* EFEntity.m in Sources */,
+				7C2365261C27F43F00760891 /* EFEmptyEntity.m in Sources */,
 				7CD8B8D31C26CF0B00246013 /* EFAlertViewCommon.m in Sources */,
 				7CD8B8C61C26CF0B00246013 /* DDMultiFormatter.m in Sources */,
 				7CD8B8AD1C26CF0B00246013 /* AFHTTPRequestOperationManager.m in Sources */,

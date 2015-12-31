@@ -1,0 +1,32 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "3C7D47BDCFDC0E839851A35DB186BCA7D74342D8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "bdb048c0-3d8f-9e4f-a100-eb25397d1da5++4612" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "bdb048c0-3d8f-9e4f-a100-eb25397d1da5++4612" : 0,
+    "3C7D47BDCFDC0E839851A35DB186BCA7D74342D8" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "6E721523-2738-4CCD-83AF-69FF4AD189B3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "bdb048c0-3d8f-9e4f-a100-eb25397d1da5++4612" : "Partner\/Code\/Partner\/Partner\/Resource\/index\/",
+    "3C7D47BDCFDC0E839851A35DB186BCA7D74342D8" : "Partner\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Partner",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Code\/Partner.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kinghy\/Partner.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3C7D47BDCFDC0E839851A35DB186BCA7D74342D8"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/192.168.5.101\/svn\/qianfang_app",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "bdb048c0-3d8f-9e4f-a100-eb25397d1da5++4612"
+    }
+  ]
+}

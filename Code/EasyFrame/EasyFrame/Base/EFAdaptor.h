@@ -52,6 +52,15 @@
 -(void)addEntity:(EFEntity*)entity withSection:(Class)sectionClass andHeight:(CGFloat)height andGroup:(NSString*)group;
 
 /*!
+ *  @brief  添加Entity实例绑定section
+ *
+ *  @param entity       entity实例
+ *  @param sectionClass Section类
+ *  @param height       Section类的高度，传入0则不做改动
+ */
+-(void)addEntity:(EFEntity *)entity withSection:(Class)sectionClass andHeight:(CGFloat)height;
+
+/*!
  *  @brief  添加Entity实例绑定section，使用默认分组
  *
  *  @param entity       entity实例

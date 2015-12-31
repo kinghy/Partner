@@ -20,6 +20,12 @@
 		7C227CA81BFB27C700441E96 /* MarketEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C227CA71BFB27C700441E96 /* MarketEntity.m */; };
 		7C227CAB1BFB27DC00441E96 /* MarketParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C227CAA1BFB27DC00441E96 /* MarketParam.m */; };
 		7C227CAE1BFB28D500441E96 /* ProductManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C227CAD1BFB28D500441E96 /* ProductManager.m */; };
+		7C23651A1C27BBCA00760891 /* contract_setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C2365181C27BBCA00760891 /* contract_setting@2x.png */; };
+		7C23651B1C27BBCA00760891 /* message_setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C2365191C27BBCA00760891 /* message_setting@2x.png */; };
+		7C2365201C27DACC00760891 /* report_setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C23651C1C27DACC00760891 /* report_setting@2x.png */; };
+		7C2365211C27DACC00760891 /* about_setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C23651D1C27DACC00760891 /* about_setting@2x.png */; };
+		7C2365221C27DACC00760891 /* services_setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C23651E1C27DACC00760891 /* services_setting@2x.png */; };
+		7C2365231C27DACC00760891 /* analysis_setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C23651F1C27DACC00760891 /* analysis_setting@2x.png */; };
 		7C24CF181BF5D4A70086266A /* STOProductSellBll.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C24CF171BF5D4A70086266A /* STOProductSellBll.m */; };
 		7C24CF1B1BF5DDC40086266A /* STOProductSellSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C24CF1A1BF5DDC40086266A /* STOProductSellSection.m */; };
 		7C24CF1D1BF5DDD30086266A /* STOProductSellSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C24CF1C1BF5DDD30086266A /* STOProductSellSection.xib */; };
@@ -219,6 +225,12 @@
 		7C227CAA1BFB27DC00441E96 /* MarketParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarketParam.m; sourceTree = "<group>"; };
 		7C227CAC1BFB28D500441E96 /* ProductManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductManager.h; sourceTree = "<group>"; };
 		7C227CAD1BFB28D500441E96 /* ProductManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductManager.m; sourceTree = "<group>"; };
+		7C2365181C27BBCA00760891 /* contract_setting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contract_setting@2x.png"; sourceTree = "<group>"; };
+		7C2365191C27BBCA00760891 /* message_setting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "message_setting@2x.png"; sourceTree = "<group>"; };
+		7C23651C1C27DACC00760891 /* report_setting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "report_setting@2x.png"; sourceTree = "<group>"; };
+		7C23651D1C27DACC00760891 /* about_setting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about_setting@2x.png"; sourceTree = "<group>"; };
+		7C23651E1C27DACC00760891 /* services_setting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "services_setting@2x.png"; sourceTree = "<group>"; };
+		7C23651F1C27DACC00760891 /* analysis_setting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "analysis_setting@2x.png"; sourceTree = "<group>"; };
 		7C24CF161BF5D4A70086266A /* STOProductSellBll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STOProductSellBll.h; sourceTree = "<group>"; };
 		7C24CF171BF5D4A70086266A /* STOProductSellBll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STOProductSellBll.m; sourceTree = "<group>"; };
 		7C24CF191BF5DDC40086266A /* STOProductSellSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STOProductSellSection.h; sourceTree = "<group>"; };
@@ -1081,6 +1093,12 @@
 		7CD8B8E51C26DEF300246013 /* personal */ = {
 			isa = PBXGroup;
 			children = (
+				7C23651C1C27DACC00760891 /* report_setting@2x.png */,
+				7C23651D1C27DACC00760891 /* about_setting@2x.png */,
+				7C23651E1C27DACC00760891 /* services_setting@2x.png */,
+				7C23651F1C27DACC00760891 /* analysis_setting@2x.png */,
+				7C2365181C27BBCA00760891 /* contract_setting@2x.png */,
+				7C2365191C27BBCA00760891 /* message_setting@2x.png */,
 				7CD8B8EA1C26E2FB00246013 /* cong.jpg */,
 				7CD8B8E61C26DF0A00246013 /* setting@2x.png */,
 			);
@@ -1227,6 +1245,7 @@
 				7CB637631C0E9ABD00143E35 /* Profile@2x.png in Resources */,
 				7CB637571C0E9ABD00143E35 /* create@2x.png in Resources */,
 				7CB637661C0E9ABD00143E35 /* more_data@2x.png in Resources */,
+				7C2365211C27DACC00760891 /* about_setting@2x.png in Resources */,
 				7CB6375C1C0E9ABD00143E35 /* partner_selected@2x.png in Resources */,
 				7CB637651C0E9ABD00143E35 /* contract_selected@2x.png in Resources */,
 				7C0CCDFB1BD888F7002E2CCD /* StockData.plist in Resources */,
@@ -1241,6 +1260,7 @@
 				7CB6375D1C0E9ABD00143E35 /* person@2x.png in Resources */,
 				7CB6375B1C0E9ABD00143E35 /* partner@2x.png in Resources */,
 				7C98B3B11BCE1683001DD686 /* ContractAlert.xib in Resources */,
+				7C23651A1C27BBCA00760891 /* contract_setting@2x.png in Resources */,
 				7CF914911BDE097A0087A8F6 /* STOProductMarketViewController.xib in Resources */,
 				7C5FCF4D1C18119C000E81CC /* STOMyStockHeadView.xib in Resources */,
 				7CACF5941BD8BAD8001CD671 /* STOStockListSection.xib in Resources */,
@@ -1252,19 +1272,23 @@
 				7CDB030B1C06900F00DB6015 /* STOProductSellOrderSection.xib in Resources */,
 				7CB637511C0E9ABD00143E35 /* contract_failed2x.png in Resources */,
 				7CB637561C0E9ABD00143E35 /* au@2x.png in Resources */,
+				7C23651B1C27BBCA00760891 /* message_setting@2x.png in Resources */,
 				7C7D9F2E1BBE3ED300FA0F7A /* ContractSection.xib in Resources */,
 				7CB54CB41BF45950007955CA /* STOProductViewController.xib in Resources */,
 				7CB6376A1C0E9ABD00143E35 /* rightarrow@2x.png in Resources */,
 				7CD8B8E41C26DDBA00246013 /* logo.jpg in Resources */,
+				7C2365201C27DACC00760891 /* report_setting@2x.png in Resources */,
 				7CEDB1BA1BDDC7BF00C77C98 /* STOProductGraphViewController.xib in Resources */,
 				7CB637591C0E9ABD00143E35 /* invest@2x.png in Resources */,
 				7CB637541C0E9ABD00143E35 /* nike@2x.png in Resources */,
 				7C68D1331BDF139D00D14969 /* STOProductMarketSection.xib in Resources */,
+				7C2365221C27DACC00760891 /* services_setting@2x.png in Resources */,
 				7C6BAC111BBD52E40035BF99 /* Info.plist in Resources */,
 				7CB6375A1C0E9ABD00143E35 /* invest_selected@2x.png in Resources */,
 				7C6C0FB71BC00403005EFF0D /* FilterSection.xib in Resources */,
 				7C7983EF1BBCE39E009CDB4A /* Assets.xcassets in Resources */,
 				7C044C261BCE2D9500FA4FF1 /* FilterListViewController.xib in Resources */,
+				7C2365231C27DACC00760891 /* analysis_setting@2x.png in Resources */,
 				7C411CDD1BDF7E6600AC08AB /* HandicapView.xib in Resources */,
 				7C6BAD301BBE38210035BF99 /* ContractViewController.xib in Resources */,
 				7C0CCDF51BD88535002E2CCD /* InvestSection.xib in Resources */,

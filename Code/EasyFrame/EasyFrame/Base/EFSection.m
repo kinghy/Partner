@@ -28,7 +28,4 @@
     info.bounds = CGRectMake(0, 0, bounds.size.width, bounds.size.height) ;
     return info;
 }
-
-
-
 @end
