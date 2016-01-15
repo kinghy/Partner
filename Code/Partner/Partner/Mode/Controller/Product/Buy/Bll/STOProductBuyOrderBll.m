@@ -35,7 +35,7 @@
     
     
     _viewModel = [STOProductBuyOrderViewModel viewModel];
-    [_viewModel getHqData];
+    [(STOProductBuyOrderViewModel*)_viewModel getHqData];
     
 //    @weakify(self);
 //    [[[[self.controller rac_signalForSelector:@selector(viewDidAppear:)] take:1] then:^RACSignal *{
@@ -73,30 +73,30 @@
         self.mySection.codeLabel.text = self.viewModel.code;
         self.mySection.slider.minimumValue = self.viewModel.minMoney.integerValue/10000;
         self.mySection.slider.maximumValue = self.viewModel.maxMoney.integerValue/10000;
-        
-        RAC(_viewModel,moneyValue) =  [s.slider rac_signalForControlEvents:UIControlEventValueChanged];
+        STOProductBuyOrderViewModel* model = (STOProductBuyOrderViewModel*)_viewModel;
+        RAC(model,moneyValue) =  [s.slider rac_signalForControlEvents:UIControlEventValueChanged];
         @weakify(self);
         //绑定最小值
-        [RACObserve(_viewModel, minMoney) subscribeNext:^(NSNumber* value) {
+        [RACObserve(model, minMoney) subscribeNext:^(NSNumber* value) {
             @strongify(self);
             self.mySection.minMoneyLabel.text = [NSString stringWithFormat:@"%ld万",value.integerValue/10000];
             self.mySection.slider.minimumValue = value.integerValue/10000;
         }];
         //绑定最大值
-        [RACObserve(_viewModel, maxMoney) subscribeNext:^(NSNumber* value) {
+        [RACObserve(model, maxMoney) subscribeNext:^(NSNumber* value) {
             @strongify(self);
             self.mySection.maxMoneyLabel.text = [NSString stringWithFormat:@"%ld万",value.integerValue/10000];
             self.mySection.slider.maximumValue = value.integerValue/10000;
         }];
         
-        RACSignal* currentValueSignal = RACObserve(_viewModel, currentValue);
+        RACSignal* currentValueSignal = RACObserve(model, currentValue);
         //绑定当前选择值
         [currentValueSignal subscribeNext:^(NSNumber* x) {
             @strongify(self);
             self.mySection.moneyLabel.text = [NSString stringWithFormat:@"%.0f万",x.doubleValue/10000];
 
         }];
-        RACSignal* lastestPriceSignal = RACObserve(_viewModel, lastestPrice);
+        RACSignal* lastestPriceSignal = RACObserve(model, lastestPrice);
         //绑定当前价
         [lastestPriceSignal subscribeNext:^(NSNumber* x) {
             @strongify(self);
@@ -114,7 +114,7 @@
         }];
         __weak STOProductContractsSection *_section = (STOProductContractsSection*)contractSection;
         //观察合约列表是否刷新
-        [RACObserve(_viewModel,contracts) subscribeNext:^(id x) {
+        [RACObserve(model,contracts) subscribeNext:^(id x) {
             [_section.contractTable reloadData];
         }];
         //绑定点击打开合约
@@ -122,7 +122,7 @@
             [[UIApplication sharedApplication].keyWindow addSubview:_section];
         }];
         //绑定合约选择
-        [RACObserve(_viewModel,selectContract) subscribeNext:^(ContractsRecordsEntity* entity) {
+        [RACObserve(model,selectContract) subscribeNext:^(ContractsRecordsEntity* entity) {
             @strongify(self);
             if(entity){
                 self.mySection.contractNoLabel.text = entity.contractNo;

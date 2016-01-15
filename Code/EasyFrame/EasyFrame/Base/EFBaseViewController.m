@@ -15,6 +15,23 @@
 
 @implementation EFBaseViewController
 
++(instancetype)controllerWithModel:(EFBaseViewModel *)viewModel nibName:(NSString *)nibName bundle:(NSBundle *)bundle{
+    EFBaseViewController *instance = [[self alloc] initWithNibName:nibName bundle:bundle];
+    if ([viewModel isKindOfClass:[instance typeOfModel]]) {
+        instance.viewModel = viewModel;
+    }
+    return instance;
+}
+
++(instancetype)controllerWithNibName:(NSString *)nibName bundle:(NSBundle *)bundle{
+    EFBaseViewController *instance = [[self alloc] initWithNibName:nibName bundle:bundle];
+    return instance;
+}
+
+-(Class)typeOfModel{
+    return [EFBaseViewModel class];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     //初始化默认参数
@@ -138,7 +155,12 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+-(void)dismissViewControllerAnimated:(BOOL)flag userObj:(id)userObj completion:(void (^)(void))completion {
+    if([self.delegate respondsToSelector:@selector(viewController:dismissedWithObject:)]){
+        [self.delegate viewController:self dismissedWithObject:userObj];
+    }
+    [super dismissViewControllerAnimated:flag completion:completion];
+}
 
 /*
 #pragma mark - Navigation

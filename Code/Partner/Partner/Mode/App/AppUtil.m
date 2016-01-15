@@ -12,6 +12,8 @@
 
 @implementation AppUtil
 +(UIColor*)colorWithOpen:(float)open andNew:(float)now{
+    now = now>0?now:open;
+    
     if (open > now) {
         return Color_Down_Green;
     }else if(now>open){
@@ -19,6 +21,8 @@
     }else{
         return Color_DS_Gray;
     }
+
+
 }
 
 +(void)gotoIndex:(BOOL)animated{

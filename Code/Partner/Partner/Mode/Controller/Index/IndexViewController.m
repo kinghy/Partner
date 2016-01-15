@@ -8,6 +8,7 @@
 
 #import "IndexViewController.h"
 #import "PartnerBll.h"
+#import "PartnerViewModel.h"
 #import "InvestBll.h"
 #import "FilterViewController.h"
 #import "PersonalBll.h"
@@ -48,14 +49,12 @@
 }
 
 -(void)initBll{
-    
-    self.partnerBll = [PartnerBll bllWithController:self tableViewDict:@{kBllUniqueTable:self.partnerTable}];
+    self.partnerBll = [PartnerBll bllWithController:self tableViewDict:@{kBllUniqueTable:self.partnerTable} viewModel:[PartnerViewModel viewModel]];
     [self.partnerBll hide];
     self.investBll = [InvestBll bllWithController:self tableViewDict:@{kBllUniqueTable:self.investTable}];
     [self.investBll hide];
     self.personalBll = [PersonalBll bllWithController:self tableViewDict:@{kBllUniqueTable:self.personalTable}];
     [self.personalBll hide];
-    
 }
 
 - (void)didReceiveMemoryWarning {

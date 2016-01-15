@@ -13,7 +13,11 @@
 
 #define kBllUniqueTable @"kBllUniqueTable"
 
-@interface EFBll : NSObject<EFAdaptorDelegate>
+@class EFBaseViewModel;
+
+@interface EFBll : NSObject<EFAdaptorDelegate,EFBaseViewControllerDelegate>{
+    EFBaseViewModel* _viewModel;
+}
 
 /*!
  *  @brief  构造Bll方法
@@ -36,11 +40,29 @@
  *  @brief  构造Bll方法
  *
  *  @param controller 父Controller
- *  @param tables  tableView字典（tableview名称:实例）
+ *  @param tables     tableView字典（tableview名称:实例）
  *
  *  @return 是咧
  */
 +(instancetype)bllWithController:(EFBaseViewController *)controller tableViewDict:(NSDictionary *)tables;
+
+/*!
+ *  @brief  构造Bll方法
+ *
+ *  @param controller 父Controller
+ *  @param tables     tableView字典（tableview名称:实例）
+ *  @param viewModel  viewModel实例，子类需实现typeOfModel确定实例类型
+ *
+ *  @return 是咧
+ */
++(instancetype)bllWithController:(EFBaseViewController *)controller tableViewDict:(NSDictionary *)tables viewModel:(EFBaseViewModel*)viewModel;
+
+/*!
+ *  @brief 返回ViewModel的实例，子类实现
+ *
+ *  @return 返回需要实例类型
+ */
+-(Class)typeOfModel;
 
 /*!
  *  @brief  初始化方法，子类实现
@@ -70,6 +92,11 @@
 - (EFAdaptor*)loadEFUIWithTable:(EFTableView*)tableView andKey:(NSString*)key;
 
 /*!
+ *  @brief  MVVM模式绑定ViewModel
+ */
+-(void)bindViewModel;
+
+/*!
  *  @brief  控制器出现时调用
  */
 -(void)controllerDidAppear;
@@ -97,6 +124,8 @@
 @property(nonatomic,strong)NSMutableDictionary* pAdaptorDict;
 
 @property(nonatomic,readonly) BOOL isHidden;
+
+@property(nonatomic,strong)EFBaseViewModel* viewModel;
 
 
 @end

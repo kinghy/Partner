@@ -11,8 +11,8 @@
 #import "ProductEntity.h"
 #import "ContractViewController.h"
 #import "IndexViewController.h"
-#import "ContractManager.h"
 #import "ContractsEntity.h"
+#import "ContractViewModel.h"
 
 @implementation PartnerBll
 -(EFAdaptor *)loadEFUIWithTable:(EFTableView *)tableView andKey:(NSString *)key{
@@ -25,35 +25,41 @@
     [super loadBll];
 }
 
--(void)getContract{
-    DEFINED_WEAK_SELF
-    MBProgressHUD *hud =[MBProgressHUD showHUDAddedTo:self.controller.view animated:YES];
-    [[ContractManager shareContractManager] filterContract:^(EFEntity *entity, NSError *error) {
-        [hud hide:YES];
-        ContractsEntity* e = (ContractsEntity*)entity;
-        if (error==nil && e && e.records.count>0) {
-            EFAdaptor* adpator = (EFAdaptor*)_self.pAdaptorDict[@"kBllUniqueTable"];
-            [adpator clear];
-            for (int i=0; i<e.records.count; ++i) {
-                [adpator addEntity:e.records[i] withSection:[PartnerSection class]];
-            }
-            [adpator notifyChanged];
-            
-        }
-    }];
+-(Class)typeOfModel{
+    return [PartnerViewModel class];
 }
 
+-(void)bindViewModel{
+    if (_viewModel) {
+        PartnerViewModel* model = (PartnerViewModel*)_viewModel;
+        @weakify(self)
+        [RACObserve(model, seqPartner) subscribeNext:^(id x) {
+            @strongify(self);
+            EFAdaptor* adpator = (EFAdaptor*)self.pAdaptorDict[kBllUniqueTable];
+            [adpator clear];
+            [[[(RACSequence*)x signal] deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(id x) {
+                [adpator addEntity:x withSection:[PartnerSection class]];
+            } completed:^{
+                [adpator notifyChanged];
+            }];
+        }];
+    }
+    
+}
+
+
 -(void)controllerDidAppear{
-   [self getContract]; 
+   [(PartnerViewModel*)self.viewModel getPartner];
 }
 
 -(void)show{
     [super show];
-    [self getContract];
+    [(PartnerViewModel*)self.viewModel getPartner];
 }
 
 #pragma marks - EFAdaptorDelegate
--(void)EFAdaptor:(EFAdaptor *)adaptor forSection:(EFSection *)section forEntity:(EFEntity *)entity{
+
+-(void)EFAdaptor:(EFAdaptor *)adaptor willDidLoadSection:(EFSection *)section willDidLoadEntity:(EFEntity *)entity{
     if ([section isMemberOfClass:[PartnerSection class]]) {
         ContractsRecordsEntity* e = (ContractsRecordsEntity*)entity;
         PartnerSection* s = (PartnerSection*)section;
@@ -72,9 +78,9 @@
     }
 }
 
+
 -(void)EFAdaptor:(EFAdaptor *)adaptor selectedSection:(EFSection *)section entity:(EFEntity *)entity{
-    ContractViewController* controller = [[ContractViewController alloc] init];
-    [ContractManager shareContractManager].selectedContract = (ContractsEntity*)entity;
+    ContractViewController* controller = [ContractViewController controllerWithModel:[ContractViewModel viewModelWithEntity:(ContractsRecordsEntity*)entity] nibName:@"ContractViewController" bundle:[NSBundle mainBundle]];
     [self.controller.navigationController pushViewController:controller animated:YES];
 }
 @end

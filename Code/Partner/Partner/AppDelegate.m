@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "EFAlertViewCommon.h"
 #import "LoginViewController.h"
+#import "LoginViewModel.h"
 #import "STODBManager.h"
 #import "UserManager.h"
 
@@ -56,7 +57,8 @@
     
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.nav = [[UINavigationController alloc] initWithRootViewController:[[LoginViewController alloc] init]];
+    
+    self.nav = [[UINavigationController alloc] initWithRootViewController:[LoginViewController controllerWithModel:[LoginViewModel viewModel] nibName:@"LoginViewController" bundle:[NSBundle mainBundle]]];
     self.window.rootViewController = self.nav;
     
 //    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[STOProductMarketViewController alloc] initWithNibName:@"STOProductMarketViewController" bundle:[NSBundle mainBundle]]];

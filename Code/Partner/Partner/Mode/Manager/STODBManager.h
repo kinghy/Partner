@@ -6,6 +6,8 @@
 //  Copyright (c) 2014年 weihui. All rights reserved.
 //
 
+
+#import "StockEntity.h"
 #import "Singleton.h"
 
 
@@ -20,6 +22,7 @@ typedef enum {
 
 @property (nonatomic,copy) NSString *searchText;
 @property (nonatomic,strong) NSMutableArray *myStockArr;
+
 single_interface(STODBManager)
 
 //检查数据库版本号
@@ -74,4 +77,6 @@ single_interface(STODBManager)
 -(void)cleanMyStockArr;
 
 - (MatchingType)matchingTypeWithSearchText:(NSString *)searchText;
+
+
 @end

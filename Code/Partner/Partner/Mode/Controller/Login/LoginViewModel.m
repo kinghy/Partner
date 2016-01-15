@@ -12,6 +12,7 @@
 @implementation LoginViewModel
 -(void)viewModelDidLoad{
     DEFINED_WEAK_SELF;
+    UIBlurEffect *effect;
     self.loginCmd = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
         return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
             self.usernameStr = @"michaelkira";
@@ -24,10 +25,10 @@
                 [[UserManager shareUserManager] loginWithName:_self.usernameStr andPwd:_self.pwdStr andBlock:^(EFEntity *entity, NSError *error) {
                     if (error==nil &&  [AppEntity isEntityValid:entity] ) {
                         [subscriber sendNext:@(YES)];
+                        [subscriber sendCompleted];
                     }else {
-                        [subscriber sendNext:@(NO)];
+                        [subscriber sendError:error];
                     }
-                    [subscriber sendCompleted];
                 }];
                 
             }

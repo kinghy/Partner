@@ -121,8 +121,16 @@
 
 
 -(void)clear{
+
+    for (id group in self.groups) {
+        [self.groupDict[group] removeAllObjects];
+    }
     [self.groups removeAllObjects];
     [self.groupDict removeAllObjects];
+}
+
+-(void)dealloc{
+    show_dealloc_info(self);
 }
 
 @end;

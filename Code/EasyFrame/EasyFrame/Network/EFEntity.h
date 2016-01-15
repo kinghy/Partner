@@ -23,8 +23,8 @@
 /*!
  *  @brief  快捷参数列表
  */
-@property (nonatomic,strong)  id dict;
+@property (nonatomic,strong)    id dict;
 
-@property(nonatomic,assign)int tag;
+@property(nonatomic,assign)     NSInteger tag;
 
 @end

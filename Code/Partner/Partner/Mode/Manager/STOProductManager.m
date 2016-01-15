@@ -59,7 +59,6 @@ single_implementation(STOProductManager)
          if(returnBlock!=nil){
              returnBlock(entity,error);
          }
-         
      }];
 }
 

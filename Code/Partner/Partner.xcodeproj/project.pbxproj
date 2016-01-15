@@ -13,10 +13,11 @@
 		7C044C261BCE2D9500FA4FF1 /* FilterListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C044C241BCE2D9500FA4FF1 /* FilterListViewController.xib */; };
 		7C044C291BCE2EDA00FA4FF1 /* FilterListBll.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C044C281BCE2EDA00FA4FF1 /* FilterListBll.m */; };
 		7C044C2C1BCE2F8500FA4FF1 /* FilterListSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C044C2B1BCE2F8500FA4FF1 /* FilterListSection.m */; };
+		7C0882E91C44D57900BA32F8 /* libEasyFrame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C0882E81C44D57900BA32F8 /* libEasyFrame.a */; };
+		7C0882EE1C44F09900BA32F8 /* PartnerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0882ED1C44F09900BA32F8 /* PartnerViewModel.m */; };
 		7C0CCDF41BD88535002E2CCD /* InvestSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0CCDF21BD88535002E2CCD /* InvestSection.m */; };
 		7C0CCDF51BD88535002E2CCD /* InvestSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C0CCDF31BD88535002E2CCD /* InvestSection.xib */; };
 		7C0CCDFB1BD888F7002E2CCD /* StockData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C0CCDF81BD888F7002E2CCD /* StockData.plist */; };
-		7C0CCDFC1BD888F7002E2CCD /* STODBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C0CCDFA1BD888F7002E2CCD /* STODBManager.m */; };
 		7C227CA81BFB27C700441E96 /* MarketEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C227CA71BFB27C700441E96 /* MarketEntity.m */; };
 		7C227CAB1BFB27DC00441E96 /* MarketParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C227CAA1BFB27DC00441E96 /* MarketParam.m */; };
 		7C227CAE1BFB28D500441E96 /* ProductManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C227CAD1BFB28D500441E96 /* ProductManager.m */; };
@@ -52,7 +53,6 @@
 		7C6BAD161BBD68E40035BF99 /* PartnerSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6BAD151BBD68E40035BF99 /* PartnerSection.xib */; };
 		7C6BAD1C1BBD8FD60035BF99 /* PartnerSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6BAD1B1BBD8FD60035BF99 /* PartnerSection.m */; };
 		7C6BAD1F1BBD981B0035BF99 /* ProductEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6BAD1E1BBD981B0035BF99 /* ProductEntity.m */; };
-		7C6BAD2B1BBE34B30035BF99 /* ContractBll.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6BAD2A1BBE34B30035BF99 /* ContractBll.m */; };
 		7C6BAD2F1BBE38210035BF99 /* ContractViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C6BAD2D1BBE38210035BF99 /* ContractViewController.m */; };
 		7C6BAD301BBE38210035BF99 /* ContractViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6BAD2E1BBE38210035BF99 /* ContractViewController.xib */; };
 		7C6C0FB71BC00403005EFF0D /* FilterSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6C0FB61BC00403005EFF0D /* FilterSection.xib */; };
@@ -98,7 +98,6 @@
 		7CACF57B1BD8A8E0001CD671 /* StockEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CACF57A1BD8A8E0001CD671 /* StockEntity.m */; };
 		7CACF5831BD8AC75001CD671 /* STOSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CACF5811BD8AC75001CD671 /* STOSearchViewController.m */; };
 		7CACF5841BD8AC75001CD671 /* STOSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CACF5821BD8AC75001CD671 /* STOSearchViewController.xib */; };
-		7CACF58C1BD8AE62001CD671 /* STOSearchStockBll.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CACF58B1BD8AE62001CD671 /* STOSearchStockBll.m */; };
 		7CACF5931BD8BAD8001CD671 /* STOStockListSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CACF5911BD8BAD8001CD671 /* STOStockListSection.m */; };
 		7CACF5941BD8BAD8001CD671 /* STOStockListSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CACF5921BD8BAD8001CD671 /* STOStockListSection.xib */; };
 		7CACF59B1BD8D138001CD671 /* STOProductManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CACF59A1BD8D138001CD671 /* STOProductManager.m */; };
@@ -156,8 +155,11 @@
 		7CCE9A0F1C0BEBE100752847 /* STOProductOrderDetailSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CCE9A0D1C0BEBE100752847 /* STOProductOrderDetailSection.xib */; };
 		7CCE9A161C0BF1AA00752847 /* STOProductOrderDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CCE9A141C0BF1AA00752847 /* STOProductOrderDetailViewController.m */; };
 		7CCE9A171C0BF1AA00752847 /* STOProductOrderDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CCE9A151C0BF1AA00752847 /* STOProductOrderDetailViewController.xib */; };
+		7CD670891C47399D00B06824 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD670881C47399D00B06824 /* UIImage+ImageEffects.m */; };
+		7CD6708B1C47623E00B06824 /* line_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CD6708A1C47623E00B06824 /* line_down@2x.png */; };
+		7CD6708E1C4779A200B06824 /* STODBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD6708D1C4779A200B06824 /* STODBManager.m */; };
+		7CD670941C4786EE00B06824 /* STOSearchViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD670931C4786EE00B06824 /* STOSearchViewModel.m */; };
 		7CD7D0261C11227500FB9005 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD7D0251C11227500FB9005 /* LoginViewModel.m */; };
-		7CD8B8DA1C26CF9900246013 /* libEasyFrame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CD8B8D91C26CF9900246013 /* libEasyFrame.a */; };
 		7CD8B8DD1C26D29A00246013 /* PersonalBll.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD8B8DC1C26D29A00246013 /* PersonalBll.m */; };
 		7CD8B8E01C26D57D00246013 /* PersonalSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD8B8DF1C26D57D00246013 /* PersonalSection.m */; };
 		7CD8B8E21C26D58F00246013 /* PersonalSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CD8B8E11C26D58F00246013 /* PersonalSection.xib */; };
@@ -170,6 +172,8 @@
 		7CDFB53C1BE9EFCC00226615 /* ContractsParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CDFB53B1BE9EFCC00226615 /* ContractsParam.m */; };
 		7CDFB53F1BE9F03A00226615 /* ContractsEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CDFB53E1BE9F03A00226615 /* ContractsEntity.m */; };
 		7CDFB5421BE9F0AE00226615 /* ContractManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CDFB5411BE9F0AE00226615 /* ContractManager.m */; };
+		7CE357711C45F5D400CB8515 /* ContractViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE357701C45F5D400CB8515 /* ContractViewModel.m */; };
+		7CE357BD1C4737A000CB8515 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CE357BC1C4737A000CB8515 /* Accelerate.framework */; };
 		7CE5D12A1BDDCF1200E6C97E /* ProductChartEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE5D1291BDDCF1200E6C97E /* ProductChartEntity.m */; };
 		7CE5D12D1BDDCF4A00E6C97E /* ProductVolChartEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE5D12C1BDDCF4A00E6C97E /* ProductVolChartEntity.m */; };
 		7CE5D13C1BDDE46700E6C97E /* STOProductMarketBll.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE5D13B1BDDE46700E6C97E /* STOProductMarketBll.m */; };
@@ -213,12 +217,13 @@
 		7C044C281BCE2EDA00FA4FF1 /* FilterListBll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterListBll.m; sourceTree = "<group>"; };
 		7C044C2A1BCE2F8500FA4FF1 /* FilterListSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterListSection.h; sourceTree = "<group>"; };
 		7C044C2B1BCE2F8500FA4FF1 /* FilterListSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterListSection.m; sourceTree = "<group>"; };
+		7C0882E81C44D57900BA32F8 /* libEasyFrame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEasyFrame.a; path = "../EasyFrame/build/Debug-iphoneos/libEasyFrame.a"; sourceTree = "<group>"; };
+		7C0882EC1C44F09900BA32F8 /* PartnerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartnerViewModel.h; sourceTree = "<group>"; };
+		7C0882ED1C44F09900BA32F8 /* PartnerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartnerViewModel.m; sourceTree = "<group>"; };
 		7C0CCDF11BD88535002E2CCD /* InvestSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvestSection.h; sourceTree = "<group>"; };
 		7C0CCDF21BD88535002E2CCD /* InvestSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvestSection.m; sourceTree = "<group>"; };
 		7C0CCDF31BD88535002E2CCD /* InvestSection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InvestSection.xib; sourceTree = "<group>"; };
 		7C0CCDF81BD888F7002E2CCD /* StockData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = StockData.plist; sourceTree = "<group>"; };
-		7C0CCDF91BD888F7002E2CCD /* STODBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STODBManager.h; sourceTree = "<group>"; };
-		7C0CCDFA1BD888F7002E2CCD /* STODBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STODBManager.m; sourceTree = "<group>"; };
 		7C227CA61BFB27C700441E96 /* MarketEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketEntity.h; sourceTree = "<group>"; };
 		7C227CA71BFB27C700441E96 /* MarketEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarketEntity.m; sourceTree = "<group>"; };
 		7C227CA91BFB27DC00441E96 /* MarketParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarketParam.h; sourceTree = "<group>"; };
@@ -276,8 +281,6 @@
 		7C6BAD1B1BBD8FD60035BF99 /* PartnerSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartnerSection.m; sourceTree = "<group>"; };
 		7C6BAD1D1BBD981B0035BF99 /* ProductEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductEntity.h; sourceTree = "<group>"; };
 		7C6BAD1E1BBD981B0035BF99 /* ProductEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductEntity.m; sourceTree = "<group>"; };
-		7C6BAD291BBE34B30035BF99 /* ContractBll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContractBll.h; sourceTree = "<group>"; };
-		7C6BAD2A1BBE34B30035BF99 /* ContractBll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContractBll.m; sourceTree = "<group>"; };
 		7C6BAD2C1BBE38210035BF99 /* ContractViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContractViewController.h; sourceTree = "<group>"; };
 		7C6BAD2D1BBE38210035BF99 /* ContractViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContractViewController.m; sourceTree = "<group>"; };
 		7C6BAD2E1BBE38210035BF99 /* ContractViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContractViewController.xib; sourceTree = "<group>"; };
@@ -360,8 +363,6 @@
 		7CACF5801BD8AC75001CD671 /* STOSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STOSearchViewController.h; sourceTree = "<group>"; };
 		7CACF5811BD8AC75001CD671 /* STOSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STOSearchViewController.m; sourceTree = "<group>"; };
 		7CACF5821BD8AC75001CD671 /* STOSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STOSearchViewController.xib; sourceTree = "<group>"; };
-		7CACF58A1BD8AE62001CD671 /* STOSearchStockBll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STOSearchStockBll.h; sourceTree = "<group>"; };
-		7CACF58B1BD8AE62001CD671 /* STOSearchStockBll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STOSearchStockBll.m; sourceTree = "<group>"; };
 		7CACF5901BD8BAD8001CD671 /* STOStockListSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STOStockListSection.h; sourceTree = "<group>"; };
 		7CACF5911BD8BAD8001CD671 /* STOStockListSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STOStockListSection.m; sourceTree = "<group>"; };
 		7CACF5921BD8BAD8001CD671 /* STOStockListSection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STOStockListSection.xib; sourceTree = "<group>"; };
@@ -439,9 +440,15 @@
 		7CCE9A131C0BF1AA00752847 /* STOProductOrderDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STOProductOrderDetailViewController.h; sourceTree = "<group>"; };
 		7CCE9A141C0BF1AA00752847 /* STOProductOrderDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STOProductOrderDetailViewController.m; sourceTree = "<group>"; };
 		7CCE9A151C0BF1AA00752847 /* STOProductOrderDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STOProductOrderDetailViewController.xib; sourceTree = "<group>"; };
+		7CD670871C47399D00B06824 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		7CD670881C47399D00B06824 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		7CD6708A1C47623E00B06824 /* line_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "line_down@2x.png"; sourceTree = "<group>"; };
+		7CD6708C1C4779A200B06824 /* STODBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STODBManager.h; sourceTree = "<group>"; };
+		7CD6708D1C4779A200B06824 /* STODBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STODBManager.m; sourceTree = "<group>"; };
+		7CD670921C4786EE00B06824 /* STOSearchViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STOSearchViewModel.h; sourceTree = "<group>"; };
+		7CD670931C4786EE00B06824 /* STOSearchViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STOSearchViewModel.m; sourceTree = "<group>"; };
 		7CD7D0241C11227500FB9005 /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
 		7CD7D0251C11227500FB9005 /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
-		7CD8B8D91C26CF9900246013 /* libEasyFrame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEasyFrame.a; path = "../EasyFrame/build/Debug-iphoneos/libEasyFrame.a"; sourceTree = "<group>"; };
 		7CD8B8DB1C26D29A00246013 /* PersonalBll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalBll.h; sourceTree = "<group>"; };
 		7CD8B8DC1C26D29A00246013 /* PersonalBll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalBll.m; sourceTree = "<group>"; };
 		7CD8B8DE1C26D57D00246013 /* PersonalSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalSection.h; sourceTree = "<group>"; };
@@ -461,6 +468,9 @@
 		7CDFB53E1BE9F03A00226615 /* ContractsEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContractsEntity.m; sourceTree = "<group>"; };
 		7CDFB5401BE9F0AE00226615 /* ContractManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContractManager.h; sourceTree = "<group>"; };
 		7CDFB5411BE9F0AE00226615 /* ContractManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContractManager.m; sourceTree = "<group>"; };
+		7CE3576F1C45F5D400CB8515 /* ContractViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContractViewModel.h; sourceTree = "<group>"; };
+		7CE357701C45F5D400CB8515 /* ContractViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContractViewModel.m; sourceTree = "<group>"; };
+		7CE357BC1C4737A000CB8515 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		7CE5D1281BDDCF1200E6C97E /* ProductChartEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductChartEntity.h; sourceTree = "<group>"; };
 		7CE5D1291BDDCF1200E6C97E /* ProductChartEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductChartEntity.m; sourceTree = "<group>"; };
 		7CE5D12B1BDDCF4A00E6C97E /* ProductVolChartEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductVolChartEntity.h; sourceTree = "<group>"; };
@@ -493,7 +503,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CD8B8DA1C26CF9900246013 /* libEasyFrame.a in Frameworks */,
+				7CE357BD1C4737A000CB8515 /* Accelerate.framework in Frameworks */,
+				7C0882E91C44D57900BA32F8 /* libEasyFrame.a in Frameworks */,
 				56803CFA84007DAF371CD5F2 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -518,7 +529,8 @@
 		1B25CE38C68FA2F89D7F6B33 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7CD8B8D91C26CF9900246013 /* libEasyFrame.a */,
+				7CE357BC1C4737A000CB8515 /* Accelerate.framework */,
+				7C0882E81C44D57900BA32F8 /* libEasyFrame.a */,
 				38DD38B0693C4A0267344AAD /* libPods.a */,
 			);
 			name = Frameworks;
@@ -739,6 +751,8 @@
 				7C6BAC621BBD52FA0035BF99 /* IndexViewController.xib */,
 				7C6BAD121BBD68030035BF99 /* PartnerBll.h */,
 				7C6BAD131BBD68030035BF99 /* PartnerBll.m */,
+				7C0882EC1C44F09900BA32F8 /* PartnerViewModel.h */,
+				7C0882ED1C44F09900BA32F8 /* PartnerViewModel.m */,
 				7C6BAD151BBD68E40035BF99 /* PartnerSection.xib */,
 				7C6BAD1A1BBD8FD60035BF99 /* PartnerSection.h */,
 				7C6BAD1B1BBD8FD60035BF99 /* PartnerSection.m */,
@@ -770,8 +784,8 @@
 			isa = PBXGroup;
 			children = (
 				7C0CCDF81BD888F7002E2CCD /* StockData.plist */,
-				7C0CCDF91BD888F7002E2CCD /* STODBManager.h */,
-				7C0CCDFA1BD888F7002E2CCD /* STODBManager.m */,
+				7CD6708C1C4779A200B06824 /* STODBManager.h */,
+				7CD6708D1C4779A200B06824 /* STODBManager.m */,
 				7CACF5991BD8D138001CD671 /* STOProductManager.h */,
 				7CACF59A1BD8D138001CD671 /* STOProductManager.m */,
 				7C788F3C1BE0C14A00EF19C4 /* UserManager.h */,
@@ -787,6 +801,7 @@
 		7C6BAC771BBD52FA0035BF99 /* OpenSource */ = {
 			isa = PBXGroup;
 			children = (
+				7CD670861C47399D00B06824 /* UIImage+ImageEffects */,
 				7C788F421BE0CD5100EF19C4 /* CustomIOSAlertView */,
 			);
 			path = OpenSource;
@@ -795,11 +810,11 @@
 		7C6BAD201BBE32C00035BF99 /* Contract */ = {
 			isa = PBXGroup;
 			children = (
-				7C6BAD291BBE34B30035BF99 /* ContractBll.h */,
-				7C6BAD2A1BBE34B30035BF99 /* ContractBll.m */,
 				7C6BAD2C1BBE38210035BF99 /* ContractViewController.h */,
 				7C6BAD2D1BBE38210035BF99 /* ContractViewController.m */,
 				7C6BAD2E1BBE38210035BF99 /* ContractViewController.xib */,
+				7CE3576F1C45F5D400CB8515 /* ContractViewModel.h */,
+				7CE357701C45F5D400CB8515 /* ContractViewModel.m */,
 				7C7D9F2A1BBE3EB900FA0F7A /* ContractSection.h */,
 				7C7D9F2B1BBE3EB900FA0F7A /* ContractSection.m */,
 				7C7D9F2D1BBE3ED300FA0F7A /* ContractSection.xib */,
@@ -931,8 +946,6 @@
 		7CACF57D1BD8AC41001CD671 /* Bll */ = {
 			isa = PBXGroup;
 			children = (
-				7CACF58A1BD8AE62001CD671 /* STOSearchStockBll.h */,
-				7CACF58B1BD8AE62001CD671 /* STOSearchStockBll.m */,
 				7CE5D13A1BDDE46700E6C97E /* STOProductMarketBll.h */,
 				7CE5D13B1BDDE46700E6C97E /* STOProductMarketBll.m */,
 				7C787FA71BE04D7C00EF19C4 /* STOProductBuyOrderBll.h */,
@@ -994,6 +1007,8 @@
 				7CB435F11C1526FA00096030 /* STOProductBuyOrderViewModel.m */,
 				7C5FCF431C17F097000E81CC /* STOProductFreeStyleViewModel.h */,
 				7C5FCF441C17F097000E81CC /* STOProductFreeStyleViewModel.m */,
+				7CD670921C4786EE00B06824 /* STOSearchViewModel.h */,
+				7CD670931C4786EE00B06824 /* STOSearchViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1001,6 +1016,7 @@
 		7CB6372C1C0E9ABD00143E35 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				7CD6708A1C47623E00B06824 /* line_down@2x.png */,
 				7CD8B8E51C26DEF300246013 /* personal */,
 				7CB6372D1C0E9ABD00143E35 /* contract */,
 				7CB637301C0E9ABD00143E35 /* filter */,
@@ -1088,6 +1104,15 @@
 				7CD7D0251C11227500FB9005 /* LoginViewModel.m */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		7CD670861C47399D00B06824 /* UIImage+ImageEffects */ = {
+			isa = PBXGroup;
+			children = (
+				7CD670871C47399D00B06824 /* UIImage+ImageEffects.h */,
+				7CD670881C47399D00B06824 /* UIImage+ImageEffects.m */,
+			);
+			path = "UIImage+ImageEffects";
 			sourceTree = "<group>";
 		};
 		7CD8B8E51C26DEF300246013 /* personal */ = {
@@ -1303,6 +1328,7 @@
 				7CB637681C0E9ABD00143E35 /* revamp@2x.png in Resources */,
 				7C4FA2C31C06CEC40091D72E /* STOProductSellOrderViewController.xib in Resources */,
 				7CB637531C0E9ABD00143E35 /* arrow@2x.png in Resources */,
+				7CD6708B1C47623E00B06824 /* line_down@2x.png in Resources */,
 				7CB637601C0E9ABD00143E35 /* touxiang.jpg in Resources */,
 				7C6BACC91BBD52FA0035BF99 /* IndexViewController.xib in Resources */,
 				7CB637551C0E9ABD00143E35 /* selected@2x.png in Resources */,
@@ -1407,14 +1433,12 @@
 				7C24CF1B1BF5DDC40086266A /* STOProductSellSection.m in Sources */,
 				7CC89ACA1BEC416A0093FB17 /* LoginViewController.m in Sources */,
 				7CB54CB31BF45950007955CA /* STOProductViewController.m in Sources */,
-				7C0CCDFC1BD888F7002E2CCD /* STODBManager.m in Sources */,
 				7CA1927C1BC048B300799621 /* AgFilterBll.m in Sources */,
 				7CC889E31BDF46D00094D67C /* ProductChartParam.m in Sources */,
 				7CE5D13C1BDDE46700E6C97E /* STOProductMarketBll.m in Sources */,
 				7CB435F21C1526FA00096030 /* STOProductBuyOrderViewModel.m in Sources */,
 				7C6BACC81BBD52FA0035BF99 /* IndexViewController.m in Sources */,
 				7CC889DB1BDF13D30094D67C /* STOProductMarketSection.m in Sources */,
-				7C6BAD2B1BBE34B30035BF99 /* ContractBll.m in Sources */,
 				7CE5D1451BDDF1E100E6C97E /* AppParam.m in Sources */,
 				7CD8B8E01C26D57D00246013 /* PersonalSection.m in Sources */,
 				7CEDB1B91BDDC7BF00C77C98 /* STOProductGraphViewController.m in Sources */,
@@ -1424,6 +1448,7 @@
 				7C755D5B1C054DD800F92C09 /* ProductOrdersParam.m in Sources */,
 				7CACF5931BD8BAD8001CD671 /* STOStockListSection.m in Sources */,
 				7C787FA51BE04D1000EF19C4 /* STOProductBuyOrderViewController.m in Sources */,
+				7CD670941C4786EE00B06824 /* STOSearchViewModel.m in Sources */,
 				7CB54CCD1BF48ABA007955CA /* ProductHqsEntity.m in Sources */,
 				7CC889F41BDF55330094D67C /* Grid.m in Sources */,
 				7C788F3B1BE0C04B00EF19C4 /* AuthenticateParam.m in Sources */,
@@ -1446,7 +1471,7 @@
 				7CE5D12D1BDDCF4A00E6C97E /* ProductVolChartEntity.m in Sources */,
 				7CACF5831BD8AC75001CD671 /* STOSearchViewController.m in Sources */,
 				7CCE9A0E1C0BEBE100752847 /* STOProductOrderDetailSection.m in Sources */,
-				7CACF58C1BD8AE62001CD671 /* STOSearchStockBll.m in Sources */,
+				7CD670891C47399D00B06824 /* UIImage+ImageEffects.m in Sources */,
 				7C6BAD141BBD68030035BF99 /* PartnerBll.m in Sources */,
 				7CDB03111C06956D00DB6015 /* STOProductSellOrderBll.m in Sources */,
 				7C787FA91BE04D7C00EF19C4 /* STOProductBuyOrderBll.m in Sources */,
@@ -1456,6 +1481,7 @@
 				7CCCCEBC1BEB5411004A31A8 /* DocumentParam.m in Sources */,
 				7CACF57B1BD8A8E0001CD671 /* StockEntity.m in Sources */,
 				7CDFB53C1BE9EFCC00226615 /* ContractsParam.m in Sources */,
+				7CD6708E1C4779A200B06824 /* STODBManager.m in Sources */,
 				7CC889F31BDF55330094D67C /* ChartView.m in Sources */,
 				7C788F3E1BE0C14A00EF19C4 /* UserManager.m in Sources */,
 				7CD7D0261C11227500FB9005 /* LoginViewModel.m in Sources */,
@@ -1463,6 +1489,7 @@
 				7CC889EC1BDF4C440094D67C /* ProductVolChartParm.m in Sources */,
 				7C411CD31BDF5A1100AC08AB /* ProductKChartEntity.m in Sources */,
 				7C787FAC1BE04E6300EF19C4 /* STOProductBuyOrderSection.m in Sources */,
+				7CE357711C45F5D400CB8515 /* ContractViewModel.m in Sources */,
 				7C788F451BE0CD5100EF19C4 /* CustomIOSAlertView.m in Sources */,
 				7C24CF181BF5D4A70086266A /* STOProductSellBll.m in Sources */,
 				7CA1927F1BC048C900799621 /* CreateFilterBll.m in Sources */,
@@ -1479,6 +1506,7 @@
 				7CCCCEB91BEB5379004A31A8 /* DocumentEntity.m in Sources */,
 				7C7EA5C51BFDA43F00216103 /* AvailableCreditParam.m in Sources */,
 				7CB54CBA1BF46379007955CA /* STOProductFreeStyleBll.m in Sources */,
+				7C0882EE1C44F09900BA32F8 /* PartnerViewModel.m in Sources */,
 				7C044C251BCE2D9500FA4FF1 /* FilterListViewController.m in Sources */,
 				7C0CCDF41BD88535002E2CCD /* InvestSection.m in Sources */,
 				7C044C291BCE2EDA00FA4FF1 /* FilterListBll.m in Sources */,

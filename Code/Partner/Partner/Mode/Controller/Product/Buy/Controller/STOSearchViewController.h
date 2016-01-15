@@ -6,16 +6,14 @@
 //  Copyright (c) 2015年 余龙. All rights reserved.
 //
 
-#import "EFBaseViewController.h"
 #import "EFTableView.h"
 
-@interface STOSearchViewController : EFBaseViewController
+@interface STOSearchViewController : EFSimpleViewController
 
 @property (assign,nonatomic)BOOL canDismiss;
 
 @property (weak, nonatomic) IBOutlet UITextField *search;
 
-@property (weak, nonatomic) IBOutlet EFTableView *localStockTable;
 @property (weak, nonatomic) IBOutlet UIButton *cancelBtn;
 
 @end

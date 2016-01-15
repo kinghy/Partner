@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C0882EB1C44D6B500BA32F8 /* EFHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CD8B8271C26CF0B00246013 /* EFHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7C2365261C27F43F00760891 /* EFEmptyEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2365251C27F43F00760891 /* EFEmptyEntity.m */; };
 		7CD8B89E1C26CF0B00246013 /* EFAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD8B8101C26CF0B00246013 /* EFAdaptor.m */; };
 		7CD8B89F1C26CF0B00246013 /* EFBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD8B8131C26CF0B00246013 /* EFBaseManager.m */; };
@@ -20,7 +21,6 @@
 		7CD8B8A71C26CF0B00246013 /* EFSourceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD8B8231C26CF0B00246013 /* EFSourceItem.m */; };
 		7CD8B8A81C26CF0B00246013 /* EFConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD8B82C1C26CF0B00246013 /* EFConnector.m */; };
 		7CD8B8A91C26CF0B00246013 /* EFConnectorParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD8B82E1C26CF0B00246013 /* EFConnectorParam.m */; };
-		7CD8B8AA1C26CF0B00246013 /* EFConnectorQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD8B8301C26CF0B00246013 /* EFConnectorQueue.m */; };
 		7CD8B8AB1C26CF0B00246013 /* EFEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD8B8321C26CF0B00246013 /* EFEntity.m */; };
 		7CD8B8AC1C26CF0B00246013 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD8B8371C26CF0B00246013 /* AFHTTPRequestOperation.m */; };
 		7CD8B8AD1C26CF0B00246013 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD8B8391C26CF0B00246013 /* AFHTTPRequestOperationManager.m */; };
@@ -67,6 +67,8 @@
 		7CD8B8D61C26CF0B00246013 /* EFNotifyHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD8B8991C26CF0B00246013 /* EFNotifyHUD.m */; };
 		7CD8B8D71C26CF0B00246013 /* EFTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD8B89B1C26CF0B00246013 /* EFTableView.m */; };
 		7CD8B8D81C26CF0B00246013 /* EFVLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CD8B89D1C26CF0B00246013 /* EFVLine.m */; };
+		7CE3576D1C45F0E000CB8515 /* EFSimpleViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CE3576B1C45F0E000CB8515 /* EFSimpleViewController.h */; };
+		7CE3576E1C45F0E000CB8515 /* EFSimpleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE3576C1C45F0E000CB8515 /* EFSimpleViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,8 +105,6 @@
 		7CD8B82C1C26CF0B00246013 /* EFConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFConnector.m; sourceTree = "<group>"; };
 		7CD8B82D1C26CF0B00246013 /* EFConnectorParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFConnectorParam.h; sourceTree = "<group>"; };
 		7CD8B82E1C26CF0B00246013 /* EFConnectorParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFConnectorParam.m; sourceTree = "<group>"; };
-		7CD8B82F1C26CF0B00246013 /* EFConnectorQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFConnectorQueue.h; sourceTree = "<group>"; };
-		7CD8B8301C26CF0B00246013 /* EFConnectorQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFConnectorQueue.m; sourceTree = "<group>"; };
 		7CD8B8311C26CF0B00246013 /* EFEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFEntity.h; sourceTree = "<group>"; };
 		7CD8B8321C26CF0B00246013 /* EFEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFEntity.m; sourceTree = "<group>"; };
 		7CD8B8361C26CF0B00246013 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -204,6 +204,8 @@
 		7CD8B89B1C26CF0B00246013 /* EFTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFTableView.m; sourceTree = "<group>"; };
 		7CD8B89C1C26CF0B00246013 /* EFVLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFVLine.h; sourceTree = "<group>"; };
 		7CD8B89D1C26CF0B00246013 /* EFVLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFVLine.m; sourceTree = "<group>"; };
+		7CE3576B1C45F0E000CB8515 /* EFSimpleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFSimpleViewController.h; sourceTree = "<group>"; };
+		7CE3576C1C45F0E000CB8515 /* EFSimpleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFSimpleViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +276,8 @@
 				7CD8B81F1C26CF0B00246013 /* EFSetEntity.m */,
 				7C2365241C27F43F00760891 /* EFEmptyEntity.h */,
 				7C2365251C27F43F00760891 /* EFEmptyEntity.m */,
+				7CE3576B1C45F0E000CB8515 /* EFSimpleViewController.h */,
+				7CE3576C1C45F0E000CB8515 /* EFSimpleViewController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -295,8 +299,6 @@
 				7CD8B82C1C26CF0B00246013 /* EFConnector.m */,
 				7CD8B82D1C26CF0B00246013 /* EFConnectorParam.h */,
 				7CD8B82E1C26CF0B00246013 /* EFConnectorParam.m */,
-				7CD8B82F1C26CF0B00246013 /* EFConnectorQueue.h */,
-				7CD8B8301C26CF0B00246013 /* EFConnectorQueue.m */,
 				7CD8B8311C26CF0B00246013 /* EFEntity.h */,
 				7CD8B8321C26CF0B00246013 /* EFEntity.m */,
 			);
@@ -479,6 +481,18 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		7C0882EA1C44D6AA00BA32F8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CE3576D1C45F0E000CB8515 /* EFSimpleViewController.h in Headers */,
+				7C0882EB1C44D6B500BA32F8 /* EFHeader.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		7CD8B8011C26CEC600246013 /* EasyFrame */ = {
 			isa = PBXNativeTarget;
@@ -486,6 +500,7 @@
 			buildPhases = (
 				7CD8B7FE1C26CEC600246013 /* Sources */,
 				7CD8B7FF1C26CEC600246013 /* Frameworks */,
+				7C0882EA1C44D6AA00BA32F8 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -574,7 +589,6 @@
 				7CD8B8A51C26CF0B00246013 /* EFSetEntity.m in Sources */,
 				7CD8B8B21C26CF0B00246013 /* AFURLRequestSerialization.m in Sources */,
 				7CD8B8AF1C26CF0B00246013 /* AFNetworkReachabilityManager.m in Sources */,
-				7CD8B8AA1C26CF0B00246013 /* EFConnectorQueue.m in Sources */,
 				7CD8B8C51C26CF0B00246013 /* DDDispatchQueueLogFormatter.m in Sources */,
 				7CD8B8C21C26CF0B00246013 /* DDLog.m in Sources */,
 				7CD8B8C11C26CF0B00246013 /* DDFileLogger.m in Sources */,
@@ -584,6 +598,7 @@
 				7CD8B8CC1C26CF0B00246013 /* NSString+MD5.m in Sources */,
 				7CD8B8D41C26CF0B00246013 /* EFButton.m in Sources */,
 				7CD8B8BC1C26CF0B00246013 /* UIRefreshControl+AFNetworking.m in Sources */,
+				7CE3576E1C45F0E000CB8515 /* EFSimpleViewController.m in Sources */,
 				7CD8B8B81C26CF0B00246013 /* UIAlertView+AFNetworking.m in Sources */,
 				7CD8B8A71C26CF0B00246013 /* EFSourceItem.m in Sources */,
 				7CD8B8AE1C26CF0B00246013 /* AFHTTPSessionManager.m in Sources */,

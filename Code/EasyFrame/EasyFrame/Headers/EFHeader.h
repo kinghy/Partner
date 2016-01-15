@@ -23,4 +23,5 @@
 #import "EFConnector.h"
 #import "EFBaseViewModel.h"
 #import "EFBaseViewController.h"
+#import "EFSimpleViewController.h"
 #endif

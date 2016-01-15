@@ -13,8 +13,6 @@
 
 @interface LoginViewController ()
 
-@property (nonatomic,strong) LoginViewModel *viewModel;
-
 @end
 
 @implementation LoginViewController
@@ -44,37 +42,36 @@
 }
 */
 
+-(Class)typeOfModel{
+    return [LoginViewModel class];
+}
 
 -(void)bindViewModel{
-    _viewModel = [LoginViewModel viewModel];
-    RAC(_viewModel,usernameStr) = self.usernameText.rac_textSignal;
-    RAC(_viewModel,pwdStr) = self.pwdText.rac_textSignal;
-    self.loginBtn.rac_command = _viewModel.loginCmd;
-    
-//监视点击事件结果
-    __block MBProgressHUD* hud = nil;
-
-    [self.loginBtn.rac_command.executionSignals subscribeNext:^(id x) {
-        hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    }];
-
-    DEFINED_WEAK_SELF;
-    
-    [self.loginBtn.rac_command.errors subscribeNext:^(NSError *error) {
-        [hud hide:YES];
-        [EFCommonFunction showNotifyHUDAtViewBottom:_self.view withErrorMessage:RACMsgFormError(error) withBackColor:kColorLogin];
-    }];
-    
-    [[self.loginBtn.rac_command.executionSignals flattenMap:^RACStream *(RACSignal *subscribeSignal) {
-        return [[subscribeSignal materialize] filter:^BOOL(RACEvent *event) {
-            [hud hide:YES];
-            DDLogInfo(@"登录成功");
-            return [event.value boolValue];
-        }];
-    }] subscribeNext:^(id x) {
-        DDLogInfo(@"登录成功");
+    if (_viewModel) {
+        LoginViewModel* model = (LoginViewModel*)_viewModel;
+        RAC(model,usernameStr) = self.usernameText.rac_textSignal;
+        RAC(model,pwdStr) = self.pwdText.rac_textSignal;
+        self.loginBtn.rac_command = model.loginCmd;
         
-        [self.navigationController pushViewController:[[IndexViewController alloc] init] animated:YES];
-    }];
+        //监视点击事件结果
+        __block MBProgressHUD* hud = nil;
+        
+        [self.loginBtn.rac_command.executionSignals subscribeNext:^(id x) {
+            hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        }];
+        
+        @weakify(self)
+        [self.loginBtn.rac_command.errors subscribeNext:^(NSError *error) {
+            @strongify(self)
+            [hud hide:YES];
+            [EFCommonFunction showNotifyHUDAtViewBottom:self.view withErrorMessage:RACMsgFormError(error) withBackColor:kColorLogin];
+        }];
+        
+        [[self.loginBtn.rac_command.executionSignals flatten] subscribeNext:^(id x) {
+            @strongify(self)
+            DDLogInfo(@"登录成功");
+            [self.navigationController pushViewController:[[IndexViewController alloc] init] animated:YES];
+        }];
+    }
 }
 @end

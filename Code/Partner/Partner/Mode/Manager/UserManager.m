@@ -30,4 +30,8 @@ single_implementation(UserManager)
          
      }];
 }
+
+-(NSString *)getUserID{
+    return @"769";
+}
 @end

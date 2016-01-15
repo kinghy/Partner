@@ -19,7 +19,10 @@
 @property (nonatomic,strong) NSNumber* indexSZ;//最新价深圳
 
 @property (nonatomic,strong) NSArray* myStocks;
+@property (nonatomic,strong) NSArray* myStocksEntities;
 
 -(void)refreshHq;
 -(void)refreshMyStock;
+
+-(void)removeMyStock:(NSInteger)index;
 @end

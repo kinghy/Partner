@@ -210,6 +210,7 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     EFSourceItem *item = [self.pSources secionByEntityIndex:indexPath.row andGroupIndex:indexPath.section];
+    item.entity.tag = indexPath.row;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:item.sectionName];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault  reuseIdentifier: item.sectionName];

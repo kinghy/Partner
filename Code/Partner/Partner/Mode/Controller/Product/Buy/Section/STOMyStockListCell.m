@@ -10,11 +10,8 @@
 @implementation STOMyStockListCell
 
 - (void)awakeFromNib {
-    
-    
     self.change.clipsToBounds=YES;
     [[self.change layer]setCornerRadius:3.0];
-
     // Initialization code
 }
 - (void)layoutSubviews

@@ -17,6 +17,4 @@
 @property (nonatomic,strong) STOProductManager *manager;
 @property (nonatomic,strong) STOProductFreeStyleSection *mySection;
 
-@property (nonatomic,strong) STOProductFreeStyleViewModel *viewModel;
-
 @end

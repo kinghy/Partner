@@ -17,28 +17,30 @@
 #import "STOMyStockHeadView.h"
 #import "STOMyStockListCell.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import "STOSearchViewModel.h"
 
 @implementation STOProductFreeStyleBll
 
 -(void)loadBll{
     self.manager = [STOProductManager shareSTOProductManager];
     [super loadBll];
-    self.viewModel = [STOProductFreeStyleViewModel viewModel];
+    _viewModel = [STOProductFreeStyleViewModel viewModel];
+    __weak STOProductFreeStyleViewModel* model = (STOProductFreeStyleViewModel*)_viewModel;
     isSearch = false;
-    [self.viewModel refreshHq];
-    @weakify(self);
+    
     RACSignal* showSignal = [RACSignal combineLatest:@[[self rac_signalForSelector:@selector(show)],[self rac_signalForSelector:@selector(controllerDidAppear)]]];
+    RACSignal* hideSignal = [RACSignal merge:@[[self rac_signalForSelector:@selector(hide)],[self rac_signalForSelector:@selector(controllerDidDisappear)]]];
     [showSignal subscribeNext:^(id x) {
-        @strongify(self);
-        RACSignal* hideSignal = [RACSignal merge:@[[self rac_signalForSelector:@selector(hide)],[self rac_signalForSelector:@selector(controllerDidDisappear)]]];
+        [model refreshHq];
+        [model refreshMyStock];
         [[[RACSignal interval:kFreeStyleValue onScheduler:[RACScheduler mainThreadScheduler]] takeUntil:hideSignal] subscribeNext:^(id x) {
-            @strongify(self);
-            DDLogInfo(@"kFreeStyleValue");
-            [self.viewModel refreshHq];
-            [self.viewModel refreshMyStock];
-            
+            [model refreshHq];
+            [model refreshMyStock];
         }];
-    }];
+    } ];
+    
+    
+    
 }
 
 -(EFAdaptor *)loadEFUIWithTable:(EFTableView *)tableView andKey:(NSString *)key{
@@ -55,20 +57,20 @@
         [self.mySection.searchBtn addTarget:self action:@selector(searchClicked) forControlEvents:UIControlEventTouchUpInside];
         @weakify(self);
         //绑定上证指数
-        
-        [[RACSignal combineLatest:@[RACObserve(_viewModel, indexYSH),RACObserve(_viewModel, indexSH)]] subscribeNext:^(id x) {
+        __weak STOProductFreeStyleViewModel* model = (STOProductFreeStyleViewModel*)_viewModel;
+        [[RACSignal combineLatest:@[RACObserve(model, indexYSH),RACObserve(model, indexSH)]] subscribeNext:^(id x) {
             RACTupleUnpack(NSNumber *indexYSH, NSNumber *indexSH) = x;
             @strongify(self);
             NSString *sign = (indexSH.floatValue>indexYSH.floatValue)?@"+":@"";
             UIColor *color = [AppUtil colorWithOpen:indexYSH.floatValue andNew:indexSH.floatValue];
             self.mySection.shLabel.text = (indexSH==nil && indexSH.floatValue==0)?@"— —":[NSString stringWithFormat:@"%.2f",indexSH.floatValue];
             self.mySection.shMinus.text = [NSString stringWithFormat:@"%@%.2f      %@%.2f%%",sign,(indexSH.floatValue-indexYSH.floatValue),sign,(indexSH.floatValue-indexYSH.floatValue)*100/indexYSH.floatValue];
- 
+            
             [self.mySection.shLabel setTextColor:color];
             [self.mySection.shMinus setTextColor:color];
         }];
         
-        [[RACSignal combineLatest:@[RACObserve(_viewModel, indexYSZ),RACObserve(_viewModel, indexSZ)]] subscribeNext:^(id x) {
+        [[RACSignal combineLatest:@[RACObserve(model, indexYSZ),RACObserve(model, indexSZ)]] subscribeNext:^(id x) {
             RACTupleUnpack(NSNumber *indexYSZ, NSNumber *indexSZ) = x;
             @strongify(self);
             NSString *sign = (indexSZ.floatValue>indexYSZ.floatValue)?@"+":@"";
@@ -82,27 +84,41 @@
         
         self.mySection.myStockTable.dataSource = self;
         self.mySection.myStockTable.delegate = self;
-        [RACObserve(_viewModel, myStocks) subscribeNext:^(id x) {
+        [RACObserve(model, myStocks) subscribeNext:^(NSArray *myStocks) {
             @strongify(self);
-            [self.mySection.myStockTable reloadData];
+            if (!self.mySection.myStockTable.isEditing) {
+                [self.mySection.myStockTable reloadData];
+                if (myStocks && myStocks.count<=0 ) {
+                    self.mySection.myStockTable.hidden = YES;
+                    self.mySection.addMyStoctView.hidden = NO;
+                }else{
+                    self.mySection.myStockTable.hidden = NO;
+                    self.mySection.addMyStoctView.hidden = YES;
+                }
+            }
         }];
     }
 }
 
 -(void)searchClicked{
-    STOSearchViewController *controller = [[STOSearchViewController alloc] init];
+    
+    STOSearchViewController *controller = [STOSearchViewController controllerWithModel:[STOSearchViewModel viewModel] nibName:@"STOSearchViewController" bundle:nil];
+    controller.delegate = self;
     [self.controller presentViewController:controller animated:YES completion:nil];
     isSearch = YES;
 }
 
--(void)controllerWillAppear{
-    if (![self isHidden]) {
-        if (self.manager.chosedStock && isSearch) {
-            isSearch = false;
-            STOProductMarketViewController *controller= [[STOProductMarketViewController alloc] init];
-            [self.controller.navigationController pushViewController:controller animated:NO];
-        }
-    }
+-(void)viewController:(EFBaseViewController *)controller dismissedWithObject:(id)obj{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.1f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self goMarket:obj];
+    });
+    
+}
+
+-(void)goMarket:(StockEntity*)entity{
+    [self.manager chooseStock:entity];
+    STOProductMarketViewController *controller= [[STOProductMarketViewController alloc] init];
+    [self.controller.navigationController pushViewController:controller animated:YES];
 }
 
 
@@ -112,15 +128,16 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [self.viewModel.myStocks count];
+    STOProductFreeStyleViewModel* model = (STOProductFreeStyleViewModel*)_viewModel;
+    return [model.myStocks count];
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 50;
+    return 35;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 45;
+    return 55;
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
@@ -128,22 +145,49 @@
     return s;
 }
 
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    [(STOProductFreeStyleViewModel*)self.viewModel removeMyStock:indexPath.row];
+    [tableView setEditing:NO animated:YES];
+}
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString* cellIdentifyer = @"STOMyStockListCell";
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifyer];
     if (cell == nil) {
-        cell = [(UITableViewCell*)[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifyer];
-        STOMyStockListCell *cell = [EFNibHelper loadNibNamed:@"STOMyStockListCell" ofClass:[STOMyStockListCell class]];
+        cell = [EFNibHelper loadNibNamed:@"STOMyStockListCell" ofClass:[STOMyStockListCell class]];
     }
     
+    STOMyStockListCell* c = (STOMyStockListCell*)cell;
+    STOProductFreeStyleViewModel* model = (STOProductFreeStyleViewModel*)_viewModel;
+    ProductHqsRecordsEntity* hq = (ProductHqsRecordsEntity*)model.myStocks[indexPath.row];
+    c.stockName.text = hq.stockname;
+    c.stockCode.text = hq.stockcode;
+    UIColor* color = [AppUtil colorWithOpen:[hq.YClose floatValue] andNew:[hq.New floatValue]];
+    c.price.textColor = color;
+    c.change.textColor = color;
+    if ([hq.New floatValue]>0) {
+        c.price.text = [NSString stringWithFormat:@"%.2f",[hq.New floatValue]];
+        float rate = ([hq.New floatValue]-[hq.YClose floatValue])/[hq.YClose floatValue]*100;
+        if (rate>0) {
+            c.change.text = [NSString stringWithFormat:@"+%.2f%%",rate];
+        }else{
+            c.change.text = [NSString stringWithFormat:@"%.2f%%",rate];
+        }
+        
+    }else{
+        c.price.text = @"— —";
+        c.change.text = @"— —";
+    }
     return cell;
 }
 
-//-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-//    self.viewModel.selectContract =  self.viewModel.contracts[indexPath.row];
-//    [self closeContractClicked];
-//}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    StockEntity* entity = ((STOProductFreeStyleViewModel*)self.viewModel).myStocksEntities[indexPath.row];
+    [self goMarket:entity];
+}
 
 @end

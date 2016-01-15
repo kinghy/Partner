@@ -57,7 +57,7 @@
 #define kFreeStyleTime @"kFreeStyleTime" //自选股
 
 #define kFreeStyleKey @"kFreeStyleKey"   //股票行情图
-#define kFreeStyleValue 5
+#define kFreeStyleValue 3
 
 #define kHqChartKey @"kHqChartKey"   //股票行情图
 #define kHqChartValue 20

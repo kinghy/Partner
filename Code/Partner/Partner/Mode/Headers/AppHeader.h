@@ -18,4 +18,5 @@
 #import "AppUtil.h"
 #import "UserManager.h"
 #import "MBProgressHUD.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 #endif

@@ -7,7 +7,7 @@
 //
 
 #import "EFBll.h"
-
+#import "PartnerViewModel.h"
 @interface PartnerBll : EFBll
 
 @end

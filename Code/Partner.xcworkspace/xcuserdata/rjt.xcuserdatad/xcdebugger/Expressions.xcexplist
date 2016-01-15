@@ -11,18 +11,12 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "__36-[LoginViewController bindViewModel]_block_invoke_2:LoginViewController.m">
+         contextName = "-[PersonalHeaderSection setHeader:]:PersonalSection.m">
          <PersistentStrings>
             <PersistentString
-               value = "event.object">
-            </PersistentString>
-            <PersistentString
-               value = "[event.value boolValue]">
+               value = "[result extent]">
             </PersistentString>
          </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "__36-[LoginViewController bindViewModel]_block_invoke_4:LoginViewController.m">
       </ContextState>
       <ContextState
          contextName = "-[EFScrollViewController viewDidLoad]:EFScrollViewController.m">
@@ -36,7 +30,60 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[STOSearchViewModel getSearchContentWithText:]:STOSearchViewModel.m">
+      </ContextState>
+      <ContextState
          contextName = "__36-[LoginViewController bindViewModel]_block_invoke_6:LoginViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "__36-[LoginViewController bindViewModel]_block_invoke_4:LoginViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[STOSearchViewController addMyStock:]:STOSearchViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "btn.tag">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__54-[STODBManager searchStockWithMathingType:searchText:]_block_invoke:STODBManager.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[set stringForColumn:@&quot;mslid&quot;]">
+            </PersistentString>
+            <PersistentString
+               value = "[set stringForColumn:@&quot;choosed&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__47-[STOSearchViewModel getSearchContentWithText:]_block_invoke_3:STOSearchViewModel.m">
+      </ContextState>
+      <ContextState
+         contextName = "+[EFBaseViewController controllerWithModel:nibName:bundle:]:EFBaseViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "__36-[LoginViewController bindViewModel]_block_invoke_2:LoginViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "event.object">
+            </PersistentString>
+            <PersistentString
+               value = "[event.value boolValue]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[STOProductFreeStyleViewModel removeMyStock:]:STOProductFreeStyleViewModel.m">
+      </ContextState>
+      <ContextState
+         contextName = "__47-[STOSearchViewModel getSearchContentWithText:]_block_invoke_2:STOSearchViewModel.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
    </ContextStates>
 </VariablesViewState>

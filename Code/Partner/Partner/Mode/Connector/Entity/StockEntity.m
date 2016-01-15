@@ -9,5 +9,7 @@
 #import "StockEntity.h"
 
 @implementation StockEntity
-
+-(void)dealloc{
+    DDLogInfo(@"dealloc stockName = %@",self.stockName);
+}
 @end

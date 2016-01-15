@@ -8,6 +8,8 @@
 
 #import "AppEntity.h"
 
+@class RACCommand;
+
 @interface StockEntity : AppEntity
 
 /**stockCode	String	Y	股票代码*/
@@ -18,5 +20,7 @@
 @property (nonatomic,copy) NSString *stockAb;
 
 @property (nonatomic,copy) NSString *codeShsz;
+
+@property (nonatomic,copy) NSNumber* choosed;//是否自选
 
 @end

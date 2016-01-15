@@ -14,5 +14,7 @@ single_interface(UserManager)
 
 @property (strong,nonatomic) AuthenticateEntity* myEntity;
 
+-(NSString*)getUserID;
+
 -(void)loginWithName:(NSString*)name andPwd:(NSString*)password andBlock:(EFManagerRetBlock)returnBlock;
 @end

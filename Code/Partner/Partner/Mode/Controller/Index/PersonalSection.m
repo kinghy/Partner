@@ -7,6 +7,7 @@
 //
 
 #import "PersonalSection.h"
+#import "UIImage+ImageEffects.h"
 
 @implementation PersonalHeaderSection
 -(void)setHeader:(UIImage *)img{
@@ -16,15 +17,8 @@
     self.logoImg.layer.borderColor = [UIColor whiteColor].CGColor;
     self.logoImg.layer.borderWidth = 1.f;
     self.logoImg.clipsToBounds = YES;
-    CIContext *context = [CIContext contextWithOptions:nil];
-    CIImage *image = [CIImage imageWithCGImage:img.CGImage];
-    CIFilter *filter = [CIFilter filterWithName:@"CIGaussianBlur"];
-    [filter setValue:image forKey:kCIInputImageKey];
-    [filter setValue:@2.0f forKey: @"inputRadius"];
-    CIImage *result = [filter valueForKey:kCIOutputImageKey];
-    CGImageRef outImage = [context createCGImage: result fromRect:[result extent]];
-    UIImage * blurImage = [UIImage imageWithCGImage:outImage];
-    self.backgroundImg.image = blurImage;
+    self.backgroundImg.image = [img blurImage];
+
 }
 /*
 // Only override drawRect: if you perform custom drawing.

@@ -33,6 +33,34 @@
     return selfBll;
 }
 
++(instancetype)bllWithController:(EFBaseViewController *)controller tableViewDict:(NSDictionary *)tables viewModel:(EFBaseViewModel *)viewModel{
+    EFBll* selfBll=[self bll];
+    selfBll.controller=controller;
+    selfBll.pAdaptorDict = [NSMutableDictionary dictionary];
+    selfBll.pTableDict = [NSMapTable mapTableWithKeyOptions:NSPointerFunctionsStrongMemory valueOptions:NSPointerFunctionsWeakMemory];
+    NSEnumerator *keys = [tables keyEnumerator];
+    for (NSString *name in keys) {
+        [selfBll.pTableDict setObject:[tables objectForKey:name] forKey:name];
+    }
+    
+    [selfBll.controller registerBll:selfBll];
+    
+    if ([viewModel isKindOfClass:[selfBll typeOfModel]]) {
+        selfBll.viewModel = viewModel;
+    }
+    [selfBll loadBll];
+    
+    return selfBll;
+}
+
+-(void)bindViewModel{
+    
+}
+
+-(Class)typeOfModel{
+    return [EFBaseViewModel class];
+}
+
 -(void)loadBll{
     _isHidden = NO;
     [self loadEFManager];
@@ -43,6 +71,7 @@
             [self.pAdaptorDict setObject:adpator forKey:name];
         }
     }
+    [self bindViewModel];
 }
 
 -(void)loadEFManager{

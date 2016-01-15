@@ -6,8 +6,7 @@
 //  Copyright © 2015年 Kinghy. All rights reserved.
 //
 
-#import "EFBaseViewController.h"
+#import "EFSimpleViewController.h"
 
-@interface ContractViewController : EFBaseViewController
-
+@interface ContractViewController : EFSimpleViewController
 @end

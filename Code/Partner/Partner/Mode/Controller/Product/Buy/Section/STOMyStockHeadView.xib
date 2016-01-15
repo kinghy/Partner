@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -11,62 +11,64 @@
             <rect key="frame" x="0.0" y="0.0" width="370" height="35"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" id="gfR-ic-0qn">
-                    <rect key="frame" x="0.0" y="0.0" width="370" height="38"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfR-ic-0qn">
+                    <rect key="frame" x="0.0" y="0.0" width="370" height="35"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ezm-0f-AAy">
-                            <rect key="frame" x="15" y="4" width="46" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezm-0f-AAy">
+                            <rect key="frame" x="15" y="4" width="88" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="88" id="Md3-QQ-nyF"/>
+                                <constraint firstAttribute="height" constant="30" id="OIB-nj-erg"/>
+                            </constraints>
                             <state key="normal" title="名称">
                                 <color key="titleColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
-                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="TtH-we-Not">
-                            <rect key="frame" x="180" y="8" width="50" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TtH-we-Not">
+                            <rect key="frame" x="145" y="8" width="80" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="Qe4-83-zHB"/>
+                                <constraint firstAttribute="width" constant="80" id="ltD-K2-VF7"/>
+                            </constraints>
                             <state key="normal" title="最新价">
                                 <color key="titleColor" red="0.61568627450980395" green="0.61568627450980395" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
-                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Df7-bL-v4m">
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Df7-bL-v4m">
                             <rect key="frame" x="287" y="4" width="70" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="70" id="3Ac-NW-yHp"/>
+                                <constraint firstAttribute="height" constant="30" id="lsq-cS-yrP"/>
+                            </constraints>
                             <state key="normal" title="涨跌幅">
                                 <color key="titleColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
-                        <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mystock_sort_defualt.png" id="OSE-Vq-qtm">
-                            <rect key="frame" x="229" y="21" width="5" height="5"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                        </imageView>
-                        <imageView userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mystock_sort_defualt.png" id="gPp-ux-Mtw">
-                            <rect key="frame" x="347" y="21" width="5" height="5"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                        </imageView>
-                        <imageView userInteractionEnabled="NO" tag="5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mystock_sort_up.png" id="Xqz-CT-883">
-                            <rect key="frame" x="229" y="12" width="7" height="14"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                        </imageView>
-                        <imageView userInteractionEnabled="NO" tag="6" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mystock_sort_up.png" id="VWS-CJ-YQq">
-                            <rect key="frame" x="347" y="12" width="7" height="14"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                        </imageView>
                     </subviews>
                     <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="TtH-we-Not" firstAttribute="centerX" secondItem="gfR-ic-0qn" secondAttribute="centerX" id="5gv-eG-H8Z"/>
+                        <constraint firstItem="TtH-we-Not" firstAttribute="top" secondItem="gfR-ic-0qn" secondAttribute="top" constant="8" id="U6m-DU-cSa"/>
+                        <constraint firstAttribute="trailing" secondItem="Df7-bL-v4m" secondAttribute="trailing" constant="13" id="Xxn-Oa-D2i"/>
+                        <constraint firstItem="Df7-bL-v4m" firstAttribute="top" secondItem="gfR-ic-0qn" secondAttribute="top" constant="4" id="iIY-Sa-zec"/>
+                        <constraint firstItem="ezm-0f-AAy" firstAttribute="leading" secondItem="gfR-ic-0qn" secondAttribute="leading" constant="15" id="nkP-uB-HGd"/>
+                        <constraint firstItem="ezm-0f-AAy" firstAttribute="top" secondItem="gfR-ic-0qn" secondAttribute="top" constant="4" id="pY9-Dv-gyt"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="gfR-ic-0qn" secondAttribute="bottom" id="Irp-Ve-mXW"/>
+                <constraint firstAttribute="trailing" secondItem="gfR-ic-0qn" secondAttribute="trailing" id="ghE-ou-Ay0"/>
+                <constraint firstItem="gfR-ic-0qn" firstAttribute="leading" secondItem="OSi-MX-hxB" secondAttribute="leading" id="shG-aE-Q8e"/>
+                <constraint firstItem="gfR-ic-0qn" firstAttribute="top" secondItem="OSi-MX-hxB" secondAttribute="top" id="ub1-0z-gM7"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="453" y="465.5"/>
         </view>
     </objects>
-    <resources>
-        <image name="mystock_sort_defualt.png" width="5" height="5"/>
-        <image name="mystock_sort_up.png" width="7" height="14"/>
-    </resources>
 </document>

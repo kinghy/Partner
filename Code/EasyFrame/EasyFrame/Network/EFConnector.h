@@ -40,15 +40,6 @@ typedef void (^EFConnQueueRetBlock)(AFHTTPRequestOperation *operation, NSOperati
  */
 - (EFConnResult*)runUntilFinished:(EFConnectorParam*)param;
 
-/*!
- *  @brief  网络队列请求
- *
- *  @param params EFConnectorQueue 网络请求参数队列
- *  @param isSeriall 是否串行执行，每个请求都依赖于队列中的前一个请求
- *  @param block  所有请求完成后调用block
- *
- */
-- (void)runQueue:(EFConnectorQueue*)params seriall:(BOOL)isSeriall finishBlock:(void (^)(NSArray * operations))finishedBlock;
 
 @end
 
