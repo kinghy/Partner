@@ -21,6 +21,9 @@
 @property (nonatomic,strong) NSArray* myStocks;
 @property (nonatomic,strong) NSArray* myStocksEntities;
 
+@property (nonatomic,strong) RACCommand* addCmd;
+
+
 -(void)refreshHq;
 -(void)refreshMyStock;
 

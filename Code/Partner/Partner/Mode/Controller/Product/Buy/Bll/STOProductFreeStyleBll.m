@@ -38,9 +38,6 @@
             [model refreshMyStock];
         }];
     } ];
-    
-    
-    
 }
 
 -(EFAdaptor *)loadEFUIWithTable:(EFTableView *)tableView andKey:(NSString *)key{
@@ -54,7 +51,10 @@
 -(void)EFAdaptor:(EFAdaptor *)adaptor willDidLoadSection:(EFSection *)section willDidLoadEntity:(EFEntity *)entity{
     if ([section isKindOfClass:[STOProductFreeStyleSection class]]) {
         self.mySection = (STOProductFreeStyleSection*)section;
+        
         [self.mySection.searchBtn addTarget:self action:@selector(searchClicked) forControlEvents:UIControlEventTouchUpInside];
+        [self.mySection.addMyStockBtn addTarget:self action:@selector(searchClicked) forControlEvents:UIControlEventTouchUpInside];
+        
         @weakify(self);
         //绑定上证指数
         __weak STOProductFreeStyleViewModel* model = (STOProductFreeStyleViewModel*)_viewModel;
@@ -97,6 +97,7 @@
                 }
             }
         }];
+        
     }
 }
 
