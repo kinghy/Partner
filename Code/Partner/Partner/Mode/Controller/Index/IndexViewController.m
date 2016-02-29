@@ -31,6 +31,8 @@
     self.navBarHidden = NO;
     self.statusBarStyle = UIStatusBarStyleLightContent;
     self.tabBar.delegate =self;
+    self.tabBar.backgroundColor = kColorTabBar;
+    
     self.title = @"合伙";
     [self setRightNavBarWithTitle:@"" image:[UIImage imageNamed:@"filter"] action:@selector(filterClicked:)]; 
     self.tabBar.selectedItem = self.tabBar.items[0];

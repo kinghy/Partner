@@ -17,6 +17,8 @@
 #define Color_Bg_RGBA(x, y, z,a) [UIColor colorWithRed:x/255.0f green:y/255.0f blue:z/255.0f alpha:a]
 //导航条颜色
 #define kColorNavBar Color_Bg_RGB(6, 29, 57)
+//tab条颜色
+#define kColorTabBar Color_Bg_RGB(60, 84, 153)
 
 #define kSouceGroupHeight 64.f
 #define kCellHeight 48.f
