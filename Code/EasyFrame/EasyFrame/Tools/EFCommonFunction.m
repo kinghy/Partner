@@ -150,11 +150,11 @@
 
 
 //在视图中间显示浮层
-+(void)showNotifyHUDAtViewCenter:(UIView*)view withErrorMessage:(NSString *)errorMessage withTextFiled:(UITextField*)textField{
-    [self showNotifyHUDAtViewCenter:view withErrorMessage:errorMessage withTextFiled:textField withBackColor:nil];
++(void)showNotifyHUDAtViewCenter:(UIView*)view withErrorMessage:(NSString *)errorMessage withTextField:(UITextField*)textField{
+    [self showNotifyHUDAtViewCenter:view withErrorMessage:errorMessage withTextField:textField withBackColor:nil];
 }
 
-+(void)showNotifyHUDAtViewCenter:(UIView*)view withErrorMessage:(NSString *)errorMessage withTextFiled:(UITextField*)textField  withBackColor:(UIColor*)backgroundColor{
++(void)showNotifyHUDAtViewCenter:(UIView*)view withErrorMessage:(NSString *)errorMessage withTextField:(UITextField*)textField  withBackColor:(UIColor*)backgroundColor{
     for (UIView *notifyView in view.subviews) {
         if ([notifyView isMemberOfClass:[EFNotifyHUD class]]) {
             EFNotifyHUD *notify = (EFNotifyHUD*)notifyView;

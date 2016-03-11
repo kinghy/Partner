@@ -125,8 +125,8 @@
 + (void)setView:(UIView*)view cornerRadius:(CGFloat)radius color:(CGColorRef)color borderWidth:(CGFloat)width;
 
 /** 在视图中间显示浮层 */
-+(void)showNotifyHUDAtViewCenter:(UIView*)view withErrorMessage:(NSString *)errorMessage withTextFiled:(UITextField*)textField;
-+(void)showNotifyHUDAtViewCenter:(UIView*)view withErrorMessage:(NSString *)errorMessage withTextFiled:(UITextField*)textField withBackColor:(UIColor*)backgroundColor;
++(void)showNotifyHUDAtViewCenter:(UIView*)view withErrorMessage:(NSString *)errorMessage withTextField:(UITextField*)textField;
++(void)showNotifyHUDAtViewCenter:(UIView*)view withErrorMessage:(NSString *)errorMessage withTextField:(UITextField*)textField withBackColor:(UIColor*)backgroundColor;
 /** 在视图中间显示浮层 */
 +(void)showNotifyHUDAtViewCenter:(UIView*)view  withErrorMessage:(NSString *)errorMessage;
 +(void)showNotifyHUDAtViewCenter:(UIView*)view  withErrorMessage:(NSString *)errorMessage withBackColor:(UIColor*)backgroundColor;
