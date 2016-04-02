@@ -278,5 +278,16 @@
         [notify removeFromSuperview];
     }];
 }
+
++(UIImage *)imageWithColor:(UIColor*)color{
+    CGSize imageSize = CGSizeMake(50, 50);
+    UIGraphicsBeginImageContextWithOptions(imageSize, 0, [UIScreen mainScreen].scale);
+    [color set];
+    UIRectFill(CGRectMake(0, 0, imageSize.width, imageSize.height));
+    UIImage *pressedColorImg = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return pressedColorImg;
+}
+
 @end
 

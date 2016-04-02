@@ -10,11 +10,6 @@
 
 @implementation ContractSection
 
--(void)awakeFromNib{
-    [self.confirmBtn.layer setCornerRadius:5.f];
-    self.confirmBtn.selectedBackgroundColor = kBtnColorSelected;
-}
-
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

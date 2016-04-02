@@ -38,13 +38,20 @@
     _navBarHidden = NO;
     _statusBarStyle = UIStatusBarStyleLightContent;
     
-    UINavigationBar *bar = self.navigationController.navigationBar;
-    bar.barTintColor = kColorNavBar;//设置显示的颜色
-    bar.tintColor = [UIColor whiteColor];//设置字体颜色
-    UIColor *titleColor = [UIColor whiteColor];
-    UIFont  *titleFont = [UIFont boldSystemFontOfSize:18.f];
-    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:titleColor,NSForegroundColorAttributeName,titleFont, NSFontAttributeName, nil];
-    self.navigationController.navigationBar.titleTextAttributes = dict;
+//    UINavigationBar *bar = self.navigationController.navigationBar;
+//    bar.tintColor = [UIColor blueColor];
+//    bar.barTintColor = kColorNavBar;//设置显示的颜色
+//    bar.tintColor = [UIColor whiteColor];//设置字体颜色
+//    UIColor *titleColor = [UIColor whiteColor];
+//    UIFont  *titleFont = [UIFont boldSystemFontOfSize:18.f];
+//    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:titleColor,NSForegroundColorAttributeName,titleFont, NSFontAttributeName, nil];
+//    self.navigationController.navigationBar.titleTextAttributes = dict;
+    
+    UINavigationBar * bar = self.navigationController.navigationBar;
+    bar.barTintColor = kColorNavBar;
+    bar.translucent =  NO;//不透明
+    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:kColorNavTitle,NSForegroundColorAttributeName,[UIFont systemFontOfSize:18.f],NSFontAttributeName,nil]];
+    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
     // Do any additional setup after loading the view.
     blls = [NSHashTable weakObjectsHashTable];
     self.edgesForExtendedLayout=UIRectEdgeNone;//使Tablebar能撑满整个屏幕;

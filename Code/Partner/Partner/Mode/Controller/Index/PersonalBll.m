@@ -14,9 +14,13 @@
 -(EFAdaptor *)loadEFUIWithTable:(EFTableView *)tableView andKey:(NSString *)key{
     EFAdaptor *adpator = [EFAdaptor adaptorWithTableView:tableView nibArray:@[@"PersonalSection"] delegate:self];
     [adpator addEntity:[EFEntity entity] withSection:[PersonalHeaderSection class]];
-    [adpator addEntity:[EFEntity entity] withSection:[PersonalMiddleSection class]];
-    [adpator addEntity:[EFEmptyEntity entity] withSection:[PersonalMiddleSection class] andHeight:10.f];
     EFSetEntity *entity = [EFSetEntity entity];
+    entity.text = @"投资日历";
+    entity.image = [UIImage imageNamed:@"calendar_setting"];
+    entity.indentationLevel = 0;
+    entity.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    [adpator addEntity:entity withSection:[EFSection class]];
+    entity = [EFSetEntity entity];
     entity.text = @"我的财报";
     entity.image = [UIImage imageNamed:@"report_setting"];
     entity.indentationLevel = 0;
@@ -29,16 +33,10 @@
     entity.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     [adpator addEntity:entity withSection:[EFSection class]];
     entity = [EFSetEntity entity];
-    entity.text = @"客服中心";
-    entity.image = [UIImage imageNamed:@"services_setting"];
+    entity.text = @"风险承受能力";
+    entity.image = [UIImage imageNamed:@"risk_setting"];
     entity.indentationLevel = 0;
     entity.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    [adpator addEntity:entity withSection:[EFSection class]];
-    entity = [EFSetEntity entity];
-    entity.text = @"关于";
-    entity.image = [UIImage imageNamed:@"about_setting"];
-    entity.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    entity.indentationLevel = 0;
     [adpator addEntity:entity withSection:[EFSection class]];
     adpator.scrollEnabled = YES;
     return adpator;

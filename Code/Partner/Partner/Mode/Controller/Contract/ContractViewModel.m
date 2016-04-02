@@ -24,10 +24,14 @@
     viewModel.period = entity.period;
     viewModel.contractNo = entity.contractNo;
     
-    viewModel.money = [NSString stringWithFormat:@"%.0f万元",[entity.amount floatValue]/10000];
+    NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init] ;
+    [numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
+    NSString *returnstr=[numberFormatter stringFromNumber:[NSNumber numberWithFloat:[entity.amount floatValue]]];
+    
+    viewModel.money = [NSString stringWithFormat:@"%@元",returnstr];
     viewModel.limit = [NSString stringWithFormat:@"%@交易日",entity.period] ;
-    viewModel.rate = [NSString stringWithFormat:@"%ld%%",[entity.securityDeposit integerValue]*10];
-    viewModel.allocation = [NSString stringWithFormat:@"%ld:%ld",[entity.profitAllocation integerValue]*10,100-[entity.profitAllocation integerValue]*10];
+    viewModel.rate = [NSString stringWithFormat:@"%d%%",[entity.securityDeposit integerValue]*10];
+    viewModel.allocation = [NSString stringWithFormat:@"%d:%d",[entity.profitAllocation integerValue]*10,100-[entity.profitAllocation integerValue]*10];
     return viewModel;
 }
 

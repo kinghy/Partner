@@ -19,26 +19,26 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RJ3-Mb-lIP">
+                <tabBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJ3-Mb-lIP">
                     <rect key="frame" x="0.0" y="618" width="375" height="49"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <items>
-                        <tabBarItem title="合伙" image="partner.png" id="Z0S-H6-G73"/>
-                        <tabBarItem tag="1" title="投资" image="invest.png" id="rvJ-yf-7Nb"/>
-                        <tabBarItem tag="2" title="个人" image="person.png" id="FLh-Jk-lid"/>
+                        <tabBarItem title="合伙" image="partner.png" selectedImage="partner_selected.png" id="Z0S-H6-G73"/>
+                        <tabBarItem tag="1" title="投资" image="invest.png" selectedImage="invest_selected.png" id="rvJ-yf-7Nb"/>
+                        <tabBarItem tag="2" title="个人" image="person.png" selectedImage="person_selected.png" id="FLh-Jk-lid"/>
                     </items>
+                    <color key="barTintColor" red="0.23529411764705882" green="0.32941176470588235" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                 </tabBar>
                 <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lz8-ny-klX" userLabel="partnerTable" customClass="EFTableView">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.89411764705882346" green="0.89411764705882346" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
                 </tableView>
                 <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qSL-M4-N7u" userLabel="investTable" customClass="EFTableView">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.89411764705882346" green="0.89411764705882346" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
                 </tableView>
                 <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ypY-Iw-gLb" customClass="EFTableView">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.89411764709999997" green="0.89411764709999997" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="separatorColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                 </tableView>
             </subviews>
@@ -66,7 +66,10 @@
     </objects>
     <resources>
         <image name="invest.png" width="33" height="24"/>
+        <image name="invest_selected.png" width="33" height="23"/>
         <image name="partner.png" width="37" height="25"/>
+        <image name="partner_selected.png" width="36" height="25"/>
         <image name="person.png" width="27" height="26"/>
+        <image name="person_selected.png" width="27" height="26"/>
     </resources>
 </document>

@@ -110,6 +110,19 @@
     return  (EFSourceGroupItem*)self.groups[groupIndex];
 }
 
+
+-(void)removeSectionByClass:(Class)cls{
+    for (NSString *key in [self.groupDict allKeys]) {
+        NSMutableArray *array = [NSMutableArray array];
+        for (EFSourceItem *item in self.groupDict[key]) {
+            if (![item.section isKindOfClass:cls]) {
+                [array addObject:item];
+            }
+        }
+        [self.groupDict setObject:array forKey:key];
+    }
+}
+
 -(NSArray *)allItems{
     NSMutableArray *array = [NSMutableArray array];
     for (EFSourceGroupItem* group in self.groups) {

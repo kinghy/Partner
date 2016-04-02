@@ -124,6 +124,8 @@
  */
 + (void)setView:(UIView*)view cornerRadius:(CGFloat)radius color:(CGColorRef)color borderWidth:(CGFloat)width;
 
++(UIImage *)imageWithColor:(UIColor*)color;
+
 /** 在视图中间显示浮层 */
 +(void)showNotifyHUDAtViewCenter:(UIView*)view withErrorMessage:(NSString *)errorMessage withTextField:(UITextField*)textField;
 +(void)showNotifyHUDAtViewCenter:(UIView*)view withErrorMessage:(NSString *)errorMessage withTextField:(UITextField*)textField withBackColor:(UIColor*)backgroundColor;

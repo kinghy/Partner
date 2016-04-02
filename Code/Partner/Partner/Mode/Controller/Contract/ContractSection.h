@@ -17,5 +17,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *rate;
 @property (weak, nonatomic) IBOutlet UILabel *allocation;
 
+@property (weak, nonatomic) IBOutlet UILabel *investorName;
+
+
+
 @end
 

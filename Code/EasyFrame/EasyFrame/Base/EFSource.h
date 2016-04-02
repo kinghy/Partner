@@ -88,8 +88,16 @@
 
 -(EFSourceGroupItem*)groupSecionByIndex:(NSInteger)groupIndex;
 
+
 /*!
- *  @brief  获取所有的items，不区分组
+ *  @brief 移除所有分组下同类型的Section 和 Entity
+ *
+ *  @param cls 需要移除的类型
+ */
+-(void)removeSectionByClass:(Class)cls;
+
+/*!
+ *:  @brief  获取所有的items，不区分组
  *
  *  @return 所有的EFSourceItem实例
  */

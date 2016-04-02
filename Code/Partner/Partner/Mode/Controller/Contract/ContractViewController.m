@@ -20,7 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.statusBarStyle = UIStatusBarStyleLightContent;
+    self.statusBarStyle = UIStatusBarStyleDefault;
+    self.navigationItem.hidesBackButton = NO;
     self.title = @"合约";
     
 }
@@ -32,7 +33,12 @@
 -(void)initAdaptor{
     self.pAdaptor = [EFAdaptor adaptorWithTableView:self.pTable nibArray:@[@"ContractSection"] delegate:self];
     [self.pAdaptor addEntity:[EFEntity entity] withSection:[ContractSection class]];
-    self.pAdaptor.fillParentEnabled = YES;
+    if (iPhone6Plus || iPhone6) {
+        self.pAdaptor.fillParentEnabled = YES;
+    }else{
+        self.pAdaptor.scrollEnabled = YES;
+    }
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated{

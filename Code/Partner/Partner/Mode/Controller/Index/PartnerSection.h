@@ -8,13 +8,17 @@
 
 #import "EFSection.h"
 
-@interface PartnerSection : EFSection
+
+@interface PartnerHeadSection : EFSection
+
+
+@end
+
+@interface PartnerListSection : EFSection
 @property (weak, nonatomic) IBOutlet UILabel *title;
 @property (weak, nonatomic) IBOutlet UILabel *investLimit;
 @property (weak, nonatomic) IBOutlet UILabel *investMoney;
 @property (weak, nonatomic) IBOutlet UILabel *bailRate;
 @property (weak, nonatomic) IBOutlet UILabel *earnest;
-@property (weak, nonatomic) IBOutlet UIImageView *logo;
 @property (weak, nonatomic) IBOutlet UILabel *nickname;
-
 @end

@@ -8,6 +8,6 @@
 
 #import "EFBaseViewController.h"
 
-@interface FilterViewController : EFBaseViewController
+@interface FilterViewController : EFSimpleViewController
 
 @end

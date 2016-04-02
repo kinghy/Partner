@@ -12,6 +12,7 @@
 #import "InvestBll.h"
 #import "FilterViewController.h"
 #import "PersonalBll.h"
+#import "EFCommonFunction.h"
 
 @interface IndexViewController ()<UITabBarDelegate>
 @property (weak, nonatomic) IBOutlet UITabBar *tabBar;
@@ -28,12 +29,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navBarHidden = NO;
     self.statusBarStyle = UIStatusBarStyleLightContent;
     self.tabBar.delegate =self;
-    self.tabBar.backgroundColor = kColorTabBar;
-    
+    self.tabBar.tintColor = [UIColor whiteColor];
+
     self.title = @"合伙";
+    self.navBarHidden = YES;
     [self setRightNavBarWithTitle:@"" image:[UIImage imageNamed:@"filter"] action:@selector(filterClicked:)]; 
     self.tabBar.selectedItem = self.tabBar.items[0];
     self.navigationItem.hidesBackButton = YES;
@@ -46,9 +47,12 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    
+    self.navBarHidden = YES;
     [self.partnerBll show];
     
 }
+
 
 -(void)initBll{
     self.partnerBll = [PartnerBll bllWithController:self tableViewDict:@{kBllUniqueTable:self.partnerTable} viewModel:[PartnerViewModel viewModel]];
@@ -70,18 +74,11 @@
         [self.partnerBll show];
         [self.investBll hide];
         [self.personalBll hide];
-        self.title = @"合伙";
-        self.navBarHidden = NO;
-        [self setRightNavBarWithTitle:@"" image:[UIImage imageNamed:@"filter"] action:@selector(filterClicked:)];
-        [self.navigationController setNavigationBarHidden:NO animated:NO];
     }else if(item.tag == 1){
         [self.partnerBll hide];
         [self.investBll show];
         [self.personalBll hide];
-        self.title = @"投资";
-        self.navBarHidden = NO;
-        self.navigationItem.rightBarButtonItem = nil;
-        [self.navigationController setNavigationBarHidden:NO animated:NO];
+
     }else if(item.tag == 2){
         [self.partnerBll hide];
         [self.investBll hide];

@@ -14,10 +14,10 @@
     self.clipsToBounds = YES;
     self.logoImg.image = img;
     self.logoImg.layer.cornerRadius = self.logoImg.frame.size.width/2;
-    self.logoImg.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.logoImg.layer.borderColor = kColorLogoBorder.CGColor;
     self.logoImg.layer.borderWidth = 1.f;
     self.logoImg.clipsToBounds = YES;
-    self.backgroundImg.image = [img blurImage];
+//    self.backgroundImg.image = [img blurImage];
 
 }
 /*
@@ -30,6 +30,4 @@
 
 @end
 
-@implementation PersonalMiddleSection
 
-@end

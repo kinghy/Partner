@@ -16,7 +16,8 @@
 #define Color_Bg_RGB(x, y, z) [UIColor colorWithRed:x/255.0f green:y/255.0f blue:z/255.0f alpha:1.0f]
 #define Color_Bg_RGBA(x, y, z,a) [UIColor colorWithRed:x/255.0f green:y/255.0f blue:z/255.0f alpha:a]
 //导航条颜色
-#define kColorNavBar Color_Bg_RGB(6, 29, 57)
+#define kColorNavBar Color_Bg_RGB(255, 255, 255)
+#define kColorNavTitle Color_Bg_RGB(34 , 34, 34)
 //tab条颜色
 #define kColorTabBar Color_Bg_RGB(60, 84, 153)
 

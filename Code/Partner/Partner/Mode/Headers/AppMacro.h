@@ -51,6 +51,8 @@
 
 #define kColorNavBarSwitchButton Color_Bg_RGB(64,138,205)//导航条选择按钮
 
+#define kColorLogoBorder Color_Bg_RGB(84,121,138)//logo边框色
+
 #define kStockLastChosed @"kStockLastChosed"
 
 #define kGraphTime @"kGraphTime" //图
@@ -120,7 +122,7 @@
 
 #define HQ_URL_DAY @"http://hqd.jyzd.com"
 #define HQ_URL_NIGHT @"http://hqn.jyzd.com"
-#define SERVER_URL @"http://115.159.126.76:10010"
+#define SERVER_URL @"http://115.159.94.39:10010"
 
 //忽略所有错误代码
 #define IGNORE_ERROR_CODE                   -999999

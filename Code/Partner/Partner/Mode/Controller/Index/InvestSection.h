@@ -15,3 +15,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *logo;
 
 @end
+
+@interface InvestHeadSection : EFSection
+
+
+@end

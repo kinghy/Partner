@@ -20,3 +20,12 @@
 @property (weak, nonatomic) IBOutlet UIButton *bailRateBtn;
 @property (weak, nonatomic) IBOutlet UIButton *ernestBtn;
 @end
+
+
+@interface FilterMarketSection : EFSection
+
+@end
+
+@interface FilterButton : UIButton
+
+@end

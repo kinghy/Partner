@@ -14,11 +14,5 @@
 -(void)setHeader:(UIImage*)img;
 @end
 
-@interface PersonalMiddleSection : EFSection
-@property (weak, nonatomic) IBOutlet UIButton *msgBtn;
-@property (weak, nonatomic) IBOutlet UIButton *contractBtn;
-
-@end
-
 
 

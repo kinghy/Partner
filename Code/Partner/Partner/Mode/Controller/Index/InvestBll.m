@@ -28,7 +28,7 @@
         if(error==nil && [entity isKindOfClass:[MarketEntity class]]){
             MarketEntity* markets = (MarketEntity*)entity;
             EFAdaptor *adpator = self.pAdaptorDict[kBllUniqueTable];
-            [adpator clear];
+            [adpator.pSources removeSectionByClass:[InvestSection class]];
             for (int i=0; i<markets.records.count;++i ) {
                 [adpator addEntity:markets.records[i] withSection:[InvestSection class]];
             }
@@ -48,6 +48,7 @@
 
 -(EFAdaptor *)loadEFUIWithTable:(EFTableView *)tableView andKey:(NSString *)key{
     EFAdaptor *adpator = [EFAdaptor adaptorWithTableView:tableView nibArray:@[@"InvestSection"] delegate:self];
+    [adpator addEntity:[EFEntity entity] withSection:[InvestHeadSection class]];
     adpator.scrollEnabled = YES;
     return adpator;
 }
