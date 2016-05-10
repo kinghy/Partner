@@ -31,6 +31,16 @@
 		7C411CDC1BDF7E6600AC08AB /* HandicapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C411CDA1BDF7E6600AC08AB /* HandicapView.m */; };
 		7C411CDD1BDF7E6600AC08AB /* HandicapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C411CDB1BDF7E6600AC08AB /* HandicapView.xib */; };
 		7C411CDF1BDF7EEE00AC08AB /* Handicap4IndexView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C411CDE1BDF7EEE00AC08AB /* Handicap4IndexView.xib */; };
+		7C43DEA31CE1C6BF00B2C0D4 /* mysearch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C43DEA11CE1C6BF00B2C0D4 /* mysearch@2x.png */; };
+		7C43DEA41CE1C6BF00B2C0D4 /* mysearch@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C43DEA21CE1C6BF00B2C0D4 /* mysearch@3x.png */; };
+		7C43DEA91CE1D95900B2C0D4 /* mydelbtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C43DEA51CE1D95900B2C0D4 /* mydelbtn@2x.png */; };
+		7C43DEAA1CE1D95900B2C0D4 /* mydelbtn@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C43DEA61CE1D95900B2C0D4 /* mydelbtn@3x.png */; };
+		7C43DEAB1CE1D95900B2C0D4 /* myaddbtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C43DEA71CE1D95900B2C0D4 /* myaddbtn@2x.png */; };
+		7C43DEAC1CE1D95900B2C0D4 /* myaddbtn@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C43DEA81CE1D95900B2C0D4 /* myaddbtn@3x.png */; };
+		7C43DEAF1CE1E28000B2C0D4 /* search_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C43DEAD1CE1E28000B2C0D4 /* search_icon@2x.png */; };
+		7C43DEB01CE1E28000B2C0D4 /* search_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C43DEAE1CE1E28000B2C0D4 /* search_icon@3x.png */; };
+		7C45C98E1CB37D25009BDBCF /* filter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C45C98C1CB37D25009BDBCF /* filter@2x.png */; };
+		7C45C98F1CB37D25009BDBCF /* filter@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C45C98D1CB37D25009BDBCF /* filter@3x.png */; };
 		7C46F95E1C9FE43E00422BCB /* partner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C46F95C1C9FE43E00422BCB /* partner@2x.png */; };
 		7C46F95F1C9FE43E00422BCB /* partner@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C46F95D1C9FE43E00422BCB /* partner@3x.png */; };
 		7C46F9641C9FE59400422BCB /* invest@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C46F9601C9FE59400422BCB /* invest@2x.png */; };
@@ -152,8 +162,6 @@
 		7CB6376A1C0E9ABD00143E35 /* rightarrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CB6374B1C0E9ABD00143E35 /* rightarrow@2x.png */; };
 		7CB6376B1C0E9ABD00143E35 /* search_frame@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CB6374C1C0E9ABD00143E35 /* search_frame@2x.png */; };
 		7CB6376C1C0E9ABD00143E35 /* search_frame_blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CB6374D1C0E9ABD00143E35 /* search_frame_blue@2x.png */; };
-		7CB6376D1C0E9ABD00143E35 /* search_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CB6374E1C0E9ABD00143E35 /* search_icon@2x.png */; };
-		7CB6376E1C0E9ABD00143E35 /* search_icon_blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CB6374F1C0E9ABD00143E35 /* search_icon_blue@2x.png */; };
 		7CB6376F1C0E9ABD00143E35 /* search_tool@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CB637501C0E9ABD00143E35 /* search_tool@2x.png */; };
 		7CC1FD801CAF9D2B00EC56AD /* bg_setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CC1FD7E1CAF9D2B00EC56AD /* bg_setting@2x.png */; };
 		7CC1FD811CAF9D2B00EC56AD /* bg_setting@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CC1FD7F1CAF9D2B00EC56AD /* bg_setting@3x.png */; };
@@ -267,6 +275,16 @@
 		7C411CDA1BDF7E6600AC08AB /* HandicapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandicapView.m; sourceTree = "<group>"; };
 		7C411CDB1BDF7E6600AC08AB /* HandicapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HandicapView.xib; sourceTree = "<group>"; };
 		7C411CDE1BDF7EEE00AC08AB /* Handicap4IndexView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Handicap4IndexView.xib; sourceTree = "<group>"; };
+		7C43DEA11CE1C6BF00B2C0D4 /* mysearch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mysearch@2x.png"; sourceTree = "<group>"; };
+		7C43DEA21CE1C6BF00B2C0D4 /* mysearch@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mysearch@3x.png"; sourceTree = "<group>"; };
+		7C43DEA51CE1D95900B2C0D4 /* mydelbtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mydelbtn@2x.png"; sourceTree = "<group>"; };
+		7C43DEA61CE1D95900B2C0D4 /* mydelbtn@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mydelbtn@3x.png"; sourceTree = "<group>"; };
+		7C43DEA71CE1D95900B2C0D4 /* myaddbtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "myaddbtn@2x.png"; sourceTree = "<group>"; };
+		7C43DEA81CE1D95900B2C0D4 /* myaddbtn@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "myaddbtn@3x.png"; sourceTree = "<group>"; };
+		7C43DEAD1CE1E28000B2C0D4 /* search_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search_icon@2x.png"; sourceTree = "<group>"; };
+		7C43DEAE1CE1E28000B2C0D4 /* search_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search_icon@3x.png"; sourceTree = "<group>"; };
+		7C45C98C1CB37D25009BDBCF /* filter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "filter@2x.png"; sourceTree = "<group>"; };
+		7C45C98D1CB37D25009BDBCF /* filter@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "filter@3x.png"; sourceTree = "<group>"; };
 		7C46F95C1C9FE43E00422BCB /* partner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "partner@2x.png"; sourceTree = "<group>"; };
 		7C46F95D1C9FE43E00422BCB /* partner@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "partner@3x.png"; sourceTree = "<group>"; };
 		7C46F9601C9FE59400422BCB /* invest@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "invest@2x.png"; sourceTree = "<group>"; };
@@ -443,8 +461,6 @@
 		7CB6374B1C0E9ABD00143E35 /* rightarrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rightarrow@2x.png"; sourceTree = "<group>"; };
 		7CB6374C1C0E9ABD00143E35 /* search_frame@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search_frame@2x.png"; sourceTree = "<group>"; };
 		7CB6374D1C0E9ABD00143E35 /* search_frame_blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search_frame_blue@2x.png"; sourceTree = "<group>"; };
-		7CB6374E1C0E9ABD00143E35 /* search_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search_icon@2x.png"; sourceTree = "<group>"; };
-		7CB6374F1C0E9ABD00143E35 /* search_icon_blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search_icon_blue@2x.png"; sourceTree = "<group>"; };
 		7CB637501C0E9ABD00143E35 /* search_tool@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search_tool@2x.png"; sourceTree = "<group>"; };
 		7CC1FD7E1CAF9D2B00EC56AD /* bg_setting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_setting@2x.png"; sourceTree = "<group>"; };
 		7CC1FD7F1CAF9D2B00EC56AD /* bg_setting@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_setting@3x.png"; sourceTree = "<group>"; };
@@ -1085,6 +1101,8 @@
 		7CB637341C0E9ABD00143E35 /* index */ = {
 			isa = PBXGroup;
 			children = (
+				7C45C98C1CB37D25009BDBCF /* filter@2x.png */,
+				7C45C98D1CB37D25009BDBCF /* filter@3x.png */,
 				7C46F9741CA002EF00422BCB /* banner@2x.png */,
 				7C46F9751CA002EF00422BCB /* banner@3x.png */,
 				7C46F9701C9FFF2F00422BCB /* person_selected@2x.png */,
@@ -1118,6 +1136,14 @@
 		7CB637441C0E9ABD00143E35 /* trade */ = {
 			isa = PBXGroup;
 			children = (
+				7C43DEAD1CE1E28000B2C0D4 /* search_icon@2x.png */,
+				7C43DEAE1CE1E28000B2C0D4 /* search_icon@3x.png */,
+				7C43DEA51CE1D95900B2C0D4 /* mydelbtn@2x.png */,
+				7C43DEA61CE1D95900B2C0D4 /* mydelbtn@3x.png */,
+				7C43DEA71CE1D95900B2C0D4 /* myaddbtn@2x.png */,
+				7C43DEA81CE1D95900B2C0D4 /* myaddbtn@3x.png */,
+				7C43DEA11CE1C6BF00B2C0D4 /* mysearch@2x.png */,
+				7C43DEA21CE1C6BF00B2C0D4 /* mysearch@3x.png */,
 				7C6FBDF91CAF919600D0D679 /* metal_logo@2x.png */,
 				7C6FBDFA1CAF919600D0D679 /* metal_logo@3x.png */,
 				7C6FBDFB1CAF919600D0D679 /* vailidcontract@2x.png */,
@@ -1138,8 +1164,6 @@
 				7CB6374B1C0E9ABD00143E35 /* rightarrow@2x.png */,
 				7CB6374C1C0E9ABD00143E35 /* search_frame@2x.png */,
 				7CB6374D1C0E9ABD00143E35 /* search_frame_blue@2x.png */,
-				7CB6374E1C0E9ABD00143E35 /* search_icon@2x.png */,
-				7CB6374F1C0E9ABD00143E35 /* search_icon_blue@2x.png */,
 				7CB637501C0E9ABD00143E35 /* search_tool@2x.png */,
 			);
 			path = trade;
@@ -1348,7 +1372,9 @@
 				7C24CF1D1BF5DDD30086266A /* STOProductSellSection.xib in Resources */,
 				7C98B3B11BCE1683001DD686 /* ContractAlert.xib in Resources */,
 				7CC1FD801CAF9D2B00EC56AD /* bg_setting@2x.png in Resources */,
+				7C43DEB01CE1E28000B2C0D4 /* search_icon@3x.png in Resources */,
 				7C784D131CA4FAC80017AC30 /* investrate@3x.png in Resources */,
+				7C43DEAC1CE1D95900B2C0D4 /* myaddbtn@3x.png in Resources */,
 				7C46F96B1C9FFC6B00422BCB /* partner_selected@3x.png in Resources */,
 				7C23651A1C27BBCA00760891 /* contract_setting@2x.png in Resources */,
 				7CF914911BDE097A0087A8F6 /* STOProductMarketViewController.xib in Resources */,
@@ -1372,6 +1398,7 @@
 				7CB6376A1C0E9ABD00143E35 /* rightarrow@2x.png in Resources */,
 				7C6FBE051CAF919600D0D679 /* A_logo@2x.png in Resources */,
 				7CD8B8E41C26DDBA00246013 /* logo.jpg in Resources */,
+				7C43DEA91CE1D95900B2C0D4 /* mydelbtn@2x.png in Resources */,
 				7C46F96E1C9FFEEF00422BCB /* invest_selected@2x.png in Resources */,
 				7C2365201C27DACC00760891 /* report_setting@2x.png in Resources */,
 				7C6FBE081CAF919600D0D679 /* HK_logo@3x.png in Resources */,
@@ -1381,6 +1408,7 @@
 				7CD509111CA93DFC00401EFD /* infoservicemoney@2x.png in Resources */,
 				7CD509161CA93EB300401EFD /* arrow@3x.png in Resources */,
 				7CB637541C0E9ABD00143E35 /* nike@2x.png in Resources */,
+				7C45C98E1CB37D25009BDBCF /* filter@2x.png in Resources */,
 				7C68D1331BDF139D00D14969 /* STOProductMarketSection.xib in Resources */,
 				7C2365221C27DACC00760891 /* services_setting@2x.png in Resources */,
 				7C6BAC111BBD52E40035BF99 /* Info.plist in Resources */,
@@ -1393,6 +1421,7 @@
 				7C2365231C27DACC00760891 /* analysis_setting@2x.png in Resources */,
 				7C6FBE0E1CAF9B2E00D0D679 /* risk_settion@3x.png in Resources */,
 				7C411CDD1BDF7E6600AC08AB /* HandicapView.xib in Resources */,
+				7C45C98F1CB37D25009BDBCF /* filter@3x.png in Resources */,
 				7C6BAD301BBE38210035BF99 /* ContractViewController.xib in Resources */,
 				7C0CCDF51BD88535002E2CCD /* InvestSection.xib in Resources */,
 				7CB637671C0E9ABD00143E35 /* retract@2x.png in Resources */,
@@ -1400,8 +1429,9 @@
 				7C5FCF4F1C18119C000E81CC /* STOMyStockListCell.xib in Resources */,
 				7CD509121CA93DFC00401EFD /* infoservicemoney@3x.png in Resources */,
 				7C46F95F1C9FE43E00422BCB /* partner@3x.png in Resources */,
-				7CB6376E1C0E9ABD00143E35 /* search_icon_blue@2x.png in Resources */,
+				7C43DEA31CE1C6BF00B2C0D4 /* mysearch@2x.png in Resources */,
 				7CD8B8E81C26DF0A00246013 /* setting@2x.png in Resources */,
+				7C43DEAF1CE1E28000B2C0D4 /* search_icon@2x.png in Resources */,
 				7CD509151CA93EB300401EFD /* arrow@2x.png in Resources */,
 				7CD8B8E21C26D58F00246013 /* PersonalSection.xib in Resources */,
 				7C784D161CA4FDB10017AC30 /* investlimited@2x.png in Resources */,
@@ -1409,11 +1439,13 @@
 				7C787FAE1BE04E8800EF19C4 /* STOProductBuyOrderSection.xib in Resources */,
 				7CCE9A0F1C0BEBE100752847 /* STOProductOrderDetailSection.xib in Resources */,
 				7C46F9721C9FFF2F00422BCB /* person_selected@2x.png in Resources */,
+				7C43DEAB1CE1D95900B2C0D4 /* myaddbtn@2x.png in Resources */,
 				7CB637681C0E9ABD00143E35 /* revamp@2x.png in Resources */,
 				7C4FA2C31C06CEC40091D72E /* STOProductSellOrderViewController.xib in Resources */,
 				7C46F9761CA002EF00422BCB /* banner@2x.png in Resources */,
 				7C46F96F1C9FFEEF00422BCB /* invest_selected@3x.png in Resources */,
 				7CD6708B1C47623E00B06824 /* line_down@2x.png in Resources */,
+				7C43DEA41CE1C6BF00B2C0D4 /* mysearch@3x.png in Resources */,
 				7C6FBDF81CAF90C600D0D679 /* banner_trade@3x.png in Resources */,
 				7CD5090E1CA9399400401EFD /* head2.png in Resources */,
 				7CB637601C0E9ABD00143E35 /* touxiang.jpg in Resources */,
@@ -1423,10 +1455,10 @@
 				7CB637551C0E9ABD00143E35 /* selected@2x.png in Resources */,
 				7CB637611C0E9ABD00143E35 /* bg@2x.png in Resources */,
 				7C6FBE071CAF919600D0D679 /* HK_logo@2x.png in Resources */,
-				7CB6376D1C0E9ABD00143E35 /* search_icon@2x.png in Resources */,
 				7C411CDF1BDF7EEE00AC08AB /* Handicap4IndexView.xib in Resources */,
 				7CB637621C0E9ABD00143E35 /* Lock@2x.png in Resources */,
 				7CB637691C0E9ABD00143E35 /* revamp_hover@2x.png in Resources */,
+				7C43DEAA1CE1D95900B2C0D4 /* mydelbtn@3x.png in Resources */,
 				7CB6376B1C0E9ABD00143E35 /* search_frame@2x.png in Resources */,
 				7CCE9A171C0BF1AA00752847 /* STOProductOrderDetailViewController.xib in Resources */,
 				7C6FBE0D1CAF9B2E00D0D679 /* risk_settion@2x.png in Resources */,
@@ -1769,6 +1801,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				HEADER_SEARCH_PATHS = "../EasyFrame/**";
 				INFOPLIST_FILE = PartnerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kk.PartnerTests;
@@ -1781,6 +1814,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				HEADER_SEARCH_PATHS = "../EasyFrame/**";
 				INFOPLIST_FILE = PartnerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kk.PartnerTests;

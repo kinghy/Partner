@@ -22,6 +22,8 @@
 // 自定义RGB色值
 #define kColorLogin Color_Bg_RGB(177,206,249)
 
+#define kColorSearchBorder Color_Bg_RGB(215,215,215)
+
 #define kColorSwitchUnselected Color_Bg_RGB(74,146,244)
 
 #define Color_DS_Gray Color_Bg_RGB(201.f, 201.f, 201.f)//平灰
@@ -52,6 +54,11 @@
 #define kColorNavBarSwitchButton Color_Bg_RGB(64,138,205)//导航条选择按钮
 
 #define kColorLogoBorder Color_Bg_RGB(84,121,138)//logo边框色
+
+//筛选按钮颜色
+#define kColorFilterChosedBtnBorder Color_Bg_RGB(92.0f, 124.0f, 215.0f)
+#define kColorFilterChoserBtnBG Color_Bg_RGB(136.0f , 162.0f, 237.0f)
+
 
 #define kStockLastChosed @"kStockLastChosed"
 

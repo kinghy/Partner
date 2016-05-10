@@ -45,12 +45,9 @@
     NSMutableDictionary *tmpdict = [NSMutableDictionary dictionaryWithDictionary:dict];
     [tmpdict addEntriesFromDictionary:param.dict];
     dict = [NSDictionary dictionaryWithDictionary:tmpdict];
-
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
-   //if ([[[param getMethod] lowercaseString] isEqualToString:[kMethodPost lowercaseString]]) {
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    //}
     manager.requestSerializer.timeoutInterval = param.delayRequestTimeOut;
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",@"application/json",nil];
     NSDictionary *dt = [param getHeaders];
@@ -62,22 +59,30 @@
     }
     
     if ([[[param getMethod] lowercaseString] isEqualToString:[kMethodGet lowercaseString]]) {
-        [manager GET:[param getOperatorTypeTranslate] parameters:dict.count>0?dict:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-            [self connectSuccess:operation withParam:param andObj:responseObject andRetBlock:block];
-        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-            [self connectError:error withOperation:operation andParam:param andRetBlock:block];
+        
+        [manager GET:[param getOperatorTypeTranslate] parameters:dict.count>0?dict:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+            
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            [self connectSuccess:task withParam:param andObj:responseObject andRetBlock:block];
+            
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            [self connectError:error withTask:task andParam:param andRetBlock:block];
         }];
+        
     }else if([[[param getMethod] lowercaseString] isEqualToString:[kMethodPost lowercaseString]]){
-        [manager POST:[param getOperatorTypeTranslate] parameters:dict success:^(AFHTTPRequestOperation *operation, id responseObject) {
-            [self connectSuccess:operation withParam:param andObj:responseObject andRetBlock:block];
-        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-            [self connectError:error withOperation:operation andParam:param andRetBlock:block];
+        [manager POST:[param getOperatorTypeTranslate] parameters:dict progress:^(NSProgress * _Nonnull uploadProgress) {
+            
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            [self connectSuccess:task withParam:param andObj:responseObject andRetBlock:block];
+            
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            [self connectError:error withTask:task andParam:param andRetBlock:block];
         }];
     }
-   
+    
 }
 
--(void)connectSuccess:(AFHTTPRequestOperation *)operation withParam:(EFConnectorParam *)param  andObj:(id)responseObject andRetBlock:(EFConnRetBlock)block{
+-(void)connectSuccess:(NSURLSessionDataTask *)task withParam:(EFConnectorParam *)param  andObj:(id)responseObject andRetBlock:(EFConnRetBlock)block{
     Class cls = [param getEntityClass];
     EFEntity* entity = nil;
     if ([cls isSubclassOfClass:[EFEntity class]]) {
@@ -87,68 +92,69 @@
     }
     [param catchErrors:nil withEntity:entity];
     if(block){
-        block(operation,entity,nil);
+        block(task,entity,nil);
     }
 }
 
--(void)connectError:(NSError*)error withOperation:(AFHTTPRequestOperation *)operation andParam:(EFConnectorParam *)param andRetBlock:(EFConnRetBlock)block{
+-(void)connectError:(NSError*)error withTask:(NSURLSessionDataTask *)task andParam:(EFConnectorParam *)param andRetBlock:(EFConnRetBlock)block{
     DDLogError(@"%@",error);
     [param catchErrors:error withEntity:nil];
     if(block){
-        block(operation,nil,error);
+        block(task,nil,error);
     }
 }
-
-
--(EFConnResult*)runUntilFinished:(EFConnectorParam *)param{
-    EFConnResult* result = [[EFConnResult alloc] init];
-    NSDictionary *dict =  [self getDictFromParam:param class:[param class]];
-    
-    NSMutableDictionary *tmpdict = [NSMutableDictionary dictionaryWithDictionary:dict];
-    [tmpdict addEntriesFromDictionary:param.dict];
-    dict = [NSDictionary dictionaryWithDictionary:tmpdict];
-    AFJSONRequestSerializer *requestSerializer = [AFJSONRequestSerializer serializer];
-    requestSerializer.timeoutInterval = param.delayRequestTimeOut;
-    NSDictionary *dt = [param getHeaders];
-    if (dt) {
-        NSArray *keys = [dt allKeys];
-        for (int i=0; i<keys.count; ++i) {
-            [requestSerializer setValue:dt[keys[i]] forHTTPHeaderField:keys[i]];
-        }
-    }
-    NSMutableURLRequest *request = [requestSerializer requestWithMethod:param.getMethod URLString:param.getOperatorTypeTranslate parameters:dict.count>0?dict:nil error:nil];
-    
-    AFHTTPRequestOperation *requestOperation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
-    AFHTTPResponseSerializer *responseSerializer = [AFJSONResponseSerializer serializer];
-    responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",@"application/json",nil];
-    
-    [requestOperation setResponseSerializer:responseSerializer];
-    [requestOperation start];
-    [requestOperation waitUntilFinished];
-    
-    if (requestOperation.error == nil) {
-        id resp = [requestOperation responseObject];
-
-        Class cls = [param getEntityClass];
-        EFEntity* entity = nil;
-        if ([cls isSubclassOfClass:[EFEntity class]]) {
-            entity = [[cls alloc] init];
-            [self getEntityFromJson:resp entity:&entity class:[entity class] aliasName:[param getAliasName]];
-            entity.dict = resp;
-        }
-        result.operation = requestOperation;
-        result.entity = entity;
-        result.error = nil;
-        [param catchErrors:nil withEntity:entity];
-    }else{
-        result.operation = requestOperation;
-        result.entity = nil;
-        result.error = requestOperation.error;
-        [param catchErrors:result.error withEntity:nil];
-        DDLogError(@"%@",result.error);
-    }
-    return result;
-}
+//
+//-(EFConnResult*)runUntilFinished:(EFConnectorParam *)param{
+//    EFConnResult* result = [[EFConnResult alloc] init];
+//    NSDictionary *dict =  [self getDictFromParam:param class:[param class]];
+//    
+//    NSMutableDictionary *tmpdict = [NSMutableDictionary dictionaryWithDictionary:dict];
+//    [tmpdict addEntriesFromDictionary:param.dict];
+//    dict = [NSDictionary dictionaryWithDictionary:tmpdict];
+//    AFJSONRequestSerializer *requestSerializer = [AFJSONRequestSerializer serializer];
+//    requestSerializer.timeoutInterval = param.delayRequestTimeOut;
+//    NSDictionary *dt = [param getHeaders];
+//    if (dt) {
+//        NSArray *keys = [dt allKeys];
+//        for (int i=0; i<keys.count; ++i) {
+//            [requestSerializer setValue:dt[keys[i]] forHTTPHeaderField:keys[i]];
+//        }
+//    }
+//    NSMutableURLRequest *request = [requestSerializer requestWithMethod:param.getMethod URLString:param.getOperatorTypeTranslate parameters:dict.count>0?dict:nil error:nil];
+//    
+//    NSURLSessionTask* task = [[NSURLSessionTask alloc] ]
+//    
+//    AFHTTPRequestOperation *requestOperation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+//    AFHTTPResponseSerializer *responseSerializer = [AFJSONResponseSerializer serializer];
+//    responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",@"application/json",nil];
+//    
+//    [requestOperation setResponseSerializer:responseSerializer];
+//    [requestOperation start];
+//    [requestOperation waitUntilFinished];
+//    
+//    if (requestOperation.error == nil) {
+//        id resp = [requestOperation responseObject];
+//        
+//        Class cls = [param getEntityClass];
+//        EFEntity* entity = nil;
+//        if ([cls isSubclassOfClass:[EFEntity class]]) {
+//            entity = [[cls alloc] init];
+//            [self getEntityFromJson:resp entity:&entity class:[entity class] aliasName:[param getAliasName]];
+//            entity.dict = resp;
+//        }
+//        result.operation = requestOperation;
+//        result.entity = entity;
+//        result.error = nil;
+//        [param catchErrors:nil withEntity:entity];
+//    }else{
+//        result.operation = requestOperation;
+//        result.entity = nil;
+//        result.error = requestOperation.error;
+//        [param catchErrors:result.error withEntity:nil];
+//        DDLogError(@"%@",result.error);
+//    }
+//    return result;
+//}
 
 
 
@@ -169,7 +175,7 @@
                 
             }
             @finally{
-//                free(prop);
+                //                free(prop);
             }
         }
         free(properties);
@@ -201,7 +207,7 @@
                             Class pkClass = NSClassFromString([NSString stringWithFormat:@"%@%@Entity",aliasName,[self makeFirstCharUppercase:name]]);
                             if (pkClass) {
                                 NSMutableArray *array = [NSMutableArray array];
-                               
+                                
                                 NSArray *tmpArray = [json objectForKey:jsonName];
                                 for (id tmp in tmpArray) {
                                     id ent = [[pkClass alloc] init];
@@ -235,7 +241,7 @@
                     @catch (NSException *exception) {
                     }
                     @finally{
-//                        free(prop);
+                        //                        free(prop);
                     }
                     
                 }
@@ -258,12 +264,12 @@
 }
 
 -(void)dealloc{
-//    show_dealloc_info(self);
+    //    show_dealloc_info(self);
 }
 @end
 
-@implementation EFConnResult
-
-
-
-@end
+//@implementation EFConnResult
+//
+//
+//
+//@end

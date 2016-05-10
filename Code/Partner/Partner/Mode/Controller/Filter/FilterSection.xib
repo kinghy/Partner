@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -27,30 +28,23 @@
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfx-Sg-2GC" customClass="FilterButton">
-                    <rect key="frame" x="15" y="43" width="80" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="80" id="x61-Qo-S2O"/>
-                    </constraints>
+                    <rect key="frame" x="15" y="43" width="75" height="30"/>
                     <state key="normal" title="沪深A股"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhU-1q-BMf">
-                    <rect key="frame" x="105" y="43" width="80" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="80" id="fNc-ZO-4PX"/>
-                    </constraints>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhU-1q-BMf" customClass="FilterButton">
+                    <rect key="frame" x="100" y="43" width="75" height="30"/>
                     <state key="normal" title="港股"/>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZW-nQ-6hF">
-                    <rect key="frame" x="195" y="43" width="80" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="80" id="d1O-sI-3P0"/>
-                    </constraints>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZW-nQ-6hF" customClass="FilterButton">
+                    <rect key="frame" x="185" y="43" width="75" height="30"/>
                     <state key="normal" title="贵金属"/>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="pfx-Sg-2GC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="1Us-uN-5Bo"/>
+                <constraint firstItem="nhU-1q-BMf" firstAttribute="width" secondItem="pfx-Sg-2GC" secondAttribute="width" id="2Sj-2B-awf"/>
+                <constraint firstItem="OZW-nQ-6hF" firstAttribute="width" secondItem="pfx-Sg-2GC" secondAttribute="width" id="2g3-L9-nnw"/>
                 <constraint firstItem="nhU-1q-BMf" firstAttribute="centerY" secondItem="pfx-Sg-2GC" secondAttribute="centerY" id="77Y-Sm-HUC"/>
                 <constraint firstItem="DQB-CK-4uZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="EUb-Fb-sCx"/>
                 <constraint firstItem="nhU-1q-BMf" firstAttribute="leading" secondItem="pfx-Sg-2GC" secondAttribute="trailing" constant="10" id="FtS-FL-IVm"/>
@@ -60,11 +54,361 @@
                 <constraint firstItem="OZW-nQ-6hF" firstAttribute="centerY" secondItem="pfx-Sg-2GC" secondAttribute="centerY" id="aAl-Yq-DcO"/>
                 <constraint firstItem="QCl-yt-XqQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="dYb-Ln-3MQ"/>
                 <constraint firstAttribute="bottom" secondItem="QCl-yt-XqQ" secondAttribute="bottom" id="fFk-2t-W1g"/>
+                <constraint firstItem="pfx-Sg-2GC" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.2" id="iTj-Or-Vtc"/>
                 <constraint firstItem="DQB-CK-4uZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="p8m-5K-pCN"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="62.5" y="138"/>
+            <connections>
+                <outlet property="hkBtn" destination="nhU-1q-BMf" id="Iyf-v9-fHT"/>
+                <outlet property="metalBtn" destination="OZW-nQ-6hF" id="9dL-Th-f35"/>
+                <outlet property="stockBtn" destination="pfx-Sg-2GC" id="AKi-JD-sIf"/>
+            </connections>
+            <point key="canvasLocation" x="-208.5" y="-21"/>
+        </view>
+        <view contentMode="scaleToFill" id="C7e-R3-I7s" customClass="FilterLimitSection">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="投资期限" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5jg-WV-Whd">
+                    <rect key="frame" x="15" y="20" width="52" height="13"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="13" id="rZe-zc-JBP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.45882352939999999" green="0.45882352939999999" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line_down.png" translatesAutoresizingMaskIntoConstraints="NO" id="ywf-qj-aRH">
+                    <rect key="frame" x="15" y="79" width="345" height="1"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="Ehf-jn-a8Q"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZXS-nP-IIO" customClass="FilterButton">
+                    <rect key="frame" x="15" y="43" width="75" height="30"/>
+                    <state key="normal" title="3交易日"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQC-8h-Ypp" customClass="FilterButton">
+                    <rect key="frame" x="100" y="43" width="75" height="30"/>
+                    <state key="normal" title="5交易日"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lis-bm-k87" customClass="FilterButton">
+                    <rect key="frame" x="185" y="43" width="75" height="30"/>
+                    <state key="normal" title="7交易日"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEc-Rt-nOZ" customClass="FilterButton">
+                    <rect key="frame" x="270" y="43" width="75" height="30"/>
+                    <state key="normal" title="10交易日"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="CQC-8h-Ypp" firstAttribute="width" secondItem="ZXS-nP-IIO" secondAttribute="width" id="5X8-gz-Uvc"/>
+                <constraint firstItem="ywf-qj-aRH" firstAttribute="leading" secondItem="C7e-R3-I7s" secondAttribute="leading" constant="15" id="6jM-3u-8ZU"/>
+                <constraint firstItem="lis-bm-k87" firstAttribute="width" secondItem="ZXS-nP-IIO" secondAttribute="width" id="92u-wg-Xie"/>
+                <constraint firstAttribute="trailing" secondItem="ywf-qj-aRH" secondAttribute="trailing" constant="15" id="DAe-Q2-cmI"/>
+                <constraint firstItem="5jg-WV-Whd" firstAttribute="top" secondItem="C7e-R3-I7s" secondAttribute="top" constant="20" id="GDF-vc-Odf"/>
+                <constraint firstAttribute="bottom" secondItem="ywf-qj-aRH" secondAttribute="bottom" id="Wf8-5i-URX"/>
+                <constraint firstItem="ZXS-nP-IIO" firstAttribute="leading" secondItem="C7e-R3-I7s" secondAttribute="leading" constant="15" id="Yc4-cX-w9A"/>
+                <constraint firstItem="CEc-Rt-nOZ" firstAttribute="centerY" secondItem="ZXS-nP-IIO" secondAttribute="centerY" id="aFU-Si-yRM"/>
+                <constraint firstItem="ZXS-nP-IIO" firstAttribute="width" secondItem="C7e-R3-I7s" secondAttribute="width" multiplier="0.2" id="c5y-mh-k9b"/>
+                <constraint firstItem="CEc-Rt-nOZ" firstAttribute="leading" secondItem="lis-bm-k87" secondAttribute="trailing" constant="10" id="cVb-ft-5To"/>
+                <constraint firstItem="CQC-8h-Ypp" firstAttribute="centerY" secondItem="ZXS-nP-IIO" secondAttribute="centerY" id="dmX-V5-OY1"/>
+                <constraint firstItem="ZXS-nP-IIO" firstAttribute="top" secondItem="5jg-WV-Whd" secondAttribute="bottom" constant="10" id="h4c-HL-RIW"/>
+                <constraint firstItem="CQC-8h-Ypp" firstAttribute="leading" secondItem="ZXS-nP-IIO" secondAttribute="trailing" constant="10" id="hB9-cS-vau"/>
+                <constraint firstItem="lis-bm-k87" firstAttribute="centerY" secondItem="ZXS-nP-IIO" secondAttribute="centerY" id="mti-23-KG0"/>
+                <constraint firstItem="CEc-Rt-nOZ" firstAttribute="width" secondItem="ZXS-nP-IIO" secondAttribute="width" id="qR9-QS-fTd"/>
+                <constraint firstItem="5jg-WV-Whd" firstAttribute="leading" secondItem="C7e-R3-I7s" secondAttribute="leading" constant="15" id="viH-uT-0AD"/>
+                <constraint firstItem="lis-bm-k87" firstAttribute="leading" secondItem="CQC-8h-Ypp" secondAttribute="trailing" constant="10" id="zGg-iR-jPY"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="limit10Btn" destination="CEc-Rt-nOZ" id="B2e-jp-i4L"/>
+                <outlet property="limit3Btn" destination="ZXS-nP-IIO" id="gO6-aU-kOo"/>
+                <outlet property="limit5Btn" destination="CQC-8h-Ypp" id="Rjd-T1-w0B"/>
+                <outlet property="limit7Btn" destination="lis-bm-k87" id="UU9-1r-3Gf"/>
+            </connections>
+            <point key="canvasLocation" x="-198.5" y="142"/>
+        </view>
+        <view contentMode="scaleToFill" id="AjK-La-B4I" customClass="FilterAllocationSection">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="盈利分配" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRX-EU-RHV">
+                    <rect key="frame" x="15" y="20" width="52" height="13"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="13" id="wV3-Ln-sce"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.45882352939999999" green="0.45882352939999999" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line_down.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Yk-3J-AMY">
+                    <rect key="frame" x="15" y="79" width="345" height="1"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="X0K-0s-nvk"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="buW-dE-Xir" customClass="FilterButton">
+                    <rect key="frame" x="15" y="43" width="75" height="30"/>
+                    <state key="normal" title="70%"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJO-1b-AlA" customClass="FilterButton">
+                    <rect key="frame" x="100" y="43" width="75" height="30"/>
+                    <state key="normal" title="80%"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d79-zT-ePq" customClass="FilterButton">
+                    <rect key="frame" x="185" y="43" width="75" height="30"/>
+                    <state key="normal" title="90%"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLp-QU-wQP" customClass="FilterButton">
+                    <rect key="frame" x="270" y="43" width="75" height="30"/>
+                    <state key="normal" title="全部"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="OJO-1b-AlA" firstAttribute="centerY" secondItem="buW-dE-Xir" secondAttribute="centerY" id="8La-qR-12y"/>
+                <constraint firstItem="cLp-QU-wQP" firstAttribute="centerY" secondItem="buW-dE-Xir" secondAttribute="centerY" id="Cp8-6S-au8"/>
+                <constraint firstAttribute="trailing" secondItem="9Yk-3J-AMY" secondAttribute="trailing" constant="15" id="Duu-Fr-1q1"/>
+                <constraint firstItem="OJO-1b-AlA" firstAttribute="leading" secondItem="buW-dE-Xir" secondAttribute="trailing" constant="10" id="QL5-Jb-A4E"/>
+                <constraint firstAttribute="bottom" secondItem="9Yk-3J-AMY" secondAttribute="bottom" id="TLY-0y-ecJ"/>
+                <constraint firstItem="d79-zT-ePq" firstAttribute="centerY" secondItem="buW-dE-Xir" secondAttribute="centerY" id="Ubb-wB-2B0"/>
+                <constraint firstItem="OJO-1b-AlA" firstAttribute="width" secondItem="buW-dE-Xir" secondAttribute="width" id="XWp-Ud-OVv"/>
+                <constraint firstItem="fRX-EU-RHV" firstAttribute="top" secondItem="AjK-La-B4I" secondAttribute="top" constant="20" id="h7f-Qz-ASF"/>
+                <constraint firstItem="buW-dE-Xir" firstAttribute="width" secondItem="AjK-La-B4I" secondAttribute="width" multiplier="0.2" id="hmW-j1-XUm"/>
+                <constraint firstItem="9Yk-3J-AMY" firstAttribute="leading" secondItem="AjK-La-B4I" secondAttribute="leading" constant="15" id="kas-we-DAL"/>
+                <constraint firstItem="cLp-QU-wQP" firstAttribute="width" secondItem="buW-dE-Xir" secondAttribute="width" id="mKl-fT-w65"/>
+                <constraint firstItem="cLp-QU-wQP" firstAttribute="leading" secondItem="d79-zT-ePq" secondAttribute="trailing" constant="10" id="mhy-Df-zHA"/>
+                <constraint firstItem="d79-zT-ePq" firstAttribute="leading" secondItem="OJO-1b-AlA" secondAttribute="trailing" constant="10" id="p4D-S0-1J7"/>
+                <constraint firstItem="buW-dE-Xir" firstAttribute="leading" secondItem="AjK-La-B4I" secondAttribute="leading" constant="15" id="qb0-Va-Nek"/>
+                <constraint firstItem="buW-dE-Xir" firstAttribute="top" secondItem="fRX-EU-RHV" secondAttribute="bottom" constant="10" id="vZj-QY-td3"/>
+                <constraint firstItem="fRX-EU-RHV" firstAttribute="leading" secondItem="AjK-La-B4I" secondAttribute="leading" constant="15" id="vaB-vN-JPL"/>
+                <constraint firstItem="d79-zT-ePq" firstAttribute="width" secondItem="buW-dE-Xir" secondAttribute="width" id="zpS-dN-0NB"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="allo70Btn" destination="buW-dE-Xir" id="bLR-F0-CWy"/>
+                <outlet property="allo80Btn" destination="OJO-1b-AlA" id="Mpm-zY-04p"/>
+                <outlet property="allo90Btn" destination="d79-zT-ePq" id="Ucl-98-vBB"/>
+                <outlet property="alloAllBtn" destination="cLp-QU-wQP" id="JOn-lP-umC"/>
+            </connections>
+            <point key="canvasLocation" x="-198.5" y="269"/>
+        </view>
+        <view contentMode="scaleToFill" id="TDn-hI-dp4" customClass="FilterRateSection">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="出资比例" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggU-qm-60U">
+                    <rect key="frame" x="15" y="20" width="52" height="13"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="13" id="WzL-Au-187"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.45882352939999999" green="0.45882352939999999" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line_down.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fyi-fU-grd">
+                    <rect key="frame" x="15" y="79" width="345" height="1"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="gOU-l5-9Kg"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0E-xq-kTD" customClass="FilterButton">
+                    <rect key="frame" x="15" y="43" width="75" height="30"/>
+                    <state key="normal" title="15%"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FU6-4M-lq3" customClass="FilterButton">
+                    <rect key="frame" x="100" y="43" width="75" height="30"/>
+                    <state key="normal" title="30%"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SbF-jH-3LD" customClass="FilterButton">
+                    <rect key="frame" x="185" y="43" width="75" height="30"/>
+                    <state key="normal" title="40%"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79t-A8-Sqq" customClass="FilterButton">
+                    <rect key="frame" x="270" y="43" width="75" height="30"/>
+                    <state key="normal" title="50%"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ggU-qm-60U" firstAttribute="top" secondItem="TDn-hI-dp4" secondAttribute="top" constant="20" id="2Pi-Kt-YxX"/>
+                <constraint firstItem="FU6-4M-lq3" firstAttribute="centerY" secondItem="f0E-xq-kTD" secondAttribute="centerY" id="7xd-Zh-EVg"/>
+                <constraint firstItem="Fyi-fU-grd" firstAttribute="leading" secondItem="TDn-hI-dp4" secondAttribute="leading" constant="15" id="GbL-uu-Sgq"/>
+                <constraint firstItem="f0E-xq-kTD" firstAttribute="width" secondItem="TDn-hI-dp4" secondAttribute="width" multiplier="0.2" id="GhF-kl-b9r"/>
+                <constraint firstItem="f0E-xq-kTD" firstAttribute="top" secondItem="ggU-qm-60U" secondAttribute="bottom" constant="10" id="J4h-cG-5Pq"/>
+                <constraint firstItem="79t-A8-Sqq" firstAttribute="centerY" secondItem="f0E-xq-kTD" secondAttribute="centerY" id="RMr-Yw-2h6"/>
+                <constraint firstItem="ggU-qm-60U" firstAttribute="leading" secondItem="TDn-hI-dp4" secondAttribute="leading" constant="15" id="WU8-Cf-bYd"/>
+                <constraint firstItem="79t-A8-Sqq" firstAttribute="width" secondItem="f0E-xq-kTD" secondAttribute="width" id="Wh8-oM-X1s"/>
+                <constraint firstAttribute="bottom" secondItem="Fyi-fU-grd" secondAttribute="bottom" id="cBT-fa-NG2"/>
+                <constraint firstItem="SbF-jH-3LD" firstAttribute="centerY" secondItem="f0E-xq-kTD" secondAttribute="centerY" id="eVd-lX-bLU"/>
+                <constraint firstItem="79t-A8-Sqq" firstAttribute="leading" secondItem="SbF-jH-3LD" secondAttribute="trailing" constant="10" id="ffZ-m4-23h"/>
+                <constraint firstAttribute="trailing" secondItem="Fyi-fU-grd" secondAttribute="trailing" constant="15" id="lR6-t6-aIF"/>
+                <constraint firstItem="SbF-jH-3LD" firstAttribute="leading" secondItem="FU6-4M-lq3" secondAttribute="trailing" constant="10" id="onI-1e-DKR"/>
+                <constraint firstItem="FU6-4M-lq3" firstAttribute="leading" secondItem="f0E-xq-kTD" secondAttribute="trailing" constant="10" id="reD-Ld-j9n"/>
+                <constraint firstItem="f0E-xq-kTD" firstAttribute="leading" secondItem="TDn-hI-dp4" secondAttribute="leading" constant="15" id="uAK-uo-GwZ"/>
+                <constraint firstItem="FU6-4M-lq3" firstAttribute="width" secondItem="f0E-xq-kTD" secondAttribute="width" id="uw7-1v-BYm"/>
+                <constraint firstItem="SbF-jH-3LD" firstAttribute="width" secondItem="f0E-xq-kTD" secondAttribute="width" id="yvZ-9K-oHw"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="rate15Btn" destination="f0E-xq-kTD" id="VSA-K7-QZ7"/>
+                <outlet property="rate30Btn" destination="FU6-4M-lq3" id="MHp-zX-4e5"/>
+                <outlet property="rate40Btn" destination="SbF-jH-3LD" id="jJB-LS-DgW"/>
+                <outlet property="rate50Btn" destination="79t-A8-Sqq" id="GtU-OM-rNM"/>
+            </connections>
+            <point key="canvasLocation" x="-198.5" y="411"/>
+        </view>
+        <view contentMode="scaleToFill" id="GhR-G7-VHP" customClass="FilterResetSection">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OwN-q0-6YU">
+                    <rect key="frame" x="150" y="15" width="75" height="30"/>
+                    <state key="normal" title="重置"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="OwN-q0-6YU" firstAttribute="centerX" secondItem="GhR-G7-VHP" secondAttribute="centerX" id="10j-Cl-ILC"/>
+                <constraint firstItem="OwN-q0-6YU" firstAttribute="width" secondItem="GhR-G7-VHP" secondAttribute="width" multiplier="0.2" id="579-BU-m0L"/>
+                <constraint firstItem="OwN-q0-6YU" firstAttribute="top" secondItem="GhR-G7-VHP" secondAttribute="top" constant="15" id="Qfr-NK-Gh3"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="reset" destination="OwN-q0-6YU" id="j4h-wt-uBm"/>
+            </connections>
+            <point key="canvasLocation" x="-198.5" y="536.5"/>
+        </view>
+        <view contentMode="scaleToFill" id="OV2-un-UST" customClass="FilterMoneySection">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="172"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="投资金额(万元)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEq-cf-Oed">
+                    <rect key="frame" x="15" y="20" width="88" height="13"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="13" id="S2V-OU-VQo"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.45882352939999999" green="0.45882352939999999" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line_down.png" translatesAutoresizingMaskIntoConstraints="NO" id="EEh-0u-jg3">
+                    <rect key="frame" x="15" y="171" width="345" height="1"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="QAA-Pt-f3V"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zK-Tz-4qa" customClass="FilterButton">
+                    <rect key="frame" x="15" y="43" width="75" height="30"/>
+                    <state key="normal" title="1-10"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ced-Ks-D9u" customClass="FilterButton">
+                    <rect key="frame" x="100" y="43" width="75" height="30"/>
+                    <state key="normal" title="11-20"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJm-mV-n1m" customClass="FilterButton">
+                    <rect key="frame" x="185" y="43" width="75" height="30"/>
+                    <state key="normal" title="21-30"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwW-rh-NXC" customClass="FilterButton">
+                    <rect key="frame" x="270" y="43" width="75" height="30"/>
+                    <state key="normal" title="31-40"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIF-Z4-SsN" customClass="FilterButton">
+                    <rect key="frame" x="100" y="83" width="75" height="30"/>
+                    <state key="normal" title="51-100"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5DE-o3-P6B" customClass="FilterButton">
+                    <rect key="frame" x="15" y="83" width="75" height="30"/>
+                    <state key="normal" title="41-50"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUB-Dc-EB6" customClass="FilterButton">
+                    <rect key="frame" x="185" y="83" width="75" height="30"/>
+                    <state key="normal" title="100+"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="自定义金额" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5EV-mh-lzt">
+                    <rect key="frame" x="15" y="135" width="65" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.45882352939999999" green="0.45882352939999999" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="起始金额" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A9h-hp-d24">
+                    <rect key="frame" x="90" y="128" width="85" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="——" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efp-ae-gnG">
+                    <rect key="frame" x="180" y="134" width="30" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="终止金额" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BJK-eI-TQz">
+                    <rect key="frame" x="215" y="128" width="85" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="EEh-0u-jg3" secondAttribute="bottom" id="0cV-6Z-tMP"/>
+                <constraint firstItem="0zK-Tz-4qa" firstAttribute="width" secondItem="OV2-un-UST" secondAttribute="width" multiplier="0.2" id="0lx-eJ-mZr"/>
+                <constraint firstItem="A9h-hp-d24" firstAttribute="centerY" secondItem="5EV-mh-lzt" secondAttribute="centerY" id="3NO-PU-y7h"/>
+                <constraint firstItem="5DE-o3-P6B" firstAttribute="top" secondItem="0zK-Tz-4qa" secondAttribute="bottom" constant="10" id="6Jl-p5-Mpz"/>
+                <constraint firstItem="5EV-mh-lzt" firstAttribute="leading" secondItem="AEq-cf-Oed" secondAttribute="leading" id="6TI-bN-6xa"/>
+                <constraint firstItem="Efp-ae-gnG" firstAttribute="leading" secondItem="A9h-hp-d24" secondAttribute="trailing" constant="5" id="75d-Qa-BJA"/>
+                <constraint firstItem="wIF-Z4-SsN" firstAttribute="centerY" secondItem="5DE-o3-P6B" secondAttribute="centerY" id="9fv-CK-F7n"/>
+                <constraint firstItem="wIF-Z4-SsN" firstAttribute="leading" secondItem="5DE-o3-P6B" secondAttribute="trailing" constant="10" id="AfN-11-WZP"/>
+                <constraint firstItem="Ced-Ks-D9u" firstAttribute="centerY" secondItem="0zK-Tz-4qa" secondAttribute="centerY" id="DiS-fU-hE2"/>
+                <constraint firstItem="BJK-eI-TQz" firstAttribute="width" secondItem="A9h-hp-d24" secondAttribute="width" id="IYf-Mr-9hu"/>
+                <constraint firstItem="0zK-Tz-4qa" firstAttribute="leading" secondItem="OV2-un-UST" secondAttribute="leading" constant="15" id="Ihj-ue-JNl"/>
+                <constraint firstItem="0zK-Tz-4qa" firstAttribute="top" secondItem="AEq-cf-Oed" secondAttribute="bottom" constant="10" id="Ina-M2-hiq"/>
+                <constraint firstItem="A9h-hp-d24" firstAttribute="leading" secondItem="5EV-mh-lzt" secondAttribute="trailing" constant="10" id="OnV-jY-Xqy"/>
+                <constraint firstItem="Ced-Ks-D9u" firstAttribute="width" secondItem="0zK-Tz-4qa" secondAttribute="width" id="QVa-sS-YM4"/>
+                <constraint firstItem="Ced-Ks-D9u" firstAttribute="leading" secondItem="0zK-Tz-4qa" secondAttribute="trailing" constant="10" id="R32-dg-aU8"/>
+                <constraint firstItem="dwW-rh-NXC" firstAttribute="width" secondItem="0zK-Tz-4qa" secondAttribute="width" id="RwY-8O-LcD"/>
+                <constraint firstItem="AEq-cf-Oed" firstAttribute="leading" secondItem="OV2-un-UST" secondAttribute="leading" constant="15" id="S2N-ux-e6H"/>
+                <constraint firstItem="wIF-Z4-SsN" firstAttribute="width" secondItem="5DE-o3-P6B" secondAttribute="width" id="SX0-Yr-Hdn"/>
+                <constraint firstItem="dwW-rh-NXC" firstAttribute="leading" secondItem="RJm-mV-n1m" secondAttribute="trailing" constant="10" id="TNe-6I-LLs"/>
+                <constraint firstItem="dwW-rh-NXC" firstAttribute="centerY" secondItem="0zK-Tz-4qa" secondAttribute="centerY" id="VKz-xT-Zvp"/>
+                <constraint firstItem="zUB-Dc-EB6" firstAttribute="width" secondItem="5DE-o3-P6B" secondAttribute="width" id="YAS-ai-rEj"/>
+                <constraint firstItem="A9h-hp-d24" firstAttribute="width" secondItem="5DE-o3-P6B" secondAttribute="width" constant="10" id="aSX-CQ-uhu"/>
+                <constraint firstItem="AEq-cf-Oed" firstAttribute="top" secondItem="OV2-un-UST" secondAttribute="top" constant="20" id="aUa-Ge-8Ql"/>
+                <constraint firstItem="5DE-o3-P6B" firstAttribute="leading" secondItem="0zK-Tz-4qa" secondAttribute="leading" id="bha-rC-dEU"/>
+                <constraint firstItem="BJK-eI-TQz" firstAttribute="centerY" secondItem="5EV-mh-lzt" secondAttribute="centerY" id="cR4-wF-dv8"/>
+                <constraint firstItem="5EV-mh-lzt" firstAttribute="top" secondItem="5DE-o3-P6B" secondAttribute="bottom" constant="22" id="fE1-Bo-EgI"/>
+                <constraint firstItem="RJm-mV-n1m" firstAttribute="leading" secondItem="Ced-Ks-D9u" secondAttribute="trailing" constant="10" id="fZd-fT-OAj"/>
+                <constraint firstItem="RJm-mV-n1m" firstAttribute="centerY" secondItem="0zK-Tz-4qa" secondAttribute="centerY" id="hUm-A9-3hq"/>
+                <constraint firstItem="RJm-mV-n1m" firstAttribute="width" secondItem="0zK-Tz-4qa" secondAttribute="width" id="knS-Zd-gx8"/>
+                <constraint firstItem="EEh-0u-jg3" firstAttribute="leading" secondItem="OV2-un-UST" secondAttribute="leading" constant="15" id="l67-ux-Gqt"/>
+                <constraint firstItem="Efp-ae-gnG" firstAttribute="centerY" secondItem="A9h-hp-d24" secondAttribute="centerY" id="pJO-QI-hfa"/>
+                <constraint firstAttribute="trailing" secondItem="EEh-0u-jg3" secondAttribute="trailing" constant="15" id="rFk-CD-GSk"/>
+                <constraint firstItem="5DE-o3-P6B" firstAttribute="width" secondItem="0zK-Tz-4qa" secondAttribute="width" id="tey-FR-LcU"/>
+                <constraint firstItem="zUB-Dc-EB6" firstAttribute="leading" secondItem="wIF-Z4-SsN" secondAttribute="trailing" constant="10" id="uSW-YT-bba"/>
+                <constraint firstItem="zUB-Dc-EB6" firstAttribute="centerY" secondItem="5DE-o3-P6B" secondAttribute="centerY" id="wac-FZ-k1x"/>
+                <constraint firstItem="BJK-eI-TQz" firstAttribute="leading" secondItem="Efp-ae-gnG" secondAttribute="trailing" constant="5" id="zcG-0a-zSa"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="endTextField" destination="BJK-eI-TQz" id="TQw-m7-f4f"/>
+                <outlet property="money100Btn" destination="zUB-Dc-EB6" id="RGj-Kb-spT"/>
+                <outlet property="money11to20Btn" destination="Ced-Ks-D9u" id="dk5-0l-Kz5"/>
+                <outlet property="money1to10Btn" destination="0zK-Tz-4qa" id="wSC-Io-Hkh"/>
+                <outlet property="money21to30Btn" destination="RJm-mV-n1m" id="FdE-IW-eKl"/>
+                <outlet property="money31to40Btn" destination="dwW-rh-NXC" id="gwV-gG-b5A"/>
+                <outlet property="money41to50Btn" destination="5DE-o3-P6B" id="j32-2f-Azv"/>
+                <outlet property="money51to100Btn" destination="wIF-Z4-SsN" id="6CI-wA-8sY"/>
+                <outlet property="startTextField" destination="A9h-hp-d24" id="XAX-0B-SEl"/>
+            </connections>
+            <point key="canvasLocation" x="-124.5" y="711"/>
         </view>
     </objects>
     <resources>

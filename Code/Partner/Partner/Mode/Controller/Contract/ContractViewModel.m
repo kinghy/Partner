@@ -13,16 +13,16 @@
 @implementation ContractViewModel
 +(instancetype)viewModelWithEntity:(ContractsRecordsEntity *)entity{
     ContractViewModel *viewModel = [self viewModel];
-    viewModel.ID = entity.ID;
-    viewModel.investorId = entity.investorId;
-    viewModel.investorName = entity.investorName;
-    viewModel.marketId = entity.marketId;
-    viewModel.marketName = entity.marketName;
-    viewModel.amount = entity.amount;
-    viewModel.securityDeposit = entity.securityDeposit;
-    viewModel.profitAllocation = entity.profitAllocation;
-    viewModel.period = entity.period;
-    viewModel.contractNo = entity.contractNo;
+//    viewModel.ID = entity.ID;
+//    viewModel.investorId = entity.investorId;
+//    viewModel.investorName = entity.investorName;
+//    viewModel.marketId = entity.marketId;
+//    viewModel.marketName = entity.marketName;
+//    viewModel.amount = entity.amount;
+//    viewModel.securityDeposit = entity.securityDeposit;
+//    viewModel.profitAllocation = entity.profitAllocation;
+//    viewModel.period = entity.period;
+//    viewModel.contractNo = entity.contractNo;
     
     NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init] ;
     [numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];

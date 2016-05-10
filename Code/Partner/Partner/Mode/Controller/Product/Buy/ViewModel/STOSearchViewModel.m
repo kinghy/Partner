@@ -57,6 +57,9 @@
         }else{
             [self getSearchContentWithText:self.searchText];
         }
+    }else{
+        [[STODBManager shareSTODBManager] deleteMyStockWithStockCode:entity.stockCode];
+        [self getSearchContentWithText:self.searchText];
     }
 }
 

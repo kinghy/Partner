@@ -31,9 +31,14 @@
     
     self.title = @"选择股票";
     [super viewDidLoad];
-    self.statusBarStyle = UIStatusBarStyleLightContent; 
+    
+    self.statusBarStyle = UIStatusBarStyleDefault;
     self.navigationController.navigationBar.translucent = NO;
     self.navigationController.navigationBar.hidden=YES;
+    
+    self.searchView.layer.cornerRadius = 3;
+    self.searchView.layer.borderWidth = 1;
+    self.searchView.layer.borderColor = kColorSearchBorder.CGColor;
     
 }
 
@@ -75,15 +80,12 @@
         StockEntity *e = (StockEntity *)entity;
         s.stockNameLab.text = e.stockName;
         s.stockCodeLab.text = e.stockCode;
-        s.stockAb.text = @"已自选";
         s.addBtn.tag = entity.tag;
         [s.addBtn addTarget:self action:@selector(addMyStock:) forControlEvents:UIControlEventTouchUpInside];
         if ([e.choosed boolValue]) {
-            s.addBtn.hidden=YES;
-            s.stockAb.hidden=NO;
+            [s.addBtn setImage:[UIImage imageNamed:@"mydelbtn"] forState:UIControlStateNormal];
         }else{
-            s.addBtn.hidden=NO;
-            s.stockAb.hidden=YES;
+            [s.addBtn setImage:[UIImage imageNamed:@"myaddbtn"] forState:UIControlStateNormal];
         }
     }
 }

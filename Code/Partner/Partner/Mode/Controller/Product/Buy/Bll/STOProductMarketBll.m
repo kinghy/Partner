@@ -322,10 +322,7 @@
     }
 }
 
--(void)searchClicked{
-    STOSearchViewController *controller = [[STOSearchViewController alloc] init];
-    [self.controller presentViewController:controller animated:YES completion:nil];
-}
+
 
 -(void)nextClicked{
     STOProductBuyOrderViewController *controller = [[STOProductBuyOrderViewController alloc] init];

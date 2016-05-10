@@ -13,6 +13,7 @@
 #import "IndexViewController.h"
 #import "ContractsEntity.h"
 #import "ContractViewModel.h"
+#import "FilterViewController.h"
 
 @implementation PartnerBll
 -(EFAdaptor *)loadEFUIWithTable:(EFTableView *)tableView andKey:(NSString *)key{
@@ -71,11 +72,21 @@
         s.bailRate.text = [NSString stringWithFormat:@"%d",[e.securityDeposit integerValue]*10];
         s.earnest.text = [NSString stringWithFormat:@"%d",[e.profitAllocation integerValue]*10];
     }
+    
+    if ([section isMemberOfClass:[PartnerHeadSection class]]) {
+        PartnerHeadSection *s = (PartnerHeadSection*)section;
+        [s.filterBtn addTarget:self action:@selector(gotoFilter) forControlEvents:UIControlEventTouchUpInside];
+    }
 }
-
 
 -(void)EFAdaptor:(EFAdaptor *)adaptor selectedSection:(EFSection *)section entity:(EFEntity *)entity{
     ContractViewController* controller = [ContractViewController controllerWithModel:[ContractViewModel viewModelWithEntity:(ContractsRecordsEntity*)entity] nibName:@"ContractViewController" bundle:[NSBundle mainBundle]];
     [self.controller.navigationController pushViewController:controller animated:YES];
 }
+
+-(void)gotoFilter{
+    FilterViewController *controler = [FilterViewController controller];
+    [self.controller.navigationController pushViewController:controler animated:YES];
+}
+
 @end

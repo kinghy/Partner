@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *search;
 
 @property (weak, nonatomic) IBOutlet UIButton *cancelBtn;
+@property (weak, nonatomic) IBOutlet UIView *searchView;
 
 @end

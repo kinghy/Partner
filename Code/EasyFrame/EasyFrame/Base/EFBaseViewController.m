@@ -8,6 +8,7 @@
 
 #import "EFBaseViewController.h"
 #import "EFBll.h"
+#import "UIBarButtonItem+YL.h"
 
 @interface EFBaseViewController ()
 
@@ -27,6 +28,13 @@
     EFBaseViewController *instance = [[self alloc] initWithNibName:nibName bundle:bundle];
     return instance;
 }
+
++(instancetype)controller{
+    NSString* nibName=NSStringFromClass([self class]);
+    EFBaseViewController* controller=[[self alloc] initWithNibName:nibName bundle:nil];
+    return controller;
+}
+
 
 -(Class)typeOfModel{
     return [EFBaseViewModel class];
@@ -115,15 +123,24 @@
     }
 }
 
--(void)setRightNavBarWithTitle:(NSString *)title image:(UIImage *)img action:(SEL)action{
+
+-(void)setRightNavBarWithTitle:(NSString *)title titleColor:(UIColor *)color action:(SEL)action{
     UIBarButtonItem *btn = [[UIBarButtonItem alloc]
-                                initWithTitle:title
-                                style:UIBarButtonItemStyleBordered
-                                target:self
-                                action:action];
-    btn.image = img;
+                            initWithTitle:title
+                            style:UIBarButtonItemStylePlain
+                            target:self
+                            action:action];
+    if (color) {
+        btn.tintColor = color;
+    }
     self.navigationItem.rightBarButtonItem= btn;
 }
+
+-(void)setRightNavBarWithImage:(NSString*)image heighLight:(NSString*)heighlight action:(SEL)action{
+
+    self.navigationItem.rightBarButtonItem= [UIBarButtonItem buttonItemWithIcon:image highlightedIcon:heighlight target:self action:action];
+}
+
 
 -(void)addSwither:(UIControl*)sw forBll:(EFBll*)bll{
     if (switcher == nil) {

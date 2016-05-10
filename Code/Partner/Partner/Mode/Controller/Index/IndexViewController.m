@@ -35,7 +35,7 @@
 
     self.title = @"合伙";
     self.navBarHidden = YES;
-    [self setRightNavBarWithTitle:@"" image:[UIImage imageNamed:@"filter"] action:@selector(filterClicked:)]; 
+    [self setRightNavBarWithTitle:@"" titleColor:nil action:@selector(filterClicked:)];
     self.tabBar.selectedItem = self.tabBar.items[0];
     self.navigationItem.hidesBackButton = YES;
 }

@@ -5,10 +5,11 @@
  @Copyright (c) 2015年 交易支点. All rights reserved.
  */
 
-@class EFConnectorParam,EFEntity,EFConnResult,EFConnectorQueue;
+@class EFConnectorParam,EFEntity,EFConnectorQueue;
 
-typedef void (^EFConnRetBlock)(AFHTTPRequestOperation *operation, EFEntity* entity,NSError *error);
-typedef void (^EFConnQueueRetBlock)(AFHTTPRequestOperation *operation, NSOperationQueue *queue , EFEntity* entity,NSError *error);
+
+typedef void (^EFConnRetBlock)(NSURLSessionDataTask *task, EFEntity* entity,NSError *error);
+typedef void (^EFConnQueueRetBlock)(NSURLSessionDataTask *task, NSOperationQueue *queue , EFEntity* entity,NSError *error);
 
 /*!
  *  @class  EFConnector
@@ -38,26 +39,26 @@ typedef void (^EFConnQueueRetBlock)(AFHTTPRequestOperation *operation, NSOperati
  *
  *  @return 返回EFConnResult类对象
  */
-- (EFConnResult*)runUntilFinished:(EFConnectorParam*)param;
+//- (EFConnResult*)runUntilFinished:(EFConnectorParam*)param;
 
 
 @end
 
-/*!
- *  @class EFConnResult
- *  @brief 网络链接返回参数类，用于同步访问作为返回值
- */
-@interface EFConnResult : NSObject
-/*!
- *  @brief  AFNetWorking请求对象
- */
-@property (nonatomic,strong) AFHTTPRequestOperation *operation;
-/*!
- *  @brief  接口容器
- */
-@property (nonatomic,strong) EFEntity* entity;
-/*!
- *  @brief  错误对象
- */
-@property (nonatomic,strong) NSError *error;
-@end
+///*!
+// *  @class EFConnResult
+// *  @brief 网络链接返回参数类，用于同步访问作为返回值
+// */
+//@interface EFConnResult : NSObject
+///*!
+// *  @brief  AFNetWorking请求对象
+// */
+////@property (nonatomic,strong) AFHTTPRequestOperation *operation;
+///*!
+// *  @brief  接口容器
+// */
+//@property (nonatomic,strong) EFEntity* entity;
+///*!
+// *  @brief  错误对象
+// */
+//@property (nonatomic,strong) NSError *error;
+//@end

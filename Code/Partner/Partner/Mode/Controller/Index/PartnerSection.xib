@@ -15,16 +15,29 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner.png" translatesAutoresizingMaskIntoConstraints="NO" id="hto-ie-8Ix">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="190"/>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07a-0b-fCo">
+                    <rect key="frame" x="337" y="29" width="26" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="26" id="0DY-WQ-Qp3"/>
+                        <constraint firstAttribute="height" constant="24" id="0UJ-Pu-8Qp"/>
+                    </constraints>
+                    <state key="normal" image="filter.png"/>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="07a-0b-fCo" secondAttribute="trailing" constant="12" id="Dwd-pf-D33"/>
                 <constraint firstItem="hto-ie-8Ix" firstAttribute="leading" secondItem="GaD-9k-YBg" secondAttribute="leading" id="Jva-BI-F16"/>
                 <constraint firstItem="hto-ie-8Ix" firstAttribute="top" secondItem="GaD-9k-YBg" secondAttribute="top" id="TsJ-z4-fpT"/>
                 <constraint firstAttribute="trailing" secondItem="hto-ie-8Ix" secondAttribute="trailing" id="gCF-WR-I1L"/>
+                <constraint firstItem="07a-0b-fCo" firstAttribute="top" secondItem="GaD-9k-YBg" secondAttribute="top" constant="29" id="oPn-8U-4C8"/>
                 <constraint firstAttribute="bottom" secondItem="hto-ie-8Ix" secondAttribute="bottom" id="oax-dp-aTH"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="filterBtn" destination="07a-0b-fCo" id="fQq-Hi-yal"/>
+            </connections>
             <point key="canvasLocation" x="241.5" y="-242.5"/>
         </view>
         <view contentMode="scaleToFill" id="ljx-UY-rFt" customClass="PartnerListSection">
@@ -259,8 +272,16 @@
             </connections>
             <point key="canvasLocation" x="337.5" y="65"/>
         </view>
+        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="B0X-1Y-eYt">
+            <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+            <nil key="highlightedColor"/>
+        </label>
     </objects>
     <resources>
         <image name="banner.png" width="375" height="191"/>
+        <image name="filter.png" width="25" height="24"/>
     </resources>
 </document>

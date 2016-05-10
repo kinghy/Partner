@@ -39,7 +39,7 @@ single_implementation(STOProductManager)
     if (code!=nil&&![code isEqualToString:@""]) {
         param.code = code;
         [[EFConnector connector] run:param returnBlock:
-         ^(AFHTTPRequestOperation *operation, EFEntity *entity, NSError *error) {
+         ^(NSURLSessionDataTask *task, EFEntity *entity, NSError *error) {
              if(returnBlock!=nil){
                  returnBlock(entity,error);
              }
@@ -55,7 +55,7 @@ single_implementation(STOProductManager)
     ProductChartParam *param = [ProductChartParam param];
     param.code = self.chosedStock.stockCode;
     [[EFConnector connector] run:param returnBlock:
-     ^(AFHTTPRequestOperation *operation, EFEntity *entity, NSError *error) {
+     ^(NSURLSessionDataTask *task, EFEntity *entity, NSError *error) {
          if(returnBlock!=nil){
              returnBlock(entity,error);
          }
@@ -67,7 +67,7 @@ single_implementation(STOProductManager)
     ProductVolChartParam *param = [ProductVolChartParam param];
     param.code = self.chosedStock.stockCode;
     [[EFConnector connector] run:param returnBlock:
-     ^(AFHTTPRequestOperation *operation, EFEntity *entity, NSError *error) {
+     ^(NSURLSessionDataTask *task, EFEntity *entity, NSError *error) {
          if(returnBlock!=nil){
              returnBlock(entity,error);
          }
@@ -80,7 +80,7 @@ single_implementation(STOProductManager)
     ProductKChartParam *param = [ProductKChartParam param];
     param.code = self.chosedStock.stockCode;
     [[EFConnector connector] run:param returnBlock:
-     ^(AFHTTPRequestOperation *operation, EFEntity *entity, NSError *error) {
+     ^(NSURLSessionDataTask *task, EFEntity *entity, NSError *error) {
          if(returnBlock!=nil){
              returnBlock(entity,error);
          }
@@ -93,7 +93,7 @@ single_implementation(STOProductManager)
     ProductPanKouParam *param = [ProductPanKouParam param];
     param.code = self.chosedStock.stockCode;
     [[EFConnector connector] run:param returnBlock:
-     ^(AFHTTPRequestOperation *operation, EFEntity *entity, NSError *error) {
+     ^(NSURLSessionDataTask *task, EFEntity *entity, NSError *error) {
          if(returnBlock!=nil){
              returnBlock(entity,error);
          }
@@ -113,7 +113,7 @@ single_implementation(STOProductManager)
     param.count = [NSString stringWithFormat:@"%ld",num];
     
     [[EFConnector connector] run:param returnBlock:
-     ^(AFHTTPRequestOperation *operation, EFEntity *entity, NSError *error) {
+     ^(NSURLSessionDataTask *task, EFEntity *entity, NSError *error) {
          if(returnBlock!=nil){
              returnBlock(entity,error);
          }
@@ -132,7 +132,7 @@ single_implementation(STOProductManager)
     param.count = [NSString stringWithFormat:@"%ld",num];
     
     [[EFConnector connector] run:param returnBlock:
-     ^(AFHTTPRequestOperation *operation, EFEntity *entity, NSError *error) {
+     ^(NSURLSessionDataTask *task, EFEntity *entity, NSError *error) {
          if(returnBlock!=nil){
              returnBlock(entity,error);
          }
@@ -144,7 +144,7 @@ single_implementation(STOProductManager)
     ProductOrdersParam *param = [ProductOrdersParam param];
     param.contractId = cid;
     [[EFConnector connector] run:param returnBlock:
-     ^(AFHTTPRequestOperation *operation, EFEntity *entity, NSError *error) {
+     ^(NSURLSessionDataTask *task, EFEntity *entity, NSError *error) {
          if(returnBlock!=nil){
              returnBlock(entity,error);
          }

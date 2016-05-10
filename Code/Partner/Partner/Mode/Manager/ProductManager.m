@@ -16,7 +16,7 @@ single_implementation(ProductManager)
 -(void)getMarkets:(EFManagerRetBlock)returnBlock{
     MarketParam *param = [MarketParam param];
     [[EFConnector connector] run:param returnBlock:
-     ^(AFHTTPRequestOperation *operation, EFEntity *entity, NSError *error) {
+     ^(NSURLSessionDataTask *task, EFEntity *entity, NSError *error) {
          if(returnBlock!=nil){
              returnBlock(entity,error);
          }
@@ -27,7 +27,7 @@ single_implementation(ProductManager)
     UserContractsParam *param = [UserContractsParam param];
     param.marketId = self.selectedMarket.ID;
     [[EFConnector connector] run:param returnBlock:
-     ^(AFHTTPRequestOperation *operation, EFEntity *entity, NSError *error) {
+     ^(NSURLSessionDataTask *task, EFEntity *entity, NSError *error) {
          if(returnBlock!=nil){
              returnBlock(entity,error);
          }
@@ -38,7 +38,7 @@ single_implementation(ProductManager)
     AvailableCreditParam *param = [AvailableCreditParam param];
     param.contractId = cid;
     [[EFConnector connector] run:param returnBlock:
-     ^(AFHTTPRequestOperation *operation, EFEntity *entity, NSError *error) {
+     ^(NSURLSessionDataTask *task, EFEntity *entity, NSError *error) {
          if(returnBlock!=nil){
              returnBlock(entity,error);
          }

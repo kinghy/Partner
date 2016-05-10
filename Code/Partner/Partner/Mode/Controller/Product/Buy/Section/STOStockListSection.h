@@ -12,7 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *stockCodeLab;
 @property (weak, nonatomic) IBOutlet UILabel *stockNameLab;
-@property (weak, nonatomic) IBOutlet UILabel *stockAb;
 @property (weak, nonatomic) IBOutlet UIButton *addBtn;
 
 @end

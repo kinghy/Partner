@@ -19,7 +19,7 @@ single_implementation(UserManager)
     param.username = name;
     param.password = password;
     [[EFConnector connector] run:param returnBlock:
-     ^(AFHTTPRequestOperation *operation, EFEntity *entity, NSError *error) {
+     ^(NSURLSessionDataTask *task, EFEntity *entity, NSError *error) {
          AuthenticateEntity* e = (AuthenticateEntity*)entity;
          if (error == nil && e.value) {
              _self.myEntity = e;

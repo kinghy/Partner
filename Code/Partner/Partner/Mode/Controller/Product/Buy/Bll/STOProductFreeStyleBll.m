@@ -42,7 +42,9 @@
 
 -(EFAdaptor *)loadEFUIWithTable:(EFTableView *)tableView andKey:(NSString *)key{
     EFAdaptor *adaptor = [EFAdaptor adaptorWithTableView:tableView nibArray:@[@"STOProductFreeStyleSection"] delegate:self];
+    adaptor.fillParentEnabled = YES;
     [adaptor addEntity:[EFEntity entity] withSection:[STOProductFreeStyleSection class]];
+
     return adaptor;
 }
 
@@ -52,7 +54,6 @@
     if ([section isKindOfClass:[STOProductFreeStyleSection class]]) {
         self.mySection = (STOProductFreeStyleSection*)section;
         
-        [self.mySection.searchBtn addTarget:self action:@selector(searchClicked) forControlEvents:UIControlEventTouchUpInside];
         [self.mySection.addMyStockBtn addTarget:self action:@selector(searchClicked) forControlEvents:UIControlEventTouchUpInside];
         
         @weakify(self);
@@ -134,7 +135,7 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 35;
+    return 59;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

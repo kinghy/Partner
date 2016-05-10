@@ -10,6 +10,8 @@
 
 
 @interface PartnerHeadSection : EFSection
+@property (weak, nonatomic) IBOutlet UIButton *filterBtn;
+
 
 
 @end

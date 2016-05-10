@@ -15,8 +15,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *szBtn;
 @property (weak, nonatomic) IBOutlet UILabel *szLabel;
 @property (weak, nonatomic) IBOutlet UILabel *szMinus;
-@property (weak, nonatomic) IBOutlet UIImageView *searchBar;
-@property (weak, nonatomic) IBOutlet UIButton *searchBtn;
 @property (weak, nonatomic) IBOutlet UITableView *myStockTable;
 @property (weak, nonatomic) IBOutlet UIView *addMyStoctView;
 @property (weak, nonatomic) IBOutlet UIButton *addMyStockBtn;

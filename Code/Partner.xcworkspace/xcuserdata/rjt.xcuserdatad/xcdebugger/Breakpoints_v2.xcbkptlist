@@ -378,11 +378,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Partner/Partner/Mode/Controller/Product/Buy/Controller/STOSearchViewController.m"
-            timestampString = "474526766.156693"
+            timestampString = "484566663.23784"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "-bindViewModel"
             landmarkType = "5">
          </BreakpointContent>
@@ -410,11 +410,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Partner/Partner/Mode/Controller/Product/Buy/Controller/STOSearchViewController.m"
-            timestampString = "474527746.492917"
+            timestampString = "484566663.23784"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "-bindViewModel"
             landmarkType = "5">
          </BreakpointContent>
@@ -441,13 +441,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Partner/Partner/Mode/Controller/Index/PartnerBll.m"
-            timestampString = "481269542.798631"
+            filePath = "EasyFrame/EasyFrame/Base/EFBaseViewController.m"
+            timestampString = "484561234.204115"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "-bindViewModel"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "-setRightNavBarWithTitle:titleColor:action:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -457,44 +457,44 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Partner/Partner/Mode/Controller/Contract/ContractViewController.m"
-            timestampString = "480854701.632763"
+            filePath = "Partner/Partner/Mode/Controller/Product/Buy/Controller/STOSearchViewController.m"
+            timestampString = "484566663.23784"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "-EFAdaptor:willDidLoadSection:willDidLoadEntity:"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "-bindViewModel"
             landmarkType = "5">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "-[ContractViewController EFAdaptor:willDidLoadSection:willDidLoadEntity:]"
+                  symbolName = "-[STOSearchViewController bindViewModel]"
                   moduleName = "Partner"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rjt/GitHub/Partner/Code/Partner/Partner/Mode/Controller/Contract/ContractViewController.m"
-                  timestampString = "481266644.847509"
+                  urlString = "file:///Users/rjt/GitHub/Partner/Code/Partner/Partner/Mode/Controller/Product/Buy/Controller/STOSearchViewController.m"
+                  timestampString = "484567132.932352"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "68"
-                  endingLineNumber = "68"
-                  offsetFromSymbolStart = "263">
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "1116">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "-[ContractViewController EFAdaptor:willDidLoadSection:willDidLoadEntity:]"
+                  symbolName = "__40-[STOSearchViewController bindViewModel]_block_invoke"
                   moduleName = "Partner"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/rjt/GitHub/Partner/Code/Partner/Partner/Mode/Controller/Contract/ContractViewController.m"
-                  timestampString = "481266644.847638"
+                  urlString = "file:///Users/rjt/GitHub/Partner/Code/Partner/Partner/Mode/Controller/Product/Buy/Controller/STOSearchViewController.m"
+                  timestampString = "484567132.932507"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "68"
-                  endingLineNumber = "68"
-                  offsetFromSymbolStart = "437">
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "22">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -505,13 +505,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Partner/Partner/Mode/Controller/Contract/ContractViewModel.m"
-            timestampString = "480854829.905777"
+            filePath = "Partner/Partner/Mode/Controller/Product/Buy/Controller/STOSearchViewController.m"
+            timestampString = "484566663.23784"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
-            landmarkName = "+viewModelWithEntity:"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "-bindViewModel"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -521,13 +521,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Partner/Partner/Mode/Controller/Contract/ContractViewModel.m"
-            timestampString = "481266644.447067"
+            filePath = "Partner/Partner/Mode/Controller/Product/Buy/Controller/STOSearchViewController.m"
+            timestampString = "484566663.23784"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "+viewModelWithEntity:"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "-bindViewModel"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Partner/Partner/Mode/Controller/Product/Buy/ViewModel/STOSearchViewModel.m"
+            timestampString = "484567062.626942"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "-addMyStock:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

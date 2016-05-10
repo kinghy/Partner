@@ -16,7 +16,7 @@ single_implementation(ContractManager)
 -(void)filterContract:(EFManagerRetBlock)returnBlock{
     ContractsParam *param = [ContractsParam param];
     [[EFConnector connector] run:param returnBlock:
-     ^(AFHTTPRequestOperation *operation, EFEntity *entity, NSError *error) {
+     ^(NSURLSessionDataTask *task, EFEntity *entity, NSError *error) {
          if(returnBlock!=nil){
              returnBlock(entity,error);
          }
@@ -32,7 +32,7 @@ single_implementation(ContractManager)
     DocumentParam *param = [DocumentParam param];
     param.contractId = self.selectedContract.ID;
     [[EFConnector connector] run:param returnBlock:
-     ^(AFHTTPRequestOperation *operation, EFEntity *entity, NSError *error) {
+     ^(NSURLSessionDataTask *task, EFEntity *entity, NSError *error) {
          if ([entity isKindOfClass:[DocumentEntity class]]) {
              _createdDocument = (DocumentEntity*)entity;
          }
@@ -47,7 +47,7 @@ single_implementation(ContractManager)
     param.contractId = self.selectedContract.ID;
     param.documentId = self.createdDocument.ID;
     [[EFConnector connector] run:param returnBlock:
-     ^(AFHTTPRequestOperation *operation, EFEntity *entity, NSError *error) {
+     ^(NSURLSessionDataTask *task, EFEntity *entity, NSError *error) {
          if(returnBlock!=nil){
              returnBlock(entity,error);
          }

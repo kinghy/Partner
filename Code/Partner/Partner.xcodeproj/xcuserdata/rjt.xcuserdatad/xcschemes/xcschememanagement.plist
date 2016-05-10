@@ -9,9 +9,29 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>PartnerTest.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>7C45C9581CB352C8009BDBCF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7C45C9701CB352C8009BDBCF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7C45C97B1CB352C8009BDBCF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>7C7983DE1BBCE39D009CDB4A</key>
 		<dict>
 			<key>primary</key>

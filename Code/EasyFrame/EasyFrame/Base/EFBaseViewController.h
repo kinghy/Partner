@@ -44,6 +44,12 @@
 +(instancetype)controllerWithNibName:(NSString*)nibName bundle:(NSBundle*)bundle;
 
 /*!
+ *  @brief 创建ViewController的方法
+ *  @return 返回创建后的实例
+ */
++(instancetype)controller;
+
+/*!
  *  @brief 返回ViewModel的实例，子类实现
  *
  *  @return 返回需要实例类型
@@ -67,14 +73,24 @@
  */
 -(void)registerBll:(EFBll*)bll;
 
+
 /**
  *  设置导航栏右侧按钮
  *
  *  @param title  按钮标题
- *  @param img    按钮图标
+ *  @param color  标题颜色
  *  @param action 按钮出发方法
  */
--(void)setRightNavBarWithTitle:(NSString*) title image:(UIImage*)img action:(SEL)action;
+-(void)setRightNavBarWithTitle:(NSString*) title titleColor:(UIColor*)color action:(SEL)action;
+
+/**
+ *  设置导航栏右侧按钮
+ *
+ *  @param image 默认图片
+ *  @param heighlight 高亮图片
+ *  @param action 按钮出发方法
+ */
+-(void)setRightNavBarWithImage:(NSString*)image heighLight:(NSString*)heighlight action:(SEL)action;
 
 /**
  *  绑定切换控制台，用来切换bll
