@@ -74,7 +74,7 @@
                 for (ProductHqsRecordsEntity *mystock in self.myStocks) {
                     ProductHqsRecordsEntity* newEntity = mystock;
                     for (ProductHqsRecordsEntity *record in hqEntity.records) {
-                        if (record.stockcode == mystock.stockcode) {
+                        if ([record.stockcode isEqualToString:mystock.stockcode]) {
                             newEntity.New = record.New;
                             newEntity.YClose = record.YClose;
                             newEntity.Buy1 = record.Buy1;

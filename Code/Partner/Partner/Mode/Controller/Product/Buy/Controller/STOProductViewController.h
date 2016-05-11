@@ -11,5 +11,8 @@
 @interface STOProductViewController : EFBaseViewController
 @property (weak, nonatomic) IBOutlet EFTableView *pBuyTable;
 @property (weak, nonatomic) IBOutlet EFTableView *pSellTable;
+@property (weak, nonatomic) IBOutlet UIButton *buyBtn;
+
+@property (weak, nonatomic) IBOutlet UIButton *sellBtn;
 
 @end

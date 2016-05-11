@@ -61,7 +61,6 @@
     self.nav = [[UINavigationController alloc] initWithRootViewController:[LoginViewController controllerWithModel:[LoginViewModel viewModel] nibName:@"LoginViewController" bundle:[NSBundle mainBundle]]];
     self.window.rootViewController = self.nav;
     
-//    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[STOProductMarketViewController alloc] initWithNibName:@"STOProductMarketViewController" bundle:[NSBundle mainBundle]]];
     [self.window makeKeyAndVisible];
    
     //初始化股票包

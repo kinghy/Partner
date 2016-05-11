@@ -8,7 +8,6 @@
 
 #import "EFBaseViewController.h"
 
-@interface STOProductBuyOrderViewController : EFBaseViewController
-@property (weak, nonatomic) IBOutlet EFTableView *pTable;
+@interface STOProductBuyOrderViewController : EFSimpleViewController
 
 @end

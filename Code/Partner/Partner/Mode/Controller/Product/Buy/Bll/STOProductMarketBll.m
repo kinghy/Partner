@@ -244,10 +244,6 @@
     titleLabel.text=stockName;
     [titleLabel setFont:[UIFont fontWithName:@"Helvetica-Bold" size:19]];
     titleLabel.textAlignment=NSTextAlignmentCenter;
-    titleLabel.textColor=[UIColor whiteColor];
-    
-    
-    
     
     UILabel *titleCode=[[UILabel alloc]initWithFrame:CGRectMake(0, 13, 100, 15)];
     if (stockCode!=nil) {

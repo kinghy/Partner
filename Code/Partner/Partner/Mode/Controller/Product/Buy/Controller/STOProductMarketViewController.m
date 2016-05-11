@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.statusBarStyle = UIStatusBarStyleLightContent;
+    self.statusBarStyle = UIStatusBarStyleDefault;
     // Do any additional setup after loading the view from its nib.
 }
 

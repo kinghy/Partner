@@ -10,7 +10,7 @@
 #import "STOProductFreeStyleSection.h"
 #import "ProductHqsEntity.h"
 #import "STOSearchViewController.h"
-#import "STOProductMarketViewController.h"
+#import "STOProductBuyOrderViewController.h"
 #import "STOProductFreeStyleSection.h"
 #import "STOProductFreeStyleViewModel.h"
 #import "AppUtil.h"
@@ -18,6 +18,7 @@
 #import "STOMyStockListCell.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "STOSearchViewModel.h"
+#import "STOProductBuyOrderViewModel.h"
 
 @implementation STOProductFreeStyleBll
 
@@ -119,7 +120,7 @@
 
 -(void)goMarket:(StockEntity*)entity{
     [self.manager chooseStock:entity];
-    STOProductMarketViewController *controller= [[STOProductMarketViewController alloc] init];
+    STOProductBuyOrderViewController *controller= [STOProductBuyOrderViewController controllerWithModel:[STOProductBuyOrderViewModel viewModel] nibName:@"STOProductBuyOrderViewController" bundle:nil];
     [self.controller.navigationController pushViewController:controller animated:YES];
 }
 

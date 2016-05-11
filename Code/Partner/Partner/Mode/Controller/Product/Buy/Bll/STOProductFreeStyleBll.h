@@ -14,6 +14,8 @@
     BOOL isSearch;
 }
 
+-(void)goMarket:(StockEntity*)entity;//买入指定股票
+
 @property (nonatomic,strong) STOProductManager *manager;
 @property (nonatomic,strong) STOProductFreeStyleSection *mySection;
 

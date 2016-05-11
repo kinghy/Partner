@@ -26,9 +26,9 @@
 
 #define kColorSwitchUnselected Color_Bg_RGB(74,146,244)
 
-#define Color_DS_Gray Color_Bg_RGB(201.f, 201.f, 201.f)//平灰
-#define Color_Up_Red Color_Bg_RGB(255.0f,72.0f, 132.0f)//涨红2
-#define Color_Down_Green Color_Bg_RGB(0.0f, 186.0f, 184.0f)//跌绿2
+#define Color_DS_Gray Color_Bg_RGB(195.f, 210.f, 255.f)//平灰
+#define Color_Up_Red Color_Bg_RGB(255.0f,118.0f, 151.0f)//涨红2
+#define Color_Down_Green Color_Bg_RGB(74.0f, 217.0f, 159.0f)//跌绿2
 #define Color_Up_Red_Change Color_Bg_RGB(255.0f,173.0f, 186.0f)//涨红涨幅变动
 #define Color_Down_Green_Change Color_Bg_RGB(119.0f, 219.0f, 179.0f)//跌绿跌幅变动
 #define Color_Bg_Blue Color_Bg_RGB(157.0f, 208.0f, 249.0f)//成交量蓝色

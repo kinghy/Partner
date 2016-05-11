@@ -56,3 +56,13 @@
  */
 
 @end
+
+@implementation STOProductBuyOrderPriceSection
+
+
+@end
+
+@implementation STOProductBuyOrderHandicapSection
+
+
+@end

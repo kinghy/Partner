@@ -94,7 +94,7 @@
     [(STOSearchViewModel*)self.viewModel addMyStock:btn.tag];
 }
 
-////#pragma mark - 点击选择section
+#pragma mark - 点击选择section
 - (void)EFAdaptor:(EFAdaptor *)adaptor selectedSection:(EFSection *)section entity:(EFEntity *)entity
 {
     if ([section isMemberOfClass:[STOStockListSection class]]) {

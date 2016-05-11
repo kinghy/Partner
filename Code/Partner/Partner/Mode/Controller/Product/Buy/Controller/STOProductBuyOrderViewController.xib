@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="STOProductBuyOrderViewController">
             <connections>
-                <outlet property="pTable" destination="h5e-T1-wP6" id="BPF-UV-8J1"/>
+                <outlet property="pTable" destination="h5e-T1-wP6" id="Sty-6z-CQh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

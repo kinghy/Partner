@@ -42,3 +42,44 @@
 @property (weak, nonatomic) IBOutlet UILabel *limitLabel;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @end
+
+@interface STOProductBuyOrderPriceSection : EFSection
+
+@property (weak, nonatomic) IBOutlet UILabel *currentPrice;
+@property (weak, nonatomic) IBOutlet UILabel *rhythmLab;
+@property (weak, nonatomic) IBOutlet UILabel *percentLab;
+
+@property (weak, nonatomic) IBOutlet UILabel *openLab;
+@property (weak, nonatomic) IBOutlet UILabel *closeLab;
+@property (weak, nonatomic) IBOutlet UILabel *highestLab;
+@property (weak, nonatomic) IBOutlet UILabel *lowestLab;
+
+@end
+
+@interface STOProductBuyOrderHandicapSection : EFSection
+
+@property (weak, nonatomic) IBOutlet UILabel *sell1Lab;
+@property (weak, nonatomic) IBOutlet UILabel *sell2Lab;
+@property (weak, nonatomic) IBOutlet UILabel *sell3Lab;
+@property (weak, nonatomic) IBOutlet UILabel *sell4Lab;
+@property (weak, nonatomic) IBOutlet UILabel *sell5Lab;
+
+@property (weak, nonatomic) IBOutlet UILabel *buy1Lab;
+@property (weak, nonatomic) IBOutlet UILabel *buy2Lab;
+@property (weak, nonatomic) IBOutlet UILabel *buy3Lab;
+@property (weak, nonatomic) IBOutlet UILabel *buy4Lab;
+@property (weak, nonatomic) IBOutlet UILabel *buy5Lab;
+
+@property (weak, nonatomic) IBOutlet UILabel *sell1VolLab;
+@property (weak, nonatomic) IBOutlet UILabel *sell2VolLab;
+@property (weak, nonatomic) IBOutlet UILabel *sell3VolLab;
+@property (weak, nonatomic) IBOutlet UILabel *sell4VolLab;
+@property (weak, nonatomic) IBOutlet UILabel *sell5VolLab;
+
+@property (weak, nonatomic) IBOutlet UILabel *buy1VolLab;
+@property (weak, nonatomic) IBOutlet UILabel *buy2VolLab;
+@property (weak, nonatomic) IBOutlet UILabel *buy3VolLab;
+@property (weak, nonatomic) IBOutlet UILabel *buy4VolLab;
+@property (weak, nonatomic) IBOutlet UILabel *buy5VolLab;
+
+@end
