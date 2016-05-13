@@ -10,13 +10,10 @@
 @class RACCommand;
 @class ContractsRecordsEntity;
 @interface STOProductBuyOrderViewModel : EFBaseViewModel
-//@property (nonatomic) NSNumber *maxMoney;
-//@property (nonatomic) NSNumber *minMoney;
-//
-//@property (nonatomic,strong) id moneyValue;
-//@property (nonatomic,strong) NSNumber *currentValue;
-//@property (nonatomic,strong) NSNumber *counts;
 
+@property (nonatomic,strong) NSNumber *maxMoney;
+@property (nonatomic,strong) NSNumber *minMoney;
+@property (nonatomic,strong) NSNumber *currentValue;
 
 @property (nonatomic,strong) NSString *currentPrice;
 @property (nonatomic,strong) UIColor *currentPriceColor;
@@ -34,12 +31,49 @@
 @property (nonatomic,strong) NSString *name;
 @property (nonatomic,strong) NSString *code;
 
-//@property (nonatomic,strong) NSString *contractNO;
-//@property (nonatomic,strong) NSArray *contracts;
-//@property (nonatomic,strong) RACCommand* confirmCmd;
-//@property (nonatomic,strong) ContractsRecordsEntity *selectContract;
-//
+
+@property (weak, nonatomic) IBOutlet NSString *sell1;
+@property (weak, nonatomic) IBOutlet NSString *sell2;
+@property (weak, nonatomic) IBOutlet NSString *sell3;
+@property (weak, nonatomic) IBOutlet NSString *sell4;
+@property (weak, nonatomic) IBOutlet NSString *sell5;
+
+@property (weak, nonatomic) IBOutlet NSString *buy1;
+@property (weak, nonatomic) IBOutlet NSString *buy2;
+@property (weak, nonatomic) IBOutlet NSString *buy3;
+@property (weak, nonatomic) IBOutlet NSString *buy4;
+@property (weak, nonatomic) IBOutlet NSString *buy5;
+
+@property (weak, nonatomic) IBOutlet NSString *sell1Vol;
+@property (weak, nonatomic) IBOutlet NSString *sell2Vol;
+@property (weak, nonatomic) IBOutlet NSString *sell3Vol;
+@property (weak, nonatomic) IBOutlet NSString *sell4Vol;
+@property (weak, nonatomic) IBOutlet NSString *sell5Vol;
+
+@property (weak, nonatomic) IBOutlet NSString *buy1Vol;
+@property (weak, nonatomic) IBOutlet NSString *buy2Vol;
+@property (weak, nonatomic) IBOutlet NSString *buy3Vol;
+@property (weak, nonatomic) IBOutlet NSString *buy4Vol;
+@property (weak, nonatomic) IBOutlet NSString *buy5Vol;
+
+@property (weak, nonatomic) IBOutlet UIColor *sell1Color;
+@property (weak, nonatomic) IBOutlet UIColor *sell2Color;
+@property (weak, nonatomic) IBOutlet UIColor *sell3Color;
+@property (weak, nonatomic) IBOutlet UIColor *sell4Color;
+@property (weak, nonatomic) IBOutlet UIColor *sell5Color;
+
+@property (weak, nonatomic) IBOutlet UIColor *buy1Color;
+@property (weak, nonatomic) IBOutlet UIColor *buy2Color;
+@property (weak, nonatomic) IBOutlet UIColor *buy3Color;
+@property (weak, nonatomic) IBOutlet UIColor *buy4Color;
+@property (weak, nonatomic) IBOutlet UIColor *buy5Color;
+
 @property (nonatomic,strong) STOProductManager *manager;
+
+@property (nonatomic,strong) NSArray* contracts;
+@property (nonatomic,strong) RACCommand* confirmCmd;
+
+@property (nonatomic,strong) ContractsRecordsEntity* selectContract;
 
 -(void)getHqData;
 -(void)setSelectContract:(ContractsRecordsEntity *)selectContract;

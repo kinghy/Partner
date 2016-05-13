@@ -8,6 +8,18 @@
 
 #import "EFSection.h"
 
+@interface STOProductBuyOrderContractSection : EFSection
+@property (weak, nonatomic) IBOutlet UILabel *partnerLabel;
+@property (weak, nonatomic) IBOutlet UILabel *remindFundLabel;
+@property (weak, nonatomic) IBOutlet UILabel *rateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *minMoneyLabel;
+@property (weak, nonatomic) IBOutlet UILabel *targetLabel
+;
+@property (weak, nonatomic) IBOutlet UILabel *deadLineLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dueLabel;
+
+@end
+
 @interface STOProductBuyOrderSection : EFSection
 @property (weak, nonatomic) IBOutlet UIButton *confirmBtn;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
@@ -83,3 +95,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *buy5VolLab;
 
 @end
+
+@interface STOProductBuyOrderSplitSection : EFSection
+
+@end
+

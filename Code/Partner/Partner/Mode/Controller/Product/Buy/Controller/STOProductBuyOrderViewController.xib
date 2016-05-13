@@ -3,10 +3,12 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="STOProductBuyOrderViewController">
             <connections>
+                <outlet property="contractTable" destination="yzj-31-UYI" id="G09-os-E2W"/>
                 <outlet property="pTable" destination="h5e-T1-wP6" id="Sty-6z-CQh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -17,19 +19,78 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h5e-T1-wP6" customClass="EFTableView">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SnM-MO-4Mh">
+                    <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Gu-xF-Wpz">
+                            <rect key="frame" x="255" y="0.0" width="120" height="49"/>
+                            <color key="backgroundColor" red="0.23529411764705882" green="0.32549019607843138" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="120" id="72T-oE-L2B"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="市价买入">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JcQ-U9-JV2">
+                            <rect key="frame" x="206" y="0.0" width="45" height="49"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="45" id="zNI-iV-0el"/>
+                            </constraints>
+                            <state key="normal" image="chosecontract.png"/>
+                            <connections>
+                                <action selector="contractsClicked:" destination="-1" eventType="touchUpInside" id="5l3-hV-h6B"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="合约" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GdY-m0-1e2">
+                            <rect key="frame" x="15" y="16" width="191" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="JcQ-U9-JV2" firstAttribute="leading" secondItem="GdY-m0-1e2" secondAttribute="trailing" id="7O6-vs-LKA"/>
+                        <constraint firstAttribute="bottom" secondItem="JcQ-U9-JV2" secondAttribute="bottom" id="CHl-Kn-IIm"/>
+                        <constraint firstItem="JcQ-U9-JV2" firstAttribute="top" secondItem="SnM-MO-4Mh" secondAttribute="top" id="Mwu-ct-Kw8"/>
+                        <constraint firstAttribute="trailing" secondItem="7Gu-xF-Wpz" secondAttribute="trailing" id="V8L-J6-G4R"/>
+                        <constraint firstAttribute="height" constant="49" id="alk-cw-c72"/>
+                        <constraint firstItem="7Gu-xF-Wpz" firstAttribute="top" secondItem="SnM-MO-4Mh" secondAttribute="top" id="dxX-Hv-Alo"/>
+                        <constraint firstItem="7Gu-xF-Wpz" firstAttribute="leading" secondItem="JcQ-U9-JV2" secondAttribute="trailing" constant="4" id="ggT-bE-l4Y"/>
+                        <constraint firstAttribute="bottom" secondItem="7Gu-xF-Wpz" secondAttribute="bottom" id="k0p-wA-ajj"/>
+                        <constraint firstItem="GdY-m0-1e2" firstAttribute="centerY" secondItem="SnM-MO-4Mh" secondAttribute="centerY" id="vVc-Pz-0dt"/>
+                        <constraint firstItem="GdY-m0-1e2" firstAttribute="leading" secondItem="SnM-MO-4Mh" secondAttribute="leading" constant="15" id="yUk-K0-E5y"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yzj-31-UYI" customClass="EFTableView">
+                    <rect key="frame" x="0.0" y="309" width="375" height="309"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="SnM-MO-4Mh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2bc-3E-xpV"/>
                 <constraint firstItem="h5e-T1-wP6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="7ga-XI-NU9"/>
                 <constraint firstAttribute="trailing" secondItem="h5e-T1-wP6" secondAttribute="trailing" id="Bkz-gT-f9J"/>
+                <constraint firstAttribute="trailing" secondItem="yzj-31-UYI" secondAttribute="trailing" id="EuH-E7-jDP"/>
                 <constraint firstItem="h5e-T1-wP6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Hoo-TZ-kaA"/>
-                <constraint firstAttribute="bottom" secondItem="h5e-T1-wP6" secondAttribute="bottom" id="xsG-fK-QZY"/>
+                <constraint firstItem="yzj-31-UYI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="MX5-gB-Ms1"/>
+                <constraint firstAttribute="bottom" secondItem="SnM-MO-4Mh" secondAttribute="bottom" id="TMW-eZ-iHH"/>
+                <constraint firstItem="yzj-31-UYI" firstAttribute="height" secondItem="h5e-T1-wP6" secondAttribute="height" multiplier="0.5" id="WNG-KX-M0d"/>
+                <constraint firstItem="SnM-MO-4Mh" firstAttribute="top" secondItem="yzj-31-UYI" secondAttribute="bottom" id="tT0-ca-T8Q"/>
+                <constraint firstItem="SnM-MO-4Mh" firstAttribute="top" secondItem="h5e-T1-wP6" secondAttribute="bottom" id="u9Y-jP-STJ"/>
+                <constraint firstAttribute="trailing" secondItem="SnM-MO-4Mh" secondAttribute="trailing" id="uBh-UQ-7Pa"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-            <point key="canvasLocation" x="550" y="318"/>
+            <point key="canvasLocation" x="549.5" y="317.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="chosecontract.png" width="14" height="13"/>
+    </resources>
 </document>

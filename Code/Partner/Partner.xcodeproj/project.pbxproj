@@ -127,6 +127,8 @@
 		7C821A5E1C05C4AA00EA7F7B /* OrdersSellParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C821A5D1C05C4AA00EA7F7B /* OrdersSellParam.m */; };
 		7C821A611C05C4EE00EA7F7B /* OrdersSellEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C821A601C05C4EE00EA7F7B /* OrdersSellEntity.m */; };
 		7C8666401BFC681E00197DE1 /* UserContractsParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C86663F1BFC681E00197DE1 /* UserContractsParam.m */; };
+		7C8E14271CE40DE70076A0A0 /* chosecontract@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C8E14251CE40DE70076A0A0 /* chosecontract@2x.png */; };
+		7C8E14281CE40DE70076A0A0 /* chosecontract@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C8E14261CE40DE70076A0A0 /* chosecontract@3x.png */; };
 		7C98B3B11BCE1683001DD686 /* ContractAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C98B3B01BCE1683001DD686 /* ContractAlert.xib */; };
 		7C98B3B91BCE181D001DD686 /* ContractAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C98B3B81BCE181D001DD686 /* ContractAlert.m */; };
 		7CA2950B1BF9D362006CE6A2 /* DocumentSignParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA2950A1BF9D362006CE6A2 /* DocumentSignParam.m */; };
@@ -413,6 +415,8 @@
 		7C821A601C05C4EE00EA7F7B /* OrdersSellEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrdersSellEntity.m; sourceTree = "<group>"; };
 		7C86663E1BFC681E00197DE1 /* UserContractsParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserContractsParam.h; sourceTree = "<group>"; };
 		7C86663F1BFC681E00197DE1 /* UserContractsParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserContractsParam.m; sourceTree = "<group>"; };
+		7C8E14251CE40DE70076A0A0 /* chosecontract@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chosecontract@2x.png"; sourceTree = "<group>"; };
+		7C8E14261CE40DE70076A0A0 /* chosecontract@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chosecontract@3x.png"; sourceTree = "<group>"; };
 		7C98B3B01BCE1683001DD686 /* ContractAlert.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContractAlert.xib; sourceTree = "<group>"; };
 		7C98B3B71BCE181D001DD686 /* ContractAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContractAlert.h; sourceTree = "<group>"; };
 		7C98B3B81BCE181D001DD686 /* ContractAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContractAlert.m; sourceTree = "<group>"; };
@@ -1136,6 +1140,8 @@
 		7CB637441C0E9ABD00143E35 /* trade */ = {
 			isa = PBXGroup;
 			children = (
+				7C8E14251CE40DE70076A0A0 /* chosecontract@2x.png */,
+				7C8E14261CE40DE70076A0A0 /* chosecontract@3x.png */,
 				7C43DEAD1CE1E28000B2C0D4 /* search_icon@2x.png */,
 				7C43DEAE1CE1E28000B2C0D4 /* search_icon@3x.png */,
 				7C43DEA51CE1D95900B2C0D4 /* mydelbtn@2x.png */,
@@ -1432,6 +1438,7 @@
 				7C43DEA31CE1C6BF00B2C0D4 /* mysearch@2x.png in Resources */,
 				7CD8B8E81C26DF0A00246013 /* setting@2x.png in Resources */,
 				7C43DEAF1CE1E28000B2C0D4 /* search_icon@2x.png in Resources */,
+				7C8E14281CE40DE70076A0A0 /* chosecontract@3x.png in Resources */,
 				7CD509151CA93EB300401EFD /* arrow@2x.png in Resources */,
 				7CD8B8E21C26D58F00246013 /* PersonalSection.xib in Resources */,
 				7C784D161CA4FDB10017AC30 /* investlimited@2x.png in Resources */,
@@ -1459,6 +1466,7 @@
 				7CB637621C0E9ABD00143E35 /* Lock@2x.png in Resources */,
 				7CB637691C0E9ABD00143E35 /* revamp_hover@2x.png in Resources */,
 				7C43DEAA1CE1D95900B2C0D4 /* mydelbtn@3x.png in Resources */,
+				7C8E14271CE40DE70076A0A0 /* chosecontract@2x.png in Resources */,
 				7CB6376B1C0E9ABD00143E35 /* search_frame@2x.png in Resources */,
 				7CCE9A171C0BF1AA00752847 /* STOProductOrderDetailViewController.xib in Resources */,
 				7C6FBE0D1CAF9B2E00D0D679 /* risk_settion@2x.png in Resources */,

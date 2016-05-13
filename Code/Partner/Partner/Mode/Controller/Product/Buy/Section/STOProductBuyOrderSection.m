@@ -59,10 +59,17 @@
 
 @implementation STOProductBuyOrderPriceSection
 
-
 @end
 
 @implementation STOProductBuyOrderHandicapSection
 
+@end
+
+@implementation STOProductBuyOrderContractSection
 
 @end
+
+@implementation STOProductBuyOrderSplitSection
+
+@end
+

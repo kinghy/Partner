@@ -20,33 +20,33 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vKJ-0s-ohx" customClass="EFTableView">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="622"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pUI-9U-HbA" customClass="EFTableView">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="622"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <color key="separatorColor" red="0.62745098040000002" green="0.62745098040000002" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yHb-LP-3cN">
-                    <rect key="frame" x="0.0" y="622" width="375" height="45"/>
+                    <rect key="frame" x="0.0" y="618" width="375" height="49"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YY7-Nc-zUw">
-                            <rect key="frame" x="187" y="0.0" width="1" height="45"/>
+                            <rect key="frame" x="187" y="0.0" width="1" height="49"/>
                             <color key="backgroundColor" red="0.45882352941176469" green="0.51764705882352935" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="1" id="ZWg-l3-rtx"/>
                             </constraints>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2P-MG-VLC">
-                            <rect key="frame" x="0.0" y="0.0" width="187" height="45"/>
+                            <rect key="frame" x="0.0" y="0.0" width="187" height="49"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <state key="normal" title="买入">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACI-6P-6RP">
-                            <rect key="frame" x="188" y="0.0" width="187" height="45"/>
+                            <rect key="frame" x="188" y="0.0" width="187" height="49"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <state key="normal" title="卖出">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -58,7 +58,7 @@
                         <constraint firstAttribute="bottom" secondItem="YY7-Nc-zUw" secondAttribute="bottom" id="0ML-i1-gQo"/>
                         <constraint firstItem="G2P-MG-VLC" firstAttribute="top" secondItem="yHb-LP-3cN" secondAttribute="top" id="Cqk-8h-eWD"/>
                         <constraint firstAttribute="bottom" secondItem="G2P-MG-VLC" secondAttribute="bottom" id="NGs-GK-k2s"/>
-                        <constraint firstAttribute="height" constant="45" id="Uu2-Rq-lw9"/>
+                        <constraint firstAttribute="height" constant="49" id="Uu2-Rq-lw9"/>
                         <constraint firstItem="ACI-6P-6RP" firstAttribute="top" secondItem="yHb-LP-3cN" secondAttribute="top" id="Z1C-Kl-9ah"/>
                         <constraint firstItem="G2P-MG-VLC" firstAttribute="leading" secondItem="yHb-LP-3cN" secondAttribute="leading" id="dED-OL-8rS"/>
                         <constraint firstItem="YY7-Nc-zUw" firstAttribute="centerX" secondItem="yHb-LP-3cN" secondAttribute="centerX" id="dEg-nu-h8S"/>
@@ -85,7 +85,7 @@
                 <constraint firstAttribute="trailing" secondItem="yHb-LP-3cN" secondAttribute="trailing" id="zO6-EI-MNh"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="549.5" y="313.5"/>
+            <point key="canvasLocation" x="586.5" y="31.5"/>
         </view>
     </objects>
 </document>

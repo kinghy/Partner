@@ -55,7 +55,6 @@
     if (obj) {
         [self.buyBll goMarket:obj];
     }
-    
 }
 
 - (void)didReceiveMemoryWarning {
