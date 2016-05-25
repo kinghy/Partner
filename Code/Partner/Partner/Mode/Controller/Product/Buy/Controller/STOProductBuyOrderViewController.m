@@ -14,8 +14,10 @@
 @interface STOProductBuyOrderViewController ()
 @property (weak, nonatomic) IBOutlet EFTableView *contractTable;
 @property (strong, nonatomic)  EFAdaptor *contractAdapor;
-//@property (weak, nonatomic)  EFAdaptor *contractAdapor;
 - (IBAction)contractsClicked:(id)sender;
+
+@property (strong,nonatomic) UIView *choseView;
+
 @end
 
 @implementation STOProductBuyOrderViewController
@@ -44,6 +46,10 @@
         @strongify(self)
         [(STOProductBuyOrderViewModel*)self.viewModel getHqData];
     }];
+    
+    
+    // Do any additional setup after loading the view, typically from a nib.
+
 }
 
 -(void)bindViewModel{
@@ -81,6 +87,7 @@
     self.pAdaptor = [EFAdaptor adaptorWithTableView:self.pTable nibArray:@[@"STOProductBuyOrderSection"] delegate:self];
     [self.pAdaptor addEntity:[EFEntity entity] withSection:[STOProductBuyOrderPriceSection class]];
     [self.pAdaptor addEntity:[EFEntity entity] withSection:[STOProductBuyOrderHandicapSection class]];
+        [self.pAdaptor addEntity:[EFEntity entity] withSection:[STOProductBuyOrderDashboardSection class]];
     [self.pAdaptor addEntity:[EFEntity entity] withSection:[STOProductBuyOrderSplitSection class]];
     [self.pAdaptor addEntity:[EFEntity entity] withSection:[STOProductBuyOrderContractSection class]];
     self.pAdaptor.scrollEnabled = YES;
@@ -159,6 +166,14 @@
         RAC(s.buy3Lab,textColor)	=	RACObserve(model,	buy3Color);
         RAC(s.buy4Lab,textColor)	=	RACObserve(model,	buy4Color);
         RAC(s.buy5Lab,textColor)	=	RACObserve(model,	buy5Color);
+    }
+    
+    if ([section isKindOfClass:[STOProductBuyOrderDashboardSection class]]) {
+        __weak STOProductBuyOrderDashboardSection* s = (STOProductBuyOrderDashboardSection*)section;
+        __weak STOProductBuyOrderViewModel* model = (STOProductBuyOrderViewModel*)self.viewModel;
+        
+        RAC(s,max) = RACObserve(model, maxMoney);
+        RAC(s,min) = RACObserve(model, minMoney);
     }
 }
 

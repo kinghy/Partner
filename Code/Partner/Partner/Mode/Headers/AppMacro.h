@@ -129,7 +129,7 @@
 
 #define HQ_URL_DAY @"http://hqd.jyzd.com"
 #define HQ_URL_NIGHT @"http://hqn.jyzd.com"
-#define SERVER_URL @"http://115.159.94.39:10010"
+#define SERVER_URL @"http://106.187.38.225:20000"
 
 //忽略所有错误代码
 #define IGNORE_ERROR_CODE                   -999999

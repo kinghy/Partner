@@ -20,19 +20,7 @@
     self.maxMoney = @500000;
     self.minMoney = @10000;
     @weakify(self);
-//    RACSignal *valueSignal = [RACObserve(self, moneyValue) map:^id(UISlider* slider) {
-//        @strongify(self);
-//        if (slider.value == 0) {
-//            return @(self.minMoney.integerValue);
-//        }else{
-//            return @(slider.value*10000);
-//        }
-//    }];
-//    [valueSignal subscribeNext:^(NSNumber *value) {
-//        @strongify(self);
-//        self.currentValue = value;
-//    }];
-//
+
     StockEntity *ent = self.manager.chosedStock;
     _name = ent.stockName;
     _code = ent.stockCode;
@@ -133,7 +121,7 @@
     if ([vol floatValue]/100>10000) {
         return [NSString stringWithFormat:@"%.2f万",[vol floatValue]/100/10000];
     }else{
-        return [NSString stringWithFormat:@"%d",[vol integerValue]/100];
+        return [NSString stringWithFormat:@"%ld",[vol integerValue]/100];
     }
     
 }
@@ -148,6 +136,7 @@
             if (error == nil && [entity isKindOfClass:[AvailableCreditEntity class]]) {
                 AvailableCreditEntity* ent = (AvailableCreditEntity*)entity;
                 self.maxMoney = @([ent.availableCredit floatValue]);
+                self.minMoney = @10000;
                 self.currentValue = self.minMoney;
             }
         }];

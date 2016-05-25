@@ -14,6 +14,8 @@
  */
 @interface EFSection : UIView
 @property (weak,nonatomic) UITableViewCell* parentCell;
+-(void)sectionDidLoad;
+-(void)sectionWillLoad;
 @end
 
 

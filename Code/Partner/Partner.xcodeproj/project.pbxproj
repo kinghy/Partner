@@ -100,7 +100,6 @@
 		7C784D1B1CA4FE830017AC30 /* earnestrate@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C784D191CA4FE830017AC30 /* earnestrate@3x.png */; };
 		7C787FA51BE04D1000EF19C4 /* STOProductBuyOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C787FA31BE04D1000EF19C4 /* STOProductBuyOrderViewController.m */; };
 		7C787FA61BE04D1000EF19C4 /* STOProductBuyOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C787FA41BE04D1000EF19C4 /* STOProductBuyOrderViewController.xib */; };
-		7C787FA91BE04D7C00EF19C4 /* STOProductBuyOrderBll.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C787FA81BE04D7C00EF19C4 /* STOProductBuyOrderBll.m */; };
 		7C787FAC1BE04E6300EF19C4 /* STOProductBuyOrderSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C787FAB1BE04E6300EF19C4 /* STOProductBuyOrderSection.m */; };
 		7C787FAE1BE04E8800EF19C4 /* STOProductBuyOrderSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C787FAD1BE04E8800EF19C4 /* STOProductBuyOrderSection.xib */; };
 		7C788F381BE0991600EF19C4 /* AppUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C788F371BE0991600EF19C4 /* AppUtil.m */; };
@@ -364,8 +363,6 @@
 		7C787FA21BE04D1000EF19C4 /* STOProductBuyOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STOProductBuyOrderViewController.h; sourceTree = "<group>"; };
 		7C787FA31BE04D1000EF19C4 /* STOProductBuyOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STOProductBuyOrderViewController.m; sourceTree = "<group>"; };
 		7C787FA41BE04D1000EF19C4 /* STOProductBuyOrderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STOProductBuyOrderViewController.xib; sourceTree = "<group>"; };
-		7C787FA71BE04D7C00EF19C4 /* STOProductBuyOrderBll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STOProductBuyOrderBll.h; sourceTree = "<group>"; };
-		7C787FA81BE04D7C00EF19C4 /* STOProductBuyOrderBll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STOProductBuyOrderBll.m; sourceTree = "<group>"; };
 		7C787FAA1BE04E6300EF19C4 /* STOProductBuyOrderSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STOProductBuyOrderSection.h; sourceTree = "<group>"; };
 		7C787FAB1BE04E6300EF19C4 /* STOProductBuyOrderSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STOProductBuyOrderSection.m; sourceTree = "<group>"; };
 		7C787FAD1BE04E8800EF19C4 /* STOProductBuyOrderSection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = STOProductBuyOrderSection.xib; sourceTree = "<group>"; };
@@ -992,8 +989,6 @@
 			children = (
 				7CE5D13A1BDDE46700E6C97E /* STOProductMarketBll.h */,
 				7CE5D13B1BDDE46700E6C97E /* STOProductMarketBll.m */,
-				7C787FA71BE04D7C00EF19C4 /* STOProductBuyOrderBll.h */,
-				7C787FA81BE04D7C00EF19C4 /* STOProductBuyOrderBll.m */,
 				7CB54CB81BF46379007955CA /* STOProductFreeStyleBll.h */,
 				7CB54CB91BF46379007955CA /* STOProductFreeStyleBll.m */,
 			);
@@ -1602,7 +1597,6 @@
 				7CD670891C47399D00B06824 /* UIImage+ImageEffects.m in Sources */,
 				7C6BAD141BBD68030035BF99 /* PartnerBll.m in Sources */,
 				7CDB03111C06956D00DB6015 /* STOProductSellOrderBll.m in Sources */,
-				7C787FA91BE04D7C00EF19C4 /* STOProductBuyOrderBll.m in Sources */,
 				7CACF59B1BD8D138001CD671 /* STOProductManager.m in Sources */,
 				7C7D9F361BBED30E00FA0F7A /* FilterViewController.m in Sources */,
 				7CCCCEBC1BEB5411004A31A8 /* DocumentParam.m in Sources */,

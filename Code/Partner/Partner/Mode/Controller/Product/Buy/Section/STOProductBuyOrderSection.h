@@ -100,3 +100,17 @@
 
 @end
 
+@interface STOProductBuyOrderDashboardSection : EFSection<UIScrollViewDelegate>
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIView *targetView;
+@property (nonatomic) int max;
+@property (nonatomic) int min;
+@property (nonatomic) int per;
+@property (nonatomic) int perWidth;
+@property (nonatomic) NSInteger viewWidth;
+@property (strong,nonatomic) UIView *choseView;
+@property (weak, nonatomic) IBOutlet UILabel *money;
+@property (weak, nonatomic) IBOutlet UILabel *hands;
+
+@end
+

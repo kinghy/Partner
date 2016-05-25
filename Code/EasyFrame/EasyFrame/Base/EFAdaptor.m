@@ -186,9 +186,12 @@
     }
     EFSection *s = [EFNibHelper loadNibArray:self.pNibNameArray ofClass:NSClassFromString(item.sectionName)];
     item.section = s;
+    [s sectionWillLoad];
+
     if ([self.delegate respondsToSelector:@selector(EFAdaptor:willDidLoadGroupSection:willDidLoadEntity:)]) {
         [self.delegate EFAdaptor:self willDidLoadGroupSection:s willDidLoadEntity:item.entity];
     }
+    [s sectionDidLoad];
     return s;
 }
 
@@ -232,6 +235,7 @@
         else{
             section = [EFNibHelper loadNibArray:self.pNibNameArray ofClass:NSClassFromString(item.sectionName)];
         }
+        [section sectionWillLoad];
         if ([self.delegate respondsToSelector:@selector(EFAdaptor:willDidLoadSection:willDidLoadEntity:)]) {
             [self.delegate EFAdaptor:self willDidLoadSection:section willDidLoadEntity:item.entity];
         }
@@ -271,13 +275,14 @@
             cell.contentView.bounds = rect;
             section.frame =  cell.contentView.bounds;
             [cell.contentView addSubview:section];
-            section.parentCell = cell;
+            [section sectionDidLoad];
         }
         item.section = section;
     }
     if ([self.delegate respondsToSelector:@selector(EFAdaptor:forSection:forEntity:)]) {
         [self.delegate EFAdaptor:self forSection:section forEntity:item.entity];
     }
+    section.parentCell = cell;
     return cell;
 }
 
