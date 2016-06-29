@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>CocoaLumberjack.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>EasyFrame.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FMDB.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -19,7 +29,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods.xcscheme</key>
+		<key>OpenUDID.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Partner.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,7 +47,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>7B2AF2BD94B8FABD39ECD86142995662</key>
+		<key>12E2BC28C62976C425F4B71C2723F0B1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1ED920A48444C8722A8412E6A8DD7765</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>336BA2D36199C3E5A71A20972EF34FD6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,7 +72,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C5DDD60ECDB8D5D3E3EC507A7D3A6068</key>
+		<key>B2809A241DBED456B27D35ED4A25B2EF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F7F3475586093CCF76EE4A4D8DFE7604</key>
 		<dict>
 			<key>primary</key>
 			<true/>

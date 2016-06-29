@@ -24,12 +24,15 @@
     StockEntity *ent = self.manager.chosedStock;
     _name = ent.stockName;
     _code = ent.stockCode;
+    
+    
+    
     [[ProductManager shareProductManager] getUserContracts:^(EFEntity *entity, NSError *error) {
         @strongify(self);
         if (error==nil && [entity isKindOfClass:[ContractsEntity class]]) {
             self.contracts = ((ContractsEntity*)entity).records;
-            
-            NSLog(@"self.contracts = %@",self.contracts);
+            //默认选中第一个
+            self.selectContract = [self.contracts firstObject];
         }
     }];
     

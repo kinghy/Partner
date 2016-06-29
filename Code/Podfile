@@ -1,8 +1,12 @@
 platform :ios, '7.0' 
-pod 'FMDB'
-pod 'MBProgressHUD', '~> 0.9.1'
-pod 'ReactiveCocoa'
-pod 'AFNetworking', '~> 3.0'
-
-xcodeproj 'Partner/Partner.xcodeproj'
-
+target "Partner" do
+  #pod 'FMDB'
+  #pod 'MBProgressHUD', '~> 0.9.1'
+  #pod 'ReactiveCocoa'
+  #pod 'AFNetworking', '~> 3.0'
+  pod 'FMDB'
+  pod 'MBProgressHUD', '~> 0.9.1'
+  pod 'ReactiveCocoa'
+  pod 'EasyFrame' , :git => 'https://github.com/kinghy/EasyFrame.git' 
+  xcodeproj 'Partner/Partner.xcodeproj'
+end

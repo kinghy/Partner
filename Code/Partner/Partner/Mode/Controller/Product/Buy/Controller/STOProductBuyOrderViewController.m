@@ -80,6 +80,7 @@
                 [self.pAdaptor notifyChanged];
             }
         }];
+        
     }
 }
 

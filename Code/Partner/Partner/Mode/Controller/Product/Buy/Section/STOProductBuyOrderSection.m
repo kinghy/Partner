@@ -131,6 +131,7 @@
     [self.scrollView addSubview:_choseView];
 
     [self adjustView];
+    [self adjustChosed];
 }
 
 -(void)layoutSubviews{
@@ -138,16 +139,15 @@
 }
 
 -(void)adjustView{
-    if ( _viewWidth != _scrollView.frame.size.width) {
+//    if ( _viewWidth != _scrollView.frame.size.width) {
         _viewWidth = _scrollView.frame.size.width;
         int width = (self.max - self.min)/self.per;
         _scrollView.contentSize = CGSizeMake(width*self.perWidth+_viewWidth, self.scrollView.bounds.size.height);
         CGRect rect = self.choseView.frame;
         rect.origin.x = _targetView.frame.origin.x;
         self.choseView.frame = rect;
-    }
+//    }
 }
-
 
 #pragma UIScrollView - delegate
 

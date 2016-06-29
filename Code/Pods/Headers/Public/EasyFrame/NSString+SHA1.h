@@ -1,0 +1,1 @@
+../../../EasyFrame/EasyFrame/EasyFrame/Tools/NSString+SHA1.h
